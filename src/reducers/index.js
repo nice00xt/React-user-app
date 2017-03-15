@@ -1,9 +1,10 @@
-// Set up your root reducer here...
- import { combineReducers } from 'redux';
- import {routerReducer} from 'react-router-redux';
+import { combineReducers } from 'redux';
+import {routerReducer} from 'react-router-redux';
+import { showUsers } from './users/users';
 
  const rootReducer = combineReducers({
-  routing: routerReducer
+  routing: routerReducer,
+  user: showUsers
 });
 
  export default rootReducer;
