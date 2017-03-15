@@ -9,12 +9,20 @@ import configureStore from './store/configureStore';
 require('./favicon.ico'); 
 import './styles/styles.scss';
 import { syncHistoryWithStore } from 'react-router-redux';
+import Home from 'containers/home/home';
 
 const store = configureStore();
 const history = syncHistoryWithStore(browserHistory, store);
 
+// render(
+//   <Provider store={store}>
+//     <Router history={history} routes={routes} />
+//   </Provider>, document.getElementById('app')
+// );
+
 render(
   <Provider store={store}>
-    <Router history={history} routes={routes} />
-  </Provider>, document.getElementById('app')
+    <Home />
+  </Provider>,
+  document.getElementById('app')
 );

@@ -4,15 +4,16 @@ import { UserList } from '../../components/user-list/user-list';
 import { showUsers } from '../../actions/users/users';
 
 export class Home extends Component {
-	componentWillMount () {
-		console.log(this.props);
+	componentDidMount() {
+		this.props.showUsers();
 	}
-
 	render () {
 		return (
 			<div>
 				<span>This is the Home page - hello world 2</span>
-				<UserList />
+				<UserList
+					users={this.props.users}
+				/>	
 			</div>
 		);
 	}
@@ -24,6 +25,15 @@ function mapStateToProps(state) {
 	};
 }
 
-export default connect(mapStateToProps, { 
-	showUsers
-})(Home);
+function mapDispatchToProps(dispatch) {
+	return {
+		showUsers: function() {
+			dispatch(showUsers());
+		}
+	};
+}
+
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(Home);
