@@ -3,8 +3,23 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import autoprefixer from 'autoprefixer';
 import path from 'path';
 
+const resolvePaths = (...args) => {
+  return path.resolve(__dirname, 'src', ...args);
+};
+
 export default {
   resolve: {
+    alias: {
+      actions: resolvePaths('actions'),
+      containers: resolvePaths('containers'),
+      constants: resolvePaths('constants'),
+      components: resolvePaths('components'),
+      reducers: resolvePaths('reducers'),
+      styles: resolvePaths('styles'),
+      store: resolvePaths('store'),
+      middleware: resolvePaths('middleware'),
+      config: resolvePaths('config')
+    },
     extensions: ['*', '.js', '.jsx', '.json']
   },
   devtool: 'eval-source-map', // more info:https://webpack.github.io/docs/build-performance.html#sourcemaps and https://webpack.github.io/docs/configuration.html#devtool

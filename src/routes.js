@@ -1,6 +1,6 @@
-import { App } from './components/App';
-import { Home } from './containers/Home/Home';
-import { NotFoundPage } from './containers/NotFoundPage/NotFoundPage';
+import { App } from 'components/App';
+import { Home } from 'containers/Home/Home';
+import { NotFoundPage } from 'containers/NotFoundPage/NotFoundPage';
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
