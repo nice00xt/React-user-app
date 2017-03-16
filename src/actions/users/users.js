@@ -4,11 +4,11 @@ export function showUsers() {
 		const users = [
 		{
 			id: 1,
-			name: 'Simeone'
+			name: 'user 1'
 		},
 		{
 			id: 2,
-			name: 'Koke'
+			name: 'user 2'
 		}
 	];
 
