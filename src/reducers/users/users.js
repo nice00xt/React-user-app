@@ -1,15 +1,10 @@
 import { SHOW_USERS } from '../../constants/action-types';
-import objectAssign from 'object-assign';
 
-const initialState = {
-	list: []
-};
-
-export function showUsers (state = initialState, action) {
+export default function(state = {}, action) {
 	switch (action.type) {
 		case SHOW_USERS:
-			return objectAssign( {}, state, { list: action.payload } );
-		default:
-			return state;
+			return action.payload;
 	}
+	
+	return state;
 }
