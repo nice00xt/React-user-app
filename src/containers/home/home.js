@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import _ from 'lodash';
 import * as actions from '../../actions/users/users';
+import { Form } from '../../components/form/form';
+import { UserList } from '../../components/user-list/user-list';
 
 
 export class Home extends Component {
@@ -9,26 +10,18 @@ export class Home extends Component {
     this.props.showUsers();
   }
 
-  renderUsers () {
-		const {
-			users
-		} = this.props;
-
-		return _.map(users, (user, key) => {
-			return (
-				<li key={key}>
-					{user.name}
-				</li>
-			);
-		});
-  }
-
 	render () {
 		return (
 			<div>
 				<span>Home page</span>
 				<br/>
-				{this.renderUsers()}
+				<Form
+					createUser={this.props.createUser}
+				/>
+				<br/>
+				<UserList 
+					usersData={this.props.users}
+				/>
 			</div>
 		);
 	}
