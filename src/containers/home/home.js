@@ -2,8 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions/users/users';
 import { Form } from '../../components/form/form';
-import { UserList } from '../../components/user-list/user-list';
-
 
 export class Home extends Component {
 	componentWillMount() {
@@ -17,11 +15,9 @@ export class Home extends Component {
 				<br/>
 				<Form
 					createUser={this.props.createUser}
-				/>
-				<br/>
-				<UserList 
 					usersData={this.props.users}
 				/>
+				<br/>
 			</div>
 		);
 	}

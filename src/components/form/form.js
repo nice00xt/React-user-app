@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import * as actions from '../../actions/users/users';
 import { connect } from 'react-redux';
+import { UserList } from '../../components/user-list/user-list';
 
 export class Form extends Component {
 	constructor(props) {
@@ -14,37 +15,38 @@ export class Form extends Component {
 
 	handleFormSubmit (event) {
 		event.preventDefault();
-
-		console.log(this.state.userName);
 		this.props.createUser(this.state.userName, this.state.userLast);
 	}
 
-	handleInputChange(event) {
-    this.setState({
-			[event.target.name]: event.target.value
-    });
-  }
+  setField (e) {
+		this.setState({[e.target.name]: e.target.value});
+	}
 
 	render () {
 		const {
+			props: {
+				usersData
+			},
 			state: {
 				userName,
 				userLast
 			},
 			handleFormSubmit,
-			handleInputChange
+			setField
 		} = this;
-		
+
 		return (
 			<div>
 				Create user list
-				<form onSubmit={handleFormSubmit.bind(this)}>
+				<form 
+					onSubmit={handleFormSubmit.bind(this)} 
+					onChange={setField.bind(this)}
+				>
 					<label>name: </label>
 					<input
 						name={'userName'}
 						type="text"
 						value={userName}
-						onChange={handleInputChange.bind(this)}
 					/>
 					<br/>
 					<label>last: </label>
@@ -52,17 +54,20 @@ export class Form extends Component {
 						name={'userLast'}
 						type="text"
 						value={userLast}
-						onChange={handleInputChange.bind(this)}
 					/>
 					<button action="submit">Save</button>
 				</form>
+				<UserList
+					usersData={usersData}
+				/>
 			</div>
 		);
 	}
 }
 
 Form.propTypes = {
-  createUser: PropTypes.func
+  createUser: PropTypes.func,
+  usersData: PropTypes.object
 };
 
 export default connect(null, actions)(Form);
