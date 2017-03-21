@@ -1,5 +1,6 @@
 import Firebase from 'firebase';
-import { 
+import {
+	CREATE_USER,
 	SHOW_USERS
 } from '../../constants/action-types';
 
@@ -24,12 +25,38 @@ export function showUsers () {
 	};
 }
 
+const createUserList = () => {
+	return {
+		type: CREATE_USER
+	};
+};
+
+const addUserList = (user, last) => {
+	return {
+		type: CREATE_USER,
+		payload: {
+			name: user,
+			last: last
+		}
+	};
+};
 
 export function createUser (user, last) {
 	return dispatch => {
-		data.ref('/').push({
-			name: user,
-			last: last
-		});
+    dispatch(createUserList());
+    const guestsRef = data.ref('/');
+    guestsRef.push({
+      name: user,
+      last: last
+    })
+    .then(() => {
+      dispatch(addUserList(user, last));
+    });
+  };
+} 
+
+export function removeUser (key) {
+	return dispatch => {
+		data.ref('/').child(key).remove();
 	};
 } 

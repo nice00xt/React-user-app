@@ -24,6 +24,8 @@ export class Home extends Component {
 }
 
 Home.propTypes = {
+	createUser: PropTypes.func,
+	showUsers: PropTypes.func,
   users: PropTypes.object
 };
 

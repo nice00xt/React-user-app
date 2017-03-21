@@ -1,31 +1,31 @@
 import React, { Component, PropTypes } from 'react';
-import _ from 'lodash';
+import { connect } from 'react-redux';
+import * as actions from '../../actions/users/users';
 
 export class UserList extends Component {
-  renderUsers () {
-		const {
-			usersData
-		} = this.props;
-
-		return _.map(usersData, (user, key) => {
-			return (
-				<li key={key}>
-					{user.name}
-				</li>
-			);
-		});
+	handleClick() {
+    this.props.removeUser(this.props.id);
   }
 
 	render () {
+		const {
+			user
+		} = this.props;
+
 		return (
 			<div>
-				<h4>User List</h4>
-				{this.renderUsers()}
+				<span>{user.name} </span>
+				<span>{user.last} </span>
+				<button onClick={this.handleClick.bind(this)}>Remove</button>
 			</div>
 		);
 	}
 }
 
 UserList.propTypes = {
-  usersData: PropTypes.object
+  user: PropTypes.object,
+  removeUser: PropTypes.func,
+  id: PropTypes.string
 };
+
+export default connect(null, actions)(UserList);

@@ -1,17 +1,16 @@
 import React, { Component, PropTypes } from 'react';
-import * as actions from '../../actions/users/users';
-import { connect } from 'react-redux';
-import { UserList } from '../../components/user-list/user-list';
+import _ from 'lodash';
+import UserList from '../../components/user-list/user-list';
 
 export class Form extends Component {
 	constructor(props) {
-      super(props);
-		
-      this.state = {
- 				userName: '',
- 				userLast: ''
-      };
-   }
+		super(props);
+
+		this.state = {
+			userName: '',
+			userLast: ''
+		};
+  }
 
 	handleFormSubmit (event) {
 		event.preventDefault();
@@ -19,14 +18,13 @@ export class Form extends Component {
 	}
 
   setField (e) {
-		this.setState({[e.target.name]: e.target.value});
+		this.setState({
+			[e.target.name]: e.target.value
+		});
 	}
 
 	render () {
 		const {
-			props: {
-				usersData
-			},
 			state: {
 				userName,
 				userLast
@@ -35,12 +33,24 @@ export class Form extends Component {
 			setField
 		} = this;
 
+		const renderUserList = () => {
+			return _.map(this.props.usersData, (user, key) => {
+				return (
+					<UserList
+						key={key}
+						user={user}
+						id={key}
+					/>
+				);
+			});
+		};
+
 		return (
 			<div>
 				Create user list
-				<form 
-					onSubmit={handleFormSubmit.bind(this)} 
+				<form
 					onChange={setField.bind(this)}
+					onSubmit={handleFormSubmit.bind(this)} 
 				>
 					<label>name: </label>
 					<input
@@ -57,9 +67,8 @@ export class Form extends Component {
 					/>
 					<button action="submit">Save</button>
 				</form>
-				<UserList
-					usersData={usersData}
-				/>
+				<br/>
+				{renderUserList()}
 			</div>
 		);
 	}
@@ -69,5 +78,3 @@ Form.propTypes = {
   createUser: PropTypes.func,
   usersData: PropTypes.object
 };
-
-export default connect(null, actions)(Form);
