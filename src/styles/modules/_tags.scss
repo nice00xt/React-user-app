@@ -1,0 +1,57 @@
+/**
+* Styles for tags filter, over main container
+**/
+
+.tags{
+  @extend .cf;
+  background: #FFF;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  border: 1px solid #D1DBE0;
+  clear: both;
+  margin-bottom: 18px;
+  padding: 5px 15px 0;
+  width: 100%;
+}
+
+.tags__title{
+  font-size: 12px;
+  font-weight: normal;
+  float: left;
+  margin-right: 32px;
+  margin-bottom: 5px;
+  padding: 4px 0px;
+}
+
+.tags__list{
+  float: left;
+  li{
+    background: #E7E7E7;
+    border-radius: 11px;
+    display: block;
+    float: left;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    padding: 4px 9px;
+    position: relative;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    .icon{
+      color: rgba(85,85,85,0.3);
+      line-height: 13px;
+      vertical-align: middle;
+      cursor: pointer;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      left: auto;
+      &:hover{
+        color:#333;
+      }
+    }
+  }
+}
+
+.tag__name{
+  padding-right: 10px;
+}

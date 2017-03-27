@@ -1,0 +1,65 @@
+/**
+* General styles for widget section
+**/
+
+.widget-section{
+  min-height: 80px;
+  padding-bottom: 40px;
+  position: absolute;
+  width: 160px;
+  .accordion__title{
+    .ui-accordion-header-icon{
+      color: #FFF;
+    }
+    &.ui-accordion-header-active{
+      border: none;
+      border-bottom: 0;
+    }
+  }
+  .accordion__title-name{
+    font-weight: 600;
+  }
+
+  .accordion__body{
+    background-color: #FFF;
+    &.ui-accordion-content-active{
+      border: 1px solid #D1DBE0;
+      border-top: 1px solid #D1DBE0;
+    }
+  }
+
+  &:hover{
+    min-width: 160px;
+  }
+  &.left{
+    &.accordion-wrapper{
+      left: -180px;
+      right: auto;
+    }
+  }
+  &.right{
+    &.accordion-wrapper{
+      top:0;
+      right: -180px;
+      left: auto;
+    }
+  }
+}
+
+.widget-section-right{
+  &.empty{
+    height: 100%;
+    top:0;
+    right: -20px;
+    width: 100px;
+  }
+}
+
+.widget-section-left{
+  &.empty{
+    height: 100%;
+    top:0;
+    left: -20px;
+    width: 100px;
+  }
+}

@@ -1,0 +1,50 @@
+/**
+* General styles for nav bar on main sidebar
+**/
+
+.nav {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  &:before,
+  &:after{
+    content: " ";
+    display: table;
+  }
+  &:after{
+    clear: both;
+  }
+}
+
+.navbar-nav {
+  float: left;
+  margin: 0;
+  >li{
+    display: inline-block;
+    >a{
+      background-color: transparent;
+      border-bottom: 3px solid transparent;
+      color: #435D65;
+      font-size: 14px;
+      padding: 17px;
+      transition: all .4s;
+      .icon{
+        font-size: 9px;
+        margin-left: 5px;
+      }
+    }
+    &.active{
+      a{
+        font-weight: 600;
+      }
+    }
+    &.magic-line{
+      background: #FF6600;
+      bottom: 0px;
+      height: 3px;
+      left: 0;
+      position: absolute;
+      width: 100px;
+    }
+  }
+}

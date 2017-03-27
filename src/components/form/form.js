@@ -47,7 +47,33 @@ export class Form extends Component {
 
 		return (
 			<div>
-				Create user list
+				<section className="content">
+					<div className="content__list">
+						<div className="container">
+							<div className="status-list">
+								<div className="status-list__titles">
+									<button className="btn btn--default float--right">Add status</button>
+									<div className="clearfix" />
+									<div className="grid">
+										<div className="grid__item one-fifth">
+											<span>USER</span>
+										</div>
+										<div className="grid__item one-fifth">
+											<span>SUBMITTED</span>
+										</div> 
+										<div className="grid__item one-fifth">
+											<span>STATUS</span>
+										</div>
+										<div className="grid__item one-fifth">
+											<span>TYPE</span>
+										</div>
+									</div>
+								</div>
+								{renderUserList()}
+							</div>
+						</div>
+					</div>
+				</section>
 				<form
 					onChange={setField.bind(this)}
 					onSubmit={handleFormSubmit.bind(this)} 
@@ -67,8 +93,6 @@ export class Form extends Component {
 					/>
 					<button action="submit">Save</button>
 				</form>
-				<br/>
-				{renderUserList()}
 			</div>
 		);
 	}

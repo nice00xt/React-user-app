@@ -1,0 +1,78 @@
+/**
+* General styles for buttons
+**/
+
+.btn {
+  border-radius: 4px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 11px 13px;
+  text-align: center;
+  margin: 15px 0;
+  font-family: 'Open Sans', sans-serif;
+
+  transition: all .1s linear;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.18);
+  -moz-box-shadow:    1px 1px 5px 0px rgba(50, 50, 50, 0.18);
+  box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.18);
+}
+
+.btn--take {
+  background: white;
+  color: #4d555b;
+  margin: 12px 0;
+  padding: 8px !important;
+  font-weight: 600 !important;
+  width: 100%;
+
+  &:hover {
+    background: #00aff0;
+    color: white;
+  }
+}
+
+.btn--default {
+  color: $white;
+  background: $clr-dark-black;
+  font-weight: 600;
+  transition: opacity, 0.20s, ease;
+
+  &:hover{
+    opacity: 0.8;
+  }
+}
+
+.btn--light {
+  background: transparent;
+  border: 2px solid lighten($clr-default-green, 5%);
+  color: $clr-default-green;
+  font-size: 18px;
+  font-weight: 600;
+  transition: opacity, 0.20s, ease;
+  width: 140px;
+
+  &:hover{
+    opacity: 0.8;
+  }
+}
+
+.btn--alternative {
+  background: $clr-dark-black;
+  color: $white;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 13px;
+  transition: all, 0.20s, ease;
+  width: 218px;
+
+  &:hover{
+    opacity: 0.8;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .btn {
+    width: 100%;
+  }
+}

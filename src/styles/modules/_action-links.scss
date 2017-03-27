@@ -1,0 +1,51 @@
+/**
+* Styles for action links over main table
+**/
+
+
+.action-list{
+  float: left;
+  list-style: none;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  @media #{$gt-medium}{
+    float: right;
+  }
+  >li{
+    display: inline-block;
+    margin-left: 20px;
+    @media #{$gt-medium}{
+      margin-left: 30px;
+    }
+    &:first-child{
+      margin-left: 0;
+    }
+    .action--link{
+      cursor: default;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 10px;
+      line-height: 1.2;
+      opacity: 0.5;
+      outline: none;
+      @media #{$gt-medium}{
+        font-size: 12px;
+      }
+      &:before{
+        font-family: 'monetize';
+        font-size: 15px;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+.loaded-data{
+  .action-list{
+    .action--link{
+      opacity: 1;
+      color: $defaults-active-links;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}

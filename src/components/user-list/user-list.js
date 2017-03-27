@@ -14,9 +14,28 @@ export class UserList extends Component {
 
 		return (
 			<div>
-				<span>{user.name} </span>
-				<span>{user.last} </span>
-				<button onClick={this.handleClick.bind(this)}>Remove</button>
+				<div className="status-list__row">
+					<div className="grid">
+						<div className="grid__item one-fifth">
+							<div className="user-avatar">
+								<img src={"https://pbs.twimg.com/profile_images/439719495/seriousicon_400x400.jpg"} />
+							</div>
+							<span className="status-text">{user.name} {user.last}</span>
+						</div>
+						<div className="grid__item one-fifth">
+							<span className="status-text">12 Jun 2017</span>
+						</div>
+						<div className="grid__item one-fifth">
+							<span className="status-text">Taken</span>
+						</div>
+						<div className="grid__item one-fifth">
+							<span className="status-text">Normal</span>
+						</div>
+						<div className="grid__item one-fifth">
+							<button className="btn btn--take status-text" onClick={this.handleClick.bind(this)}>Remove</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		);
 	}

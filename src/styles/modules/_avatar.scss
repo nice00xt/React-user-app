@@ -1,0 +1,23 @@
+/**
+* Avatar styles
+**/
+
+.avatar{
+  margin: 0 auto;
+  overflow: hidden;
+  img{
+    display: block;
+    width: 100%;
+  }
+}
+
+.avatar--circle{
+  border-radius: 100%;
+}
+
+ .person__avatar{
+    width: 28px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+ }

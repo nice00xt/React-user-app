@@ -1,0 +1,723 @@
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+/**
+ * A more considered reset; more of a restart...
+ * As per: csswizardry.com/2011/10/reset-restarted
+ */
+
+    /**
+    * Let’s make the box model all nice, shall we...?
+    */
+*{
+      &,
+      &:before,
+      &:after{
+          -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+          -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+          box-sizing: border-box;         /* Opera/IE 8+ */
+      }
+  }
+
+/**
+ * The usual...
+ */
+h1,h2,h3,h4,h5,h6,
+p,blockquote,pre,
+dl,dd,ol,ul,
+form,fieldset,legend,
+table,th,td,caption,
+hr{
+    margin:0;
+    padding:0;
+}
+
+/**
+ * Give a help cursor to elements that give extra info on `:hover`.
+ */
+abbr[title],dfn[title]{
+    cursor:help;
+}
+
+/**
+ * Remove underlines from potentially troublesome elements.
+ */
+u,ins{
+    text-decoration:none;
+}
+
+/**
+ * Apply faux underline via `border-bottom`.
+ */
+ins{
+    border-bottom:1px solid;
+}
+
+/**
+ * So that `alt` text is visually offset if images don’t load.
+ */
+img{
+    font-style:italic;
+}
+
+/**
+ * Give form elements some cursor interactions...
+ */
+label,
+input,
+textarea,
+button,
+select,
+option{
+    cursor:pointer;
+}
+    .text-input:active,
+    .text-input:focus,
+    textarea:active,
+    textarea:focus{
+        cursor:text;
+        outline:none;
+    }
+
+html{
+    font:#{($font-size-base/16px)*1em}/#{$line-height-ratio} $font-family-base;
+    overflow-y:auto;
+    min-height:100%;
+    -webkit-font-smoothing: antialiased;
+    -ms-touch-action: manipulation;
+        touch-action: manipulation;
+}
+
+input{
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  font-weight: 300;
+}
+
+blockquote{
+  margin: 0;
+}
+
+
+a{
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+  &:focus{
+    outline: none;
+  }
+}
+
+/**
+ * Base colors
+ */
+
+.body-color{
+  background: #DFE8ED;
+}
+
+.nav-sidebar-bgcolor{
+  background: #435D65;
+}
+
+.sidebar-expandable-bgcolor, .tab_active{
+  background: #25373D;
+  .nav-sidebar-active{
+    color: #00A2FF;
+  }
+}
+
+.ui-accordion-header-active{
+  .ui-icon-triangle-1-s{
+    color: #00A2FF;
+  }
+}
+
+.loaded-data{
+  .action-list{
+    .action--link{
+      &:before{
+        color: #00A2FF;
+      }
+    }
+  }
+}
+
+.box-scroll__list{
+  li{
+    a{
+      &:hover{
+        background: #00A2FF;
+      }
+    }
+  }
+  &:hover{
+    border-color: #00A2FF;
+    box-shadow: 1px 1px 0px #00A2FF, -1px -1px 0px #00A2FF;
+  }
+}
+
+.state-active{
+  border-color: #00A2FF;
+}
+
+.accordion__list{
+  li{
+    background: rgba(37,55,61,0.43);
+  }
+}
+
+.rounder-borders {
+  &:before{
+    box-shadow: 4px 4px 0 #25373D;
+  }
+  &:after{
+    box-shadow: 4px -4px 0 #25373D;
+  }
+}
+
+.tabs--simple{
+  li{
+    &.active{
+      a{
+        background: #DFE8ED;
+        &:before {
+          border-top: 1px solid #DFE8ED;
+        }
+      }
+    }
+  }
+}
+
+.pagination__list{
+  li{
+    a{
+      border-color: #435D65;
+      &:hover{
+        background: #435D65;
+      }
+    }
+    &.active{
+      a{
+        background: #435D65;
+        border-color: #435D65;
+      }
+    }
+  }
+}
+
+.table{
+  thead{
+    td,th{
+      background: #435D65;
+    }
+  }
+}
+
+.accordion__title{
+  background: #435D65;
+  &.ui-accordion-header-active{
+    background: #435D65;
+    border:2px solid #00A2FF;
+    border-bottom: 0;
+  }
+}
+
+.accordion__body{
+  &.ui-accordion-content-active{
+    background: #435D65;
+    border:2px solid #00A2FF;
+    border-top: 0;
+  }
+}
+
+.modal__header{
+  background: #435D65;
+}
+
+.widget-section{
+    .accordion__title{
+      border:0;
+    }
+    .accordion__body{
+      &.ui-accordion-content-active{
+        background: #FFF;
+        border: 0;
+      }
+    }
+  }
+
+  .ksg-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    padding: 0 10px;
+  }
+
+  .ksg-main-wrapper {
+    @extend .cf;
+    background: white;
+  }
+
+  .ksg-main-header {
+    @extend .cf;
+    background: #333;
+    padding: 1.5em 0;
+  }
+
+  .ksg-logo {
+    float: left;
+  }
+
+  .ksg-main-nav {
+    float: right;
+  }
+
+  .ksg-main-nav__item {
+    display: inline-block;
+    margin-left: 1em;
+
+    a {
+      color: white;
+    }
+  }
+
+  .ksg-main-content {
+
+  }
+
+  .ksg-main-footer {
+    @extend .ksg-wrapper;
+  }
+
+  .ksg-jumbo {
+    @extend .ksg-wrapper;
+    background: #4DC394;
+    color: white;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+  }
+
+  .ksg-preview {
+    background: white;
+    border: 1px solid #CCC;
+    border-radius: 0.5em 0.5em 0 0;
+    padding: 1em;
+
+    & + .ksg-code {
+      border-top: 0 none;
+    }
+  }
+
+  .ksg-code {
+    background: #EEE;
+    border: 1px solid #CCC;
+    border-radius: 0 0 0.5em 0.5em;
+    margin-bottom: 1em;
+    padding: 1em;
+  }
+
+  .ksg-grid-system__row {
+    margin-bottom: 1em;
+
+    &.grid--full > .grid__item:nth-child(even) .ksg-grid-system__item {
+      background: rgba(77, 195, 148, 0.3);
+    }
+  }
+
+  .ksg-grid-system__item {
+    background: rgba(77, 195, 148, 0.2);
+    padding: 0.5em;
+    text-align: center;
+  }
+  /* -------------------------------------------------------------------------
+   Utility Classes
+  ---------------------------------------------------------------------------- */
+  .sg-container {
+    overflow: hidden;
+    padding: 16px 24px;
+    /* For older browsers */
+    padding: 1rem 1.5rem;
+  }
+  .sg-animated {
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+  }
+  /* -------------------------------------------------------------------------
+   Modules
+  ---------------------------------------------------------------------------- */
+  /* Headings
+  ---------------------------------------------------------------------------- */
+  .sg-h1,
+  .sg-h2,
+  .sg-h3 {
+    border-bottom: 1px solid #ddd;
+    font-weight: normal;
+    margin-bottom: 1em;
+    margin-top: 0;
+  }
+  .sg-h1 {
+    font-weight: bold;
+    padding-bottom: .2em;
+    margin-top: 1em;
+    margin-bottom: 1.25em;
+    border-bottom-width: 3px;
+  }
+  .sg-h2 {
+    margin-bottom: .5em;
+    padding-bottom: .5em;
+    text-transform: capitalize;
+    margin-top: 1.5em;
+    border-bottom-width: 2px;
+  }
+  .sg-h3 {
+    padding-bottom: .25em;
+    border-color: #eee;
+  }
+  .sg-about {
+    margin-top: 2em;
+  }
+  .row > .page-header {
+    padding-top: 2em;
+  }
+  /* Buttons
+  ---------------------------------------------------------------------------- */
+  .sg-btn {
+    float: left;
+    text-shadow: none!important;
+  }
+  .sg-btn--top {
+    float: right;
+  }
+  ul.scroll-menu {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    -ms-overflow-scrolling: touch;
+    -o-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    width: 100%;
+    max-height: 500px;
+  }
+  .dropdown-header {
+    text-transform: uppercase;
+  }
+  .sg-btn--select {
+    border-radius: 0 0.3em;
+    position: absolute;
+    right: 5px;
+    top: 14px;
+  }
+  .sg-btn--select.is-active:hover:after {
+    background: #111;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    top: 45px;
+    color: #fff;
+    content: "Selected code ready to be copied";
+    font-size: .8em;
+    display: block;
+    right: 5px;
+    padding: 5px 15px;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 98;
+  }
+  .sg-btn--select.is-active:hover:before {
+    border: solid;
+    border-color: #111 transparent;
+    border-width: 0 6px 6px 6px;
+    top: 40px;
+    content: "";
+    display: block;
+    left: 75%;
+    position: absolute;
+    z-index: 99;
+  }
+  /* Hide specific buttons for use with JS */
+  .sg-btn--source {
+    clear: both;
+  }
+  .sg-btn--source,
+  .sg-btn--select {
+    display: none;
+  }
+  /* Show specific buttons if JS enabled */
+  .js .sg-btn--source,
+  .js .sg-btn--select {
+    display: block;
+  }
+  /* Hide specific buttons conditionally */
+  .operamini .sg-btn--source,
+  .legacy .sg-btn--source {
+    display: none;
+  }
+  /* Sections
+  ---------------------------------------------------------------------------- */
+  .sg-section {
+    margin-bottom: 32px;
+    /* For older browsers */
+    margin-bottom: 3rem;
+    overflow: hidden;
+  }
+  .sg-anchor {
+    display: block;
+    padding-top: 1em;
+  }
+  /* Colors
+  ---------------------------------------------------------------------------- */
+  .sg-color {
+    background: #fff;
+    border: 1px solid #b3b3b3;
+    display: inline-block;
+    height: 80px;
+    margin: 0 .5em .5em 0;
+    padding: 5px;
+    position: relative;
+    width: 100px;
+  }
+  .sg-lg {
+    width: 140px;
+    height: 100px;
+  }
+  .sg-color-swatch {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+  .sg-color-swatch span {
+    background: #000;
+    background: rgba(0, 0, 0, 0.7);
+    bottom: 5px;
+    color: #fff;
+    font-size: .8em;
+    margin: 0;
+    opacity: 0;
+    padding: 5px 0;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    width: 88px;
+  }
+  .sg-lg .sg-color-swatch span {
+    width: 128px;
+  }
+  .sg-color-swatch:hover span {
+    opacity: 1;
+  }
+  /* -------------------------------------------------------------------------
+   Colors
+  ---------------------------------------------------------------------------- */
+  .sg-brand-primary .sg-color-swatch {
+    background: #3F4E55;
+  }
+  .sg-gray-lighter .sg-color-swatch {
+    background: #dddddd;
+  }
+  .sg-gray-light .sg-color-swatch {
+    background: #808080;
+  }
+  .sg-gray .sg-color-swatch {
+    background: #555555;
+  }
+  .sg-gray-dark .sg-color-swatch {
+    background: #333333;
+  }
+  .sg-gray-darker .sg-color-swatch {
+    background: #222222;
+  }
+  .sg-brand-success .sg-color-swatch {
+    background: #469408;
+  }
+  .sg-brand-info .sg-color-swatch {
+    background: #029acf;
+  }
+  .sg-brand-warning .sg-color-swatch {
+    background: #9b479f;
+  }
+  .sg-brand-danger .sg-color-swatch {
+    background: #d9831f;
+  }
+  /* Fonts
+  ---------------------------------------------------------------------------- */
+  .sg-font {
+    font-size: 1.8em;
+    padding: 0 0 .2em 0;
+  }
+  .sg-font-primary {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .sg-font-secondary {
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  /* Grid
+  ---------------------------------------------------------------------------- */
+  .show-grid {
+    padding: .5em 0;
+  }
+  .show-grid div {
+    background-color: #dddddd;
+    border: 1px solid #808080;
+    padding: 0.5em;
+  }
+  /* Markup
+  ---------------------------------------------------------------------------- */
+  .sg-markup-controls {
+    overflow: hidden;
+    padding-top: 1.5em;
+    clear: both;
+  }
+  .sg-source {
+    position: relative;
+  }
+  .sg-source pre {
+    background: #333;
+    border-radius: .5em;
+    border: 1px solid #ddd;
+    color: #fff;
+    overflow-x: scroll;
+    padding: .5em .3em;
+  }
+  .sg-source pre code {
+    background: transparent;
+  }
+  .js .sg-source {
+    max-height: 0;
+    overflow: hidden;
+  }
+  .js .sg-source.is-active,
+  .operamini .sg-source,
+  .legacy .sg-source {
+    max-height: 2400px;
+  }
+  /* -------------------------------------------------------------------------
+   Prettyprint
+  ---------------------------------------------------------------------------- */
+  .pln {
+    color: #ffffff;
+  }
+  /* plain text */
+  @media screen {
+    .str,
+    .string {
+      color: #E6DB74;
+    }
+    /* string content */
+    .kwd,
+    .keyword {
+      color: #66D9EF;
+    }
+    /* a keyword */
+    .com,
+    .comment {
+      color: #75715E;
+    }
+    /* a comment */
+    .typ {
+      color: #A6E22E;
+    }
+    /* a type name */
+    .lit,
+    .number {
+      color: #AE81FF;
+    }
+    /* a literal value */
+    /* punctuation, lisp open bracket, lisp close bracket */
+    /* .pun, .opn, .clo { color: #660 } */
+    .tag {
+      color: #F92672;
+    }
+    /* a markup tag name */
+    .atn {
+      color: #A6E22E;
+    }
+    /* a markup attribute name */
+    .atv {
+      color: #E6DB74;
+    }
+    /* a markup attribute value */
+    /*.dec, .var { color: #606 }*/
+    /* a declaration; a variable name */
+    .fun {
+      color: #FF0000;
+    }
+    /* a function name */
+  }
+  /* Use higher contrast and text-weight for printable form. */
+  @media print, projection {
+    .str {
+      color: #006600;
+    }
+    .kwd {
+      color: #006;
+      font-weight: bold;
+    }
+    .com {
+      color: #600;
+      font-style: italic;
+    }
+    .typ {
+      color: #404;
+      font-weight: bold;
+    }
+    .lit {
+      color: #004444;
+    }
+    .pun,
+    .opn,
+    .clo {
+      color: #444400;
+    }
+    .tag {
+      color: #006;
+      font-weight: bold;
+    }
+    .atn {
+      color: #440044;
+    }
+    .atv {
+      color: #006600;
+    }
+  }
+  /* Specify class=linenums on a pre to get line numbering */
+  ol.linenums {
+    border-left: 1px solid #444;
+    margin: 0 0 0 3.3em;
+    /* IE indents via margin-left */
+    padding: 0;
+  }
+  ol.linenums li {
+    color: #bebec5;
+    line-height: 1.5;
+    padding-left: .8em;
+  }
+  /* -------------------------------------------------------------------------
+   Legacy IE
+  ---------------------------------------------------------------------------- */
+  /**
+   * IE 7 Fixes
+   */
+  .sg-color {
+    *display: inline;
+    zoom: 1;
+  }
+  /* End IE 7 Fixes */
+  /**
+   * IE 6 Fixes
+   */
+  pre {
+    _white-space: pre;
+    _white-space: pre-wrap;
+    _word-wrap: break-word;
+  }
+  /* End IE 6 Fixes */
+

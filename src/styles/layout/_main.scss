@@ -1,0 +1,135 @@
+body {
+  background: $clr-grey;
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1025px;
+  padding: 0 10px;
+  position: relative;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.content {
+  &__list {
+    margin-left:-5%;
+    margin-right: -5%;
+    padding: 17px 0;
+    width: 110%;
+
+    -webkit-box-shadow: inset 0 20px 20px -30px rgba(0,0,0,0.8);
+    -moz-box-shadow: inset 0 20px 20px -30px rgba(0,0,0,0.8);
+    box-shadow: inset 0 20px 20px -30px rgba(0,0,0,0.8);
+  }
+
+  &__list-header { padding: 30px 0 12px; }
+
+  &__tabs-title {
+    display: inline-block;
+    list-style: none;
+    margin-right: 20px;
+    padding: 20px 0;
+
+    a {
+      color: $clr-smoke-grey;
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+    &:hover a {
+      color: $clr-noir-grey;
+    }
+
+    &--active {
+      @extend .content__tabs-title;
+      border-bottom: 2px solid $clr-default-blue;
+    }
+  }
+}
+
+.banner {
+  background: $clr-default-blue;
+  color: white;
+  font-weight: 400;
+
+  &__logo {
+    padding: 20px 0;
+  }
+}
+
+.background {
+  &--grey { background: $clr-grey; }
+
+  &--white { background: $white; }
+}
+
+.content-title {
+  color: $clr-dark-grey;
+  font-weight: 300;
+
+  &--blue {
+    @extend .content-title;
+    color: $clr-default-blue;
+  }
+}
+
+.user-avatar {
+  float: left;
+  margin: 8px 8px 0 0;
+
+  img {
+    border-radius: 100%;
+    border: 2px solid white;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.18);
+    -moz-box-shadow:    1px 1px 5px 0px rgba(50, 50, 50, 0.18);
+    box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.18);
+  }
+
+  &--taken {
+    @extend .user-avatar;
+  }
+}
+
+.status-list {
+  .status-text {
+    color: #697f8a;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 16px 0;
+
+    &--free {
+      @extend .status-text;
+      color: $clr-default-green;
+    }
+  }
+
+  &__titles {
+    span {
+      color: $clr-dark-grey;
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      padding-bottom: 5px;
+    }
+  }
+
+  &__titles,
+  &__row {
+    border-bottom: 1px solid $clr-light-grey;
+    padding: 12px 0;
+  }
+}

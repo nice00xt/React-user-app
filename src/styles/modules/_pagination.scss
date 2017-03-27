@@ -1,0 +1,38 @@
+/**
+* General styles for pagination
+**/
+
+.pagination__list{
+  @extend .cf;
+  position: relative;
+  z-index: 10;
+  li{
+    display: block;
+    float: left;
+    margin-right: 4px;
+    text-align: center;
+    a{
+      background: transparent;
+      border: 1px solid;
+      border-radius: 100%;
+      display: block;
+      height: 24px;
+      line-height: 21px;
+      transition: background 0.3s ease;
+      width: 24px;
+      &:hover{
+        color: $white;
+      }
+    }
+    i{
+      padding-left: 2px;
+      line-height: 23px;
+    }
+    &.active{
+      a{
+        color: $white;
+        cursor: default;
+      }
+    }
+  }
+}

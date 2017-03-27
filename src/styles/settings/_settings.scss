@@ -1,0 +1,281 @@
+/*------------------------------------*\
+    $DEFAULTS
+\*------------------------------------*/
+/**
+ * inuit.css’ default variables. Redefine these in your `_vars.scss` file (found
+ * in the inuit.css-web-template) to override them.
+ */
+
+
+
+
+
+/*------------------------------------*\
+    $DEBUG
+\*------------------------------------*/
+/**
+ * Debug mode will visually highlight any potential markup/accessibility quirks
+ * in the browser. Set to `true` or `false`.
+ */
+$debug-mode:        false!default;
+
+
+
+
+
+/*------------------------------------*\
+    $BORDER-BOX
+\*------------------------------------*/
+/**
+ * Do you want all elements to adopt `box-sizing:border-box;` as per
+ * paulirish.com/2012/box-sizing-border-box-ftw ?
+ */
+$global-border-box: true!default;
+
+
+
+
+
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+/**
+ * Base stuff
+ */
+$base-font-size:    15px!default;
+$base-line-height:  24px!default;
+
+/**
+ * Base font-family.
+ */
+$base-font-family: 'lato'!default;
+
+/**
+ * Default colour for objects’ borders etc.
+ */
+$base-ui-color:     $clr-grey!default;
+
+
+
+
+
+/*------------------------------------*\
+    $RESPONSIVE
+\*------------------------------------*/
+/**
+ * Responsiveness?
+ */
+$responsive:        true!default;
+
+/**
+ * Responsiveness for widescreen/high resolution desktop monitors and beyond?
+ * Note: `$responsive` variable above must be set to true before enabling this.
+ */
+$responsive-extra:  false!default;
+
+/**
+ * Responsive push and pull produce a LOT of code, only turn them on if you
+ * definitely need them.
+ */
+$push:              false!default;
+/**
+ * Note: `$push` variable above must be set to true before enabling these.
+ */
+$palm-push:         false!default;
+$lap-push:          false!default;
+$lap-and-up-push:   false!default;
+$portable-push:     false!default;
+$desk-push:         false!default;
+
+$pull:              false!default;
+/**
+ * Note: `$pull` variable above must be set to true before enabling these.
+ */
+$palm-pull:         false!default;
+$lap-pull:          false!default;
+$lap-and-up-pull:   false!default;
+$portable-pull:     false!default;
+$desk-pull:         false!default;
+
+/**
+ * Tell inuit.css when breakpoints start.
+ */
+$lap-start:         481px!default;
+$desk-start:        1024px!default;
+$desk-wide-start:   1200px!default;
+
+
+
+
+
+/*------------------------------------*\
+    $FONT-SIZES
+\*------------------------------------*/
+/**
+ * Font-sizes (in pixels). Refer to relevant sections for their implementations.
+ */
+$giga-size:         96px!default;
+$mega-size:         72px!default;
+$kilo-size:         48px!default;
+
+$h1-size:           42px!default; // .alpha
+$h2-size:           32px!default; // .beta
+$h3-size:           24px!default; // .gamma
+$h4-size:           20px!default; // .delta
+$h5-size:           16px!default; // .epsilon
+$h6-size:           14px!default; // .zeta
+
+$milli-size:        12px!default;
+$micro-size:        10px!default;
+
+
+
+
+
+/*------------------------------------*\
+    $BEAUTONS
+\*------------------------------------*/
+/**
+ * Set the background colors for beauton button functions.
+ */
+$beautons:              #2c77ba!default;
+$beautons-positive:     #4a993e!default;
+$beautons-negative:     #b33630!default;
+$beautons-inactive:     #ddd!default;
+
+
+
+
+
+/*------------------------------------*\
+    $QUOTES
+\*------------------------------------*/
+/**
+ * English quote marks?
+ */
+$english-quotes:    true!default;
+
+/**
+ * If you want English quotes then please do not edit these; they’re only here
+ * because Sass needs them.
+ */
+$open-quote:    null;
+$close-quote:   null;
+
+/**
+ * If you need non-English quotes, please alter the following values accordingly:
+ */
+@if $english-quotes != true{
+    $open-quote:    \00AB;
+    $close-quote:   \00BB;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $BRAND
+\*------------------------------------*/
+/**
+ * Brand stuff
+ */
+$brand-color:       #4a8ec2!default;
+$brand-face:        "Helvetica Neue", sans-serif!default;
+
+/**
+ * How big would you like round corners to be by default?
+ */
+$brand-round:        4px!default;
+
+
+/*------------------------------------*\
+    $FRAMEWORK
+\*------------------------------------*/
+/**
+ * inuit.css will work these next ones out for use within the framework.
+ *
+ * Assign our `$base-line-height` to a new spacing var for more transparency.
+ */
+$base-spacing-unit: $base-line-height!default;
+$half-spacing-unit: $base-spacing-unit / 2!default;
+$line-height-ratio: $base-line-height / $base-font-size;
+
+// Line Height
+$font-size-base:    12px!default;
+$line-height-base:  16px!default;
+
+// Font Family
+$font-family-serif        : 'Roboto Slab', serif !default;
+$font-family-sans-serif   : 'Open Sans', sans-serif !default;
+$font-family-base         : $font-family-sans-serif;
+$font-family-alternative  : $font-family-serif;
+
+// Colors
+
+$white                        : #FFF;
+// $body-bgcolor                 : #DFE8ED;
+// $nav-sidebar                  : #435D65;
+// $nav-sidebar-active           : #00A2FF;
+// $sidebar-expandable-bgcolor   : #25373D;
+// $accordion-active-bg          : #1F496B;
+$accordion-item-bg            : rgba(37,55,61,0.43);
+$table-td-bg                  : #DFE8ED;
+
+$defaults-active-links		  : #435D65;
+
+
+// Spacing units
+$base-spacing-unit:       $line-height-base!default;
+$half-spacing-unit:       $base-spacing-unit / 2!default;
+$double-spacing-unit:     $base-spacing-unit * 2!default;
+$quadruple-spacing-unit:  $base-spacing-unit * 4!default;
+
+$line-height-ratio:   $line-height-base / $font-size-base;
+
+
+// Breakpoints
+$palm-start:        320px!default;
+$lap-start:         800px!default;
+$desk-start:        1024px!default;
+$desk-wide-start:   1280px!default;
+
+$screen: "only screen";
+$gt-small: "only screen and (min-width: #{$palm-start})";
+$gt-medium: "only screen and (min-width: #{$lap-start})";
+$gt-large: "only screen and (min-width: #{$desk-start})";
+$gt-extra-large: "only screen and (min-width: #{$desk-wide-start})";
+
+$wrapper-size:        1180px!default;
+$wrapper-size-small:  960px!default;
+
+
+// dropdown menu.
+$dropdown-bg: #fff !default;
+$dropdown-border:                rgba(0,0,0,.15) !default;
+$dropdown-fallback-border:       #ccc !default;
+$dropdown-divider-bg:            #e5e5e5 !default;
+$dropdown-link-color:           #22646A !default;
+$dropdown-link-hover-color:      darken(#22646A, 5%) !default;
+$dropdown-link-hover-bg:         #f5f5f5 !default;
+$dropdown-link-active-color:     blue !default;
+$dropdown-link-active-bg:        pink !default;
+$dropdown-link-disabled-color:   #22646A !default;
+$dropdown-header-color:          #22646A !default;
+$dropdown-caret-color:           #000 !default;
+
+// Z-index master list
+
+$zindex-navbar:            1000 !default;
+$zindex-dropdown:          1000 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
+$zindex-navbar-fixed:      1030 !default;
+$zindex-modal:             1040 !default;
+
+
+ $border-radius-base: 5px;
+  $line-height-base:        1.428571429;
+  $line-height-computed:    floor(($font-size-base * $line-height-base));
+
+ $line-height-computed:    floor(($font-size-base * $line-height-base));

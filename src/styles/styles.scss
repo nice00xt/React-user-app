@@ -1,3 +1,16 @@
-.body {
-	display: block;
-}
+// //misc settings
+@import 'config/settings';
+@import 'config/mixins';
+
+// //global things
+@import 'general/reset';
+@import 'layout/fonts';
+@import 'layout/main';
+
+@import 'modules/buttons';
+@import 'modules/navbar';
+@import 'modules/modals';
+
+@import 'settings/settings';
+
+@import "core/core";

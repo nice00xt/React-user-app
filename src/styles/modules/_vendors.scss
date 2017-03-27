@@ -1,0 +1,5960 @@
+@charset "UTF-8";
+/*! normalize.css v2.1.0 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Correct `block` display not defined in IE 8/9.
+ */
+/* line 11, ../../app/assets/stylesheets/core/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/*
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+/* line 30, ../../app/assets/stylesheets/core/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/*
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 41, ../../app/assets/stylesheets/core/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/*
+ * Address styling not present in IE 8/9.
+ */
+/* line 50, ../../app/assets/stylesheets/core/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 64, ../../app/assets/stylesheets/core/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+ * Remove default margin.
+ */
+/* line 74, ../../app/assets/stylesheets/core/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 86, ../../app/assets/stylesheets/core/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/*
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 94, ../../app/assets/stylesheets/core/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 108, ../../app/assets/stylesheets/core/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/*
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 117, ../../app/assets/stylesheets/core/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/*
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 125, ../../app/assets/stylesheets/core/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/*
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 134, ../../app/assets/stylesheets/core/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/*
+ * Address differences between Firefox and other browsers.
+ */
+/* line 142, ../../app/assets/stylesheets/core/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/*
+ * Address styling not present in IE 8/9.
+ */
+/* line 152, ../../app/assets/stylesheets/core/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/*
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+/* line 161, ../../app/assets/stylesheets/core/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/*
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 173, ../../app/assets/stylesheets/core/_normalize.scss */
+pre {
+  white-space: pre-wrap;
+}
+
+/*
+ * Set consistent quote types.
+ */
+/* line 181, ../../app/assets/stylesheets/core/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/*
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 189, ../../app/assets/stylesheets/core/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/*
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 197, ../../app/assets/stylesheets/core/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 205, ../../app/assets/stylesheets/core/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 209, ../../app/assets/stylesheets/core/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * Remove border when inside `a` element in IE 8/9.
+ */
+/* line 221, ../../app/assets/stylesheets/core/_normalize.scss */
+img {
+  border: 0;
+}
+
+/*
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 229, ../../app/assets/stylesheets/core/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+/* line 241, ../../app/assets/stylesheets/core/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Define consistent border, margin, and padding.
+ */
+/* line 253, ../../app/assets/stylesheets/core/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 264, ../../app/assets/stylesheets/core/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/*
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 275, ../../app/assets/stylesheets/core/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/*
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 289, ../../app/assets/stylesheets/core/_normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/*
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 301, ../../app/assets/stylesheets/core/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 314, ../../app/assets/stylesheets/core/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+/* line 326, ../../app/assets/stylesheets/core/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/*
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+/* line 336, ../../app/assets/stylesheets/core/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/*
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 348, ../../app/assets/stylesheets/core/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/*
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 360, ../../app/assets/stylesheets/core/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 369, ../../app/assets/stylesheets/core/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 380, ../../app/assets/stylesheets/core/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+/* line 393, ../../app/assets/stylesheets/core/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/**
+ * Create a fully formed type style (sizing and vertical rhythm) by passing in a
+ * single value, e.g.:
+ *
+   `@include font-size(10px);`
+ *
+ * Thanks to @redclov3r for the `line-height` Sass:
+ * twitter.com/redclov3r/status/250301539321798657
+ */
+/**
+ * Style any number of headings in one fell swoop, e.g.:
+ *
+   .foo{
+       @include headings(1, 3){
+           color:#BADA55;
+       }
+    }
+ *
+ * With thanks to @lar_zzz, @paranoida, @rowanmanning and ultimately
+ * @thierrylemoulec for refining and improving my initial mixin.
+ */
+/**
+ * Create vendor-prefixed CSS in one go, e.g.
+ *
+   `@include vendor(border-radius, 4px);`
+ *
+ */
+/**
+ * Create CSS keyframe animations for all vendors in one go, e.g.:
+ *
+   .foo{
+       @include vendor(animation, shrink 3s);
+   }
+
+   @include keyframe(shrink){
+       from{
+           font-size:5em;
+       }
+   }
+ *
+ * Courtesy of @integralist: twitter.com/integralist/status/260484115315437569
+ */
+/**
+ * Force overly long spans of text to truncate, e.g.:
+ *
+   `@include truncate(100%);`
+ *
+ * Where `$truncation-boundary` is a united measurement.
+ */
+/**
+ * CSS arrows!!! But... before you read on, you might want to grab a coffee...
+ *
+ * This mixin creates a CSS arrow on a given element. We can have the arrow
+ * appear in one of 12 locations, thus:
+ *
+ *       01    02    03
+ *    +------------------+
+ * 12 |                  | 04
+ *    |                  |
+ * 11 |                  | 05
+ *    |                  |
+ * 10 |                  | 06
+ *    +------------------+
+ *       09    08    07
+ *
+ * You pass this position in along with a desired arrow color and optional
+ * border color, for example:
+ *
+ * `@include arrow(top, left, red)`
+ *
+ * for just a single, red arrow, or:
+ *
+ * `@include arrow(bottom, center, red, black)`
+ *
+ * which will create a red triangle with a black border which sits at the bottom
+ * center of the element. Call the mixin thus:
+ *
+   .foo{
+       background-color:#BADA55;
+       border:1px solid #ACE;
+       @include arrow(top, left, #BADA55, #ACE);
+   }
+ *
+ */
+/**
+ * Media query mixin.
+ *
+ * It’s not great practice to define solid breakpoints up-front, preferring to
+ * modify your design when it needs it, rather than assuming you’ll want a
+ * change at ‘mobile’. However, as inuit.css is required to take a hands off
+ * approach to design decisions, this is the closest we can get to baked-in
+ * responsiveness. It’s flexible enough to allow you to set your own breakpoints
+ * but solid enough to be frameworkified.
+ *
+ * We define some broad breakpoints in our vars file that are picked up here
+ * for use in a simple media query mixin. Our options are:
+ *
+ * palm
+ * lap
+ * lap-and-up
+ * portable
+ * desk
+ * desk-wide
+ *
+ * Not using a media query will, naturally, serve styles to all devices.
+ *
+ * `@include media-query(palm){ [styles here] }`
+ *
+ * We work out your end points for you:
+ */
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+/**
+ * A more considered reset; more of a restart...
+ * As per: csswizardry.com/2011/10/reset-restarted
+ */
+/**
+* Let’s make the box model all nice, shall we...?
+*/
+/* line 13, ../../app/assets/stylesheets/core/_base.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+}
+
+/**
+ * The usual...
+ */
+/* line 25, ../../app/assets/stylesheets/core/_base.scss */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+table, th, td, caption,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Give a help cursor to elements that give extra info on `:hover`.
+ */
+/* line 38, ../../app/assets/stylesheets/core/_base.scss */
+abbr[title], dfn[title] {
+  cursor: help;
+}
+
+/**
+ * Remove underlines from potentially troublesome elements.
+ */
+/* line 45, ../../app/assets/stylesheets/core/_base.scss */
+u, ins {
+  text-decoration: none;
+}
+
+/**
+ * Apply faux underline via `border-bottom`.
+ */
+/* line 52, ../../app/assets/stylesheets/core/_base.scss */
+ins {
+  border-bottom: 1px solid;
+}
+
+/**
+ * So that `alt` text is visually offset if images don’t load.
+ */
+/* line 59, ../../app/assets/stylesheets/core/_base.scss */
+img {
+  font-style: italic;
+}
+
+/**
+ * Give form elements some cursor interactions...
+ */
+/* line 66, ../../app/assets/stylesheets/core/_base.scss */
+label,
+input,
+textarea,
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+/* line 74, ../../app/assets/stylesheets/core/_base.scss */
+.text-input:active,
+.text-input:focus,
+textarea:active,
+textarea:focus {
+  cursor: text;
+  outline: none;
+}
+
+/* line 82, ../../app/assets/stylesheets/core/_base.scss */
+html {
+  font: 0.75em/1.33333 "Open Sans", sans-serif;
+  overflow-y: auto;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+/* line 91, ../../app/assets/stylesheets/core/_base.scss */
+input {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 95, ../../app/assets/stylesheets/core/_base.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 99, ../../app/assets/stylesheets/core/_base.scss */
+body {
+  color: #333;
+  font-weight: 300;
+}
+
+/* line 105, ../../app/assets/stylesheets/core/_base.scss */
+blockquote {
+  margin: 0;
+}
+
+/* line 110, ../../app/assets/stylesheets/core/_base.scss */
+a {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+}
+/* line 114, ../../app/assets/stylesheets/core/_base.scss */
+a:focus {
+  outline: none;
+}
+
+/**
+ * Base colors
+ */
+/* line 123, ../../app/assets/stylesheets/core/_base.scss */
+.body-color, body {
+  background: #DFE8ED;
+}
+
+/* line 127, ../../app/assets/stylesheets/core/_base.scss */
+.nav-sidebar-bgcolor, .sidebar-container, .table thead td, .table thead th {
+  background: #435D65;
+}
+
+/* line 131, ../../app/assets/stylesheets/core/_base.scss */
+.sidebar-expandable-bgcolor, .sidebar-expandable, .sidebar__link.tab_active, .tab_active {
+  background: #25373D;
+}
+/* line 133, ../../app/assets/stylesheets/core/_base.scss */
+.sidebar-expandable-bgcolor .nav-sidebar-active, .sidebar-expandable .nav-sidebar-active, .sidebar__link.tab_active .nav-sidebar-active, .sidebar__link.tab_active .icon, .tab_active .nav-sidebar-active, .sidebar__link.tab_active .icon {
+  color: #00A2FF;
+}
+
+/* line 139, ../../app/assets/stylesheets/core/_base.scss */
+.ui-accordion-header-active .ui-icon-triangle-1-s {
+  color: #00A2FF;
+}
+
+/* line 147, ../../app/assets/stylesheets/core/_base.scss */
+.loaded-data .action-list .action--link:before {
+  color: #00A2FF;
+}
+
+/* line 157, ../../app/assets/stylesheets/core/_base.scss */
+.box-scroll__list li a:hover {
+  background: #00A2FF;
+}
+/* line 162, ../../app/assets/stylesheets/core/_base.scss */
+.box-scroll__list:hover {
+  border-color: #00A2FF;
+  box-shadow: 1px 1px 0px #00A2FF, -1px -1px 0px #00A2FF;
+}
+
+/* line 168, ../../app/assets/stylesheets/core/_base.scss */
+.state-active {
+  border-color: #00A2FF;
+}
+
+/* line 172, ../../app/assets/stylesheets/core/_base.scss */
+.btn--default {
+  background: #00A2FF;
+}
+
+/* line 177, ../../app/assets/stylesheets/core/_base.scss */
+.accordion__list li {
+  background: rgba(37, 55, 61, 0.43);
+}
+
+/* line 183, ../../app/assets/stylesheets/core/_base.scss */
+.rounder-borders:before, .sidebar__link:before {
+  box-shadow: 4px 4px 0 #25373D;
+}
+/* line 186, ../../app/assets/stylesheets/core/_base.scss */
+.rounder-borders:after, .sidebar__link:after {
+  box-shadow: 4px -4px 0 #25373D;
+}
+
+/* line 194, ../../app/assets/stylesheets/core/_base.scss */
+.tabs--simple li.active a {
+  background: #DFE8ED;
+}
+/* line 196, ../../app/assets/stylesheets/core/_base.scss */
+.tabs--simple li.active a:before {
+  border-top: 1px solid #DFE8ED;
+}
+
+/* line 206, ../../app/assets/stylesheets/core/_base.scss */
+.pagination__list li a {
+  border-color: #435D65;
+}
+/* line 208, ../../app/assets/stylesheets/core/_base.scss */
+.pagination__list li a:hover {
+  background: #435D65;
+}
+/* line 213, ../../app/assets/stylesheets/core/_base.scss */
+.pagination__list li.active a {
+  background: #435D65;
+  border-color: #435D65;
+}
+
+/* line 223, ../../app/assets/stylesheets/core/_base.scss */
+.table thead td, .table thead th {
+  background: #435D65;
+}
+
+/* line 229, ../../app/assets/stylesheets/core/_base.scss */
+.accordion__title {
+  background: #435D65;
+}
+/* line 231, ../../app/assets/stylesheets/core/_base.scss */
+.accordion__title.ui-accordion-header-active {
+  background: #435D65;
+  border: 2px solid #00A2FF;
+  border-bottom: 0;
+}
+
+/* line 239, ../../app/assets/stylesheets/core/_base.scss */
+.accordion__body.ui-accordion-content-active, .ui-accordion-content-active.widget__body {
+  background: #435D65;
+  border: 2px solid #00A2FF;
+  border-top: 0;
+}
+
+/* line 246, ../../app/assets/stylesheets/core/_base.scss */
+.modal__header {
+  background: #435D65;
+}
+
+/* line 251, ../../app/assets/stylesheets/core/_base.scss */
+.widget-section .accordion__title {
+  border: 0;
+}
+/* line 255, ../../app/assets/stylesheets/core/_base.scss */
+.widget-section .accordion__body.ui-accordion-content-active, .widget-section .ui-accordion-content-active.widget__body {
+  background: #FFF;
+  border: 0;
+}
+
+/* line 2, ../../app/assets/stylesheets/core/objects/_clearfix.scss */
+.cf:after, .media:after, .accordion__title:after, .accordion__item:after, .tags:after, .pagination__list:after, .panel__title:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 1, ../../app/assets/stylesheets/core/objects/_media.scss */
+.media {
+  display: block;
+}
+
+/* line 5, ../../app/assets/stylesheets/core/objects/_media.scss */
+.media__img {
+  float: left;
+  margin-right: 16px;
+}
+
+/**
+ * Reversed image location (right instead of left).
+ */
+/* line 12, ../../app/assets/stylesheets/core/objects/_media.scss */
+.media__img--rev {
+  float: right;
+  margin-left: 16px;
+}
+
+/* line 17, ../../app/assets/stylesheets/core/objects/_media.scss */
+.media__img img,
+.media__img--rev img {
+  display: block;
+}
+
+/* line 22, ../../app/assets/stylesheets/core/objects/_media.scss */
+.media__body {
+  overflow: hidden;
+}
+
+/* line 25, ../../app/assets/stylesheets/core/objects/_media.scss */
+.media__body,
+.media__body > :last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * `.img`s in `.islet`s need an appropriately sized margin.
+ */
+/* line 34, ../../app/assets/stylesheets/core/objects/_media.scss */
+.islet .media__img {
+  margin-right: 8px;
+}
+
+/* line 37, ../../app/assets/stylesheets/core/objects/_media.scss */
+.islet .media__img--rev {
+  margin-left: 8px;
+}
+
+/*------------------------------------*\
+    $CSSWIZARDRY-GRIDS
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * INTRODUCTION.........How the grid system works.
+ * VARIABLES............Your settings.
+ * MIXINS...............Library mixins.
+ * GRID SETUP...........Build the grid structure.
+ * WIDTHS...............Build our responsive widths around our breakpoints.
+ * PUSH.................Push classes.
+ * PULL.................Pull classes.
+ */
+/*------------------------------------*\
+    $INTRODUCTION
+\*------------------------------------*/
+/**
+ * csswizardry grids provides you with widths to suit a number of breakpoints
+ * designed around devices of a size you specify. Out of the box, csswizardry
+ * grids caters to the following types of device:
+ *
+ * palm     --  palm-based devices, like phones and small tablets
+ * lap      --  lap-based devices, like iPads or laptops
+ * portable --  all of the above
+ * desk     --  stationary devices, like desktop computers
+ * regular  --  any/all types of device
+ *
+ * These namespaces are then used in the library to give you the ability to
+ * manipulate your layouts based around them, for example:
+ *
+   <div class="grid__item  one-whole  lap--one-half  desk--one-third">
+ *
+ * This would give you a grid item which is 100% width unless it is on a lap
+ * device, at which point it become 50% wide, or it is on a desktop device, at
+ * which point it becomes 33.333% width.
+ *
+ * csswizardry grids also has push and pull classes which allow you to nudge
+ * grid items left and right by a defined amount. These follow the same naming
+ * convention as above, but are prepended by either `push--` or `pull--`, for
+ * example:
+ *
+   `class="grid__item  one-half  push--one-half"`
+ *
+ * This would give you a grid item which is 50% width and pushed over to the
+ * right by 50%.
+ *
+ * All classes in csswizardry grids follow this patten, so you should fairly
+ * quickly be able to piece together any combinations you can imagine, for
+ * example:
+ *
+   `class="grid__item  one-whole  lap--one-half  desk--one-third  push--desk--one-third"`
+ *
+   `class="grid__item  one-quarter  palm--one-half  push--palm--one-half"`
+ *
+   `class="grid__item  palm--one-third  desk--five-twelfths"`
+ */
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+/**
+ * If you are building a non-responsive site but would still like to use
+ * csswizardry-grids, set this to ‘false’:
+ */
+/**
+ * Is this build mobile first? Setting to ‘true’ means that all grids will be
+ * 100% width if you do not apply a more specific class to them.
+ */
+/**
+ * Set the spacing between your grid items.
+ */
+/**
+ * Would you like Sass’ silent classes, or regular CSS classes?
+ */
+/**
+ * Would you like push and pull classes enabled?
+ */
+/**
+ * Using `inline-block` means that the grid items need their whitespace removing
+ * in order for them to work correctly. Set the following to true if you are
+ * going to achieve this by manually removing/commenting out any whitespace in
+ * your HTML yourself.
+ *
+ * Setting this to false invokes a hack which cannot always be guaranteed,
+ * please see the following for more detail:
+ *
+ * github.com/csswizardry/csswizardry-grids/commit/744d4b23c9d2b77d605b5991e54a397df72e0688
+ * github.com/csswizardry/inuit.css/issues/170#issuecomment-14859371
+ */
+/**
+ * Define your breakpoints. The first value is the prefix that shall be used for
+ * your classes (e.g. `.palm--one-half`), the second value is the media query
+ * that the breakpoint fires at.
+ */
+/**
+ * Define which namespaced breakpoints you would like to generate for each of
+ * widths, push and pull. This is handy if you only need pull on, say, desk, or
+ * you only need a new width breakpoint at mobile sizes. It allows you to only
+ * compile as much CSS as you need. All are turned on by default, but you can
+ * add and remove breakpoints at will.
+ *
+ * Push and pull shall only be used if `$push` and/or `$pull` and `$responsive`
+ * have been set to ‘true’.
+ */
+/**
+ * You do not need to edit anything from this line onward; csswizardry-grids is
+ * good to go. Happy griddin’!
+ */
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/**
+ * These mixins are for the library to use only, you should not need to modify
+ * them at all.
+ *
+ * Enclose a block of code with a media query as named in `$breakpoints`.
+ */
+/**
+ * Drop relative positioning into silent classes which can’t take advantage of
+ * the `[class*="push--"]` and `[class*="pull--"]` selectors.
+ */
+/*------------------------------------*\
+    $GRID SETUP
+\*------------------------------------*/
+/**
+ * 1. Allow the grid system to be used on lists.
+ * 2. Remove any margins and paddings that might affect the grid system.
+ * 3. Apply a negative `margin-left` to negate the columns’ gutters.
+ */
+/* line 207, ../../app/assets/stylesheets/core/_grids.scss */
+.grid {
+  list-style: none;
+  /* [1] */
+  margin: 0;
+  /* [2] */
+  padding: 0;
+  /* [2] */
+  margin-left: -20px;
+  /* [3] */
+}
+
+/**
+ * 1. Cause columns to stack side-by-side.
+ * 2. Space columns apart.
+ * 3. Align columns to the tops of each other.
+ * 4. Full-width unless told to behave otherwise.
+ * 5. Required to combine fluid widths and fixed gutters.
+ */
+/* line 233, ../../app/assets/stylesheets/core/_grids.scss */
+.grid__item {
+  display: inline-block;
+  /* [1] */
+  padding-left: 20px;
+  /* [2] */
+  vertical-align: top;
+  /* [3] */
+  width: 100%;
+  /* [4] */
+  -webkit-box-sizing: border-box;
+  /* [5] */
+  -moz-box-sizing: border-box;
+  /* [5] */
+  box-sizing: border-box;
+  /* [5] */
+}
+/* line 237, ../../app/assets/stylesheets/core/_grids.scss */
+.grid__item > :last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * Reversed grids allow you to structure your source in the opposite order to
+ * how your rendered layout will appear. Extends `.grid`.
+ */
+/* line 257, ../../app/assets/stylesheets/core/_grids.scss */
+.grid--rev {
+  direction: rtl;
+  text-align: left;
+}
+/* line 261, ../../app/assets/stylesheets/core/_grids.scss */
+.grid--rev > .grid__item {
+  direction: ltr;
+  text-align: left;
+}
+
+/**
+ * Gutterless grids have all the properties of regular grids, minus any spacing.
+ * Extends `.grid`.
+ */
+/* line 272, ../../app/assets/stylesheets/core/_grids.scss */
+.grid--full {
+  margin-left: 0;
+}
+/* line 275, ../../app/assets/stylesheets/core/_grids.scss */
+.grid--full > .grid__item {
+  padding-left: 0;
+}
+
+/**
+ * Align the entire grid to the right. Extends `.grid`.
+ */
+/* line 284, ../../app/assets/stylesheets/core/_grids.scss */
+.grid--right {
+  text-align: right;
+}
+/* line 287, ../../app/assets/stylesheets/core/_grids.scss */
+.grid--right > .grid__item {
+  text-align: left;
+}
+
+/**
+ * Centered grids align grid items centrally without needing to use push or pull
+ * classes. Extends `.grid`.
+ */
+/* line 297, ../../app/assets/stylesheets/core/_grids.scss */
+.grid--center {
+  text-align: center;
+}
+/* line 299, ../../app/assets/stylesheets/core/_grids.scss */
+.grid--center > .grid__item {
+  text-align: left;
+}
+
+/**
+ * Align grid cells vertically (`.grid--middle` or `.grid--bottom`). Extends
+ * `.grid`.
+ */
+/* line 311, ../../app/assets/stylesheets/core/_grids.scss */
+.grid--middle > .grid__item {
+  vertical-align: middle;
+}
+
+/* line 318, ../../app/assets/stylesheets/core/_grids.scss */
+.grid--bottom > .grid__item {
+  vertical-align: bottom;
+}
+
+/* line 323, ../../app/assets/stylesheets/core/_grids.scss */
+.grid--table {
+  display: table;
+}
+/* line 325, ../../app/assets/stylesheets/core/_grids.scss */
+.grid--table > .grid__item {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/**
+ * Create grids with narrower gutters. Extends `.grid`.
+ */
+/* line 335, ../../app/assets/stylesheets/core/_grids.scss */
+.grid--narrow {
+  margin-left: -10px;
+}
+/* line 338, ../../app/assets/stylesheets/core/_grids.scss */
+.grid--narrow > .grid__item {
+  padding-left: 10px;
+}
+
+/**
+ * Create grids with wider gutters. Extends `.grid`.
+ */
+/* line 347, ../../app/assets/stylesheets/core/_grids.scss */
+.grid--wide {
+  margin-left: -40px;
+}
+/* line 350, ../../app/assets/stylesheets/core/_grids.scss */
+.grid--wide > .grid__item {
+  padding-left: 40px;
+}
+
+/*------------------------------------*\
+    $WIDTHS
+\*------------------------------------*/
+/**
+ * Create our width classes, prefixed by the specified namespace.
+ */
+/**
+ * Our regular, non-responsive width classes.
+ */
+/**
+ * Whole
+ */
+/* line 371, ../../app/assets/stylesheets/core/_grids.scss */
+.one-whole {
+  width: 100%;
+}
+
+/**
+ * Halves
+ */
+/* line 377, ../../app/assets/stylesheets/core/_grids.scss */
+.one-half, .two-quarters, .three-sixths, .four-eighths, .five-tenths, .six-twelfths {
+  width: 50%;
+}
+
+/**
+ * Thirds
+ */
+/* line 383, ../../app/assets/stylesheets/core/_grids.scss */
+.one-third, .two-sixths, .four-twelfths {
+  width: 33.333%;
+}
+
+/* line 384, ../../app/assets/stylesheets/core/_grids.scss */
+.two-thirds, .four-sixths, .eight-twelfths {
+  width: 66.666%;
+}
+
+/**
+ * Quarters
+ */
+/* line 390, ../../app/assets/stylesheets/core/_grids.scss */
+.one-quarter, .two-eighths, .three-twelfths {
+  width: 25%;
+}
+
+/* line 392, ../../app/assets/stylesheets/core/_grids.scss */
+.three-quarters, .six-eighths, .nine-twelfths {
+  width: 75%;
+}
+
+/**
+ * Fifths
+ */
+/* line 398, ../../app/assets/stylesheets/core/_grids.scss */
+.one-fifth, .two-tenths {
+  width: 20%;
+}
+
+/* line 399, ../../app/assets/stylesheets/core/_grids.scss */
+.two-fifths, .four-tenths {
+  width: 40%;
+}
+
+/* line 400, ../../app/assets/stylesheets/core/_grids.scss */
+.three-fifths, .six-tenths {
+  width: 60%;
+}
+
+/* line 401, ../../app/assets/stylesheets/core/_grids.scss */
+.four-fifths, .eight-tenths {
+  width: 80%;
+}
+
+/**
+ * Sixths
+ */
+/* line 407, ../../app/assets/stylesheets/core/_grids.scss */
+.one-sixth, .two-twelfths {
+  width: 16.666%;
+}
+
+/* line 411, ../../app/assets/stylesheets/core/_grids.scss */
+.five-sixths, .ten-twelfths {
+  width: 83.333%;
+}
+
+/**
+ * Eighths
+ */
+/* line 417, ../../app/assets/stylesheets/core/_grids.scss */
+.one-eighth {
+  width: 12.5%;
+}
+
+/* line 419, ../../app/assets/stylesheets/core/_grids.scss */
+.three-eighths {
+  width: 37.5%;
+}
+
+/* line 421, ../../app/assets/stylesheets/core/_grids.scss */
+.five-eighths {
+  width: 62.5%;
+}
+
+/* line 423, ../../app/assets/stylesheets/core/_grids.scss */
+.seven-eighths {
+  width: 87.5%;
+}
+
+/**
+ * Tenths
+ */
+/* line 429, ../../app/assets/stylesheets/core/_grids.scss */
+.one-tenth {
+  width: 10%;
+}
+
+/* line 431, ../../app/assets/stylesheets/core/_grids.scss */
+.three-tenths {
+  width: 30%;
+}
+
+/* line 435, ../../app/assets/stylesheets/core/_grids.scss */
+.seven-tenths {
+  width: 70%;
+}
+
+/* line 437, ../../app/assets/stylesheets/core/_grids.scss */
+.nine-tenths {
+  width: 90%;
+}
+
+/**
+ * Twelfths
+ */
+/* line 443, ../../app/assets/stylesheets/core/_grids.scss */
+.one-twelfth {
+  width: 8.333%;
+}
+
+/* line 447, ../../app/assets/stylesheets/core/_grids.scss */
+.five-twelfths {
+  width: 41.666%;
+}
+
+/* line 449, ../../app/assets/stylesheets/core/_grids.scss */
+.seven-twelfths {
+  width: 58.333%;
+}
+
+/* line 453, ../../app/assets/stylesheets/core/_grids.scss */
+.eleven-twelfths {
+  width: 91.666%;
+}
+
+/**
+ * Our responsive classes, if we have enabled them.
+ */
+@media only screen and (max-width: 480px) {
+  /**
+   * Whole
+   */
+  /* line 371, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--one-whole {
+    width: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /* line 377, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--one-half, .palm--two-quarters, .palm--three-sixths, .palm--four-eighths, .palm--five-tenths, .palm--six-twelfths {
+    width: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /* line 383, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--one-third, .palm--two-sixths, .palm--four-twelfths {
+    width: 33.333%;
+  }
+
+  /* line 384, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--two-thirds, .palm--four-sixths, .palm--eight-twelfths {
+    width: 66.666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /* line 390, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--one-quarter, .palm--two-eighths, .palm--three-twelfths {
+    width: 25%;
+  }
+
+  /* line 392, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--three-quarters, .palm--six-eighths, .palm--nine-twelfths {
+    width: 75%;
+  }
+
+  /**
+   * Fifths
+   */
+  /* line 398, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--one-fifth, .palm--two-tenths {
+    width: 20%;
+  }
+
+  /* line 399, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--two-fifths, .palm--four-tenths {
+    width: 40%;
+  }
+
+  /* line 400, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--three-fifths, .palm--six-tenths {
+    width: 60%;
+  }
+
+  /* line 401, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--four-fifths, .palm--eight-tenths {
+    width: 80%;
+  }
+
+  /**
+   * Sixths
+   */
+  /* line 407, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--one-sixth, .palm--two-twelfths {
+    width: 16.666%;
+  }
+
+  /* line 411, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--five-sixths, .palm--ten-twelfths {
+    width: 83.333%;
+  }
+
+  /**
+   * Eighths
+   */
+  /* line 417, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--one-eighth {
+    width: 12.5%;
+  }
+
+  /* line 419, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--three-eighths {
+    width: 37.5%;
+  }
+
+  /* line 421, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--five-eighths {
+    width: 62.5%;
+  }
+
+  /* line 423, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--seven-eighths {
+    width: 87.5%;
+  }
+
+  /**
+   * Tenths
+   */
+  /* line 429, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--one-tenth {
+    width: 10%;
+  }
+
+  /* line 431, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--three-tenths {
+    width: 30%;
+  }
+
+  /* line 435, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--seven-tenths {
+    width: 70%;
+  }
+
+  /* line 437, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--nine-tenths {
+    width: 90%;
+  }
+
+  /**
+   * Twelfths
+   */
+  /* line 443, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--one-twelfth {
+    width: 8.333%;
+  }
+
+  /* line 447, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--five-twelfths {
+    width: 41.666%;
+  }
+
+  /* line 449, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--seven-twelfths {
+    width: 58.333%;
+  }
+
+  /* line 453, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--eleven-twelfths {
+    width: 91.666%;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  /**
+   * Whole
+   */
+  /* line 371, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--one-whole {
+    width: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /* line 377, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--one-half, .lap--two-quarters, .lap--three-sixths, .lap--four-eighths, .lap--five-tenths, .lap--six-twelfths {
+    width: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /* line 383, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--one-third, .lap--two-sixths, .lap--four-twelfths {
+    width: 33.333%;
+  }
+
+  /* line 384, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--two-thirds, .lap--four-sixths, .lap--eight-twelfths {
+    width: 66.666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /* line 390, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--one-quarter, .lap--two-eighths, .lap--three-twelfths {
+    width: 25%;
+  }
+
+  /* line 392, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--three-quarters, .lap--six-eighths, .lap--nine-twelfths {
+    width: 75%;
+  }
+
+  /**
+   * Fifths
+   */
+  /* line 398, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--one-fifth, .lap--two-tenths {
+    width: 20%;
+  }
+
+  /* line 399, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--two-fifths, .lap--four-tenths {
+    width: 40%;
+  }
+
+  /* line 400, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--three-fifths, .lap--six-tenths {
+    width: 60%;
+  }
+
+  /* line 401, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--four-fifths, .lap--eight-tenths {
+    width: 80%;
+  }
+
+  /**
+   * Sixths
+   */
+  /* line 407, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--one-sixth, .lap--two-twelfths {
+    width: 16.666%;
+  }
+
+  /* line 411, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--five-sixths, .lap--ten-twelfths {
+    width: 83.333%;
+  }
+
+  /**
+   * Eighths
+   */
+  /* line 417, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--one-eighth {
+    width: 12.5%;
+  }
+
+  /* line 419, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--three-eighths {
+    width: 37.5%;
+  }
+
+  /* line 421, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--five-eighths {
+    width: 62.5%;
+  }
+
+  /* line 423, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--seven-eighths {
+    width: 87.5%;
+  }
+
+  /**
+   * Tenths
+   */
+  /* line 429, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--one-tenth {
+    width: 10%;
+  }
+
+  /* line 431, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--three-tenths {
+    width: 30%;
+  }
+
+  /* line 435, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--seven-tenths {
+    width: 70%;
+  }
+
+  /* line 437, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--nine-tenths {
+    width: 90%;
+  }
+
+  /**
+   * Twelfths
+   */
+  /* line 443, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--one-twelfth {
+    width: 8.333%;
+  }
+
+  /* line 447, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--five-twelfths {
+    width: 41.666%;
+  }
+
+  /* line 449, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--seven-twelfths {
+    width: 58.333%;
+  }
+
+  /* line 453, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--eleven-twelfths {
+    width: 91.666%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  /**
+   * Whole
+   */
+  /* line 371, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--one-whole {
+    width: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /* line 377, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--one-half, .portable--two-quarters, .portable--three-sixths, .portable--four-eighths, .portable--five-tenths, .portable--six-twelfths {
+    width: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /* line 383, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--one-third, .portable--two-sixths, .portable--four-twelfths {
+    width: 33.333%;
+  }
+
+  /* line 384, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--two-thirds, .portable--four-sixths, .portable--eight-twelfths {
+    width: 66.666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /* line 390, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--one-quarter, .portable--two-eighths, .portable--three-twelfths {
+    width: 25%;
+  }
+
+  /* line 392, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--three-quarters, .portable--six-eighths, .portable--nine-twelfths {
+    width: 75%;
+  }
+
+  /**
+   * Fifths
+   */
+  /* line 398, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--one-fifth, .portable--two-tenths {
+    width: 20%;
+  }
+
+  /* line 399, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--two-fifths, .portable--four-tenths {
+    width: 40%;
+  }
+
+  /* line 400, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--three-fifths, .portable--six-tenths {
+    width: 60%;
+  }
+
+  /* line 401, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--four-fifths, .portable--eight-tenths {
+    width: 80%;
+  }
+
+  /**
+   * Sixths
+   */
+  /* line 407, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--one-sixth, .portable--two-twelfths {
+    width: 16.666%;
+  }
+
+  /* line 411, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--five-sixths, .portable--ten-twelfths {
+    width: 83.333%;
+  }
+
+  /**
+   * Eighths
+   */
+  /* line 417, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--one-eighth {
+    width: 12.5%;
+  }
+
+  /* line 419, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--three-eighths {
+    width: 37.5%;
+  }
+
+  /* line 421, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--five-eighths {
+    width: 62.5%;
+  }
+
+  /* line 423, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--seven-eighths {
+    width: 87.5%;
+  }
+
+  /**
+   * Tenths
+   */
+  /* line 429, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--one-tenth {
+    width: 10%;
+  }
+
+  /* line 431, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--three-tenths {
+    width: 30%;
+  }
+
+  /* line 435, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--seven-tenths {
+    width: 70%;
+  }
+
+  /* line 437, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--nine-tenths {
+    width: 90%;
+  }
+
+  /**
+   * Twelfths
+   */
+  /* line 443, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--one-twelfth {
+    width: 8.333%;
+  }
+
+  /* line 447, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--five-twelfths {
+    width: 41.666%;
+  }
+
+  /* line 449, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--seven-twelfths {
+    width: 58.333%;
+  }
+
+  /* line 453, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--eleven-twelfths {
+    width: 91.666%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /**
+   * Whole
+   */
+  /* line 371, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--one-whole {
+    width: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /* line 377, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--one-half, .desk--two-quarters, .desk--three-sixths, .desk--four-eighths, .desk--five-tenths, .desk--six-twelfths {
+    width: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /* line 383, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--one-third, .desk--two-sixths, .desk--four-twelfths {
+    width: 33.333%;
+  }
+
+  /* line 384, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--two-thirds, .desk--four-sixths, .desk--eight-twelfths {
+    width: 66.666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /* line 390, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--one-quarter, .desk--two-eighths, .desk--three-twelfths {
+    width: 25%;
+  }
+
+  /* line 392, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--three-quarters, .desk--six-eighths, .desk--nine-twelfths {
+    width: 75%;
+  }
+
+  /**
+   * Fifths
+   */
+  /* line 398, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--one-fifth, .desk--two-tenths {
+    width: 20%;
+  }
+
+  /* line 399, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--two-fifths, .desk--four-tenths {
+    width: 40%;
+  }
+
+  /* line 400, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--three-fifths, .desk--six-tenths {
+    width: 60%;
+  }
+
+  /* line 401, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--four-fifths, .desk--eight-tenths {
+    width: 80%;
+  }
+
+  /**
+   * Sixths
+   */
+  /* line 407, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--one-sixth, .desk--two-twelfths {
+    width: 16.666%;
+  }
+
+  /* line 411, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--five-sixths, .desk--ten-twelfths {
+    width: 83.333%;
+  }
+
+  /**
+   * Eighths
+   */
+  /* line 417, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--one-eighth {
+    width: 12.5%;
+  }
+
+  /* line 419, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--three-eighths {
+    width: 37.5%;
+  }
+
+  /* line 421, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--five-eighths {
+    width: 62.5%;
+  }
+
+  /* line 423, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--seven-eighths {
+    width: 87.5%;
+  }
+
+  /**
+   * Tenths
+   */
+  /* line 429, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--one-tenth {
+    width: 10%;
+  }
+
+  /* line 431, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--three-tenths {
+    width: 30%;
+  }
+
+  /* line 435, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--seven-tenths {
+    width: 70%;
+  }
+
+  /* line 437, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--nine-tenths {
+    width: 90%;
+  }
+
+  /**
+   * Twelfths
+   */
+  /* line 443, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--one-twelfth {
+    width: 8.333%;
+  }
+
+  /* line 447, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--five-twelfths {
+    width: 41.666%;
+  }
+
+  /* line 449, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--seven-twelfths {
+    width: 58.333%;
+  }
+
+  /* line 453, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--eleven-twelfths {
+    width: 91.666%;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  /**
+   * Whole
+   */
+  /* line 371, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--one-whole {
+    width: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /* line 377, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--one-half, .desk-wide--two-quarters, .desk-wide--three-sixths, .desk-wide--four-eighths, .desk-wide--five-tenths, .desk-wide--six-twelfths {
+    width: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /* line 383, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--one-third, .desk-wide--two-sixths, .desk-wide--four-twelfths {
+    width: 33.333%;
+  }
+
+  /* line 384, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--two-thirds, .desk-wide--four-sixths, .desk-wide--eight-twelfths {
+    width: 66.666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /* line 390, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--one-quarter, .desk-wide--two-eighths, .desk-wide--three-twelfths {
+    width: 25%;
+  }
+
+  /* line 392, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--three-quarters, .desk-wide--six-eighths, .desk-wide--nine-twelfths {
+    width: 75%;
+  }
+
+  /**
+   * Fifths
+   */
+  /* line 398, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--one-fifth, .desk-wide--two-tenths {
+    width: 20%;
+  }
+
+  /* line 399, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--two-fifths, .desk-wide--four-tenths {
+    width: 40%;
+  }
+
+  /* line 400, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--three-fifths, .desk-wide--six-tenths {
+    width: 60%;
+  }
+
+  /* line 401, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--four-fifths, .desk-wide--eight-tenths {
+    width: 80%;
+  }
+
+  /**
+   * Sixths
+   */
+  /* line 407, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--one-sixth, .desk-wide--two-twelfths {
+    width: 16.666%;
+  }
+
+  /* line 411, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--five-sixths, .desk-wide--ten-twelfths {
+    width: 83.333%;
+  }
+
+  /**
+   * Eighths
+   */
+  /* line 417, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--one-eighth {
+    width: 12.5%;
+  }
+
+  /* line 419, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--three-eighths {
+    width: 37.5%;
+  }
+
+  /* line 421, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--five-eighths {
+    width: 62.5%;
+  }
+
+  /* line 423, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--seven-eighths {
+    width: 87.5%;
+  }
+
+  /**
+   * Tenths
+   */
+  /* line 429, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--one-tenth {
+    width: 10%;
+  }
+
+  /* line 431, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--three-tenths {
+    width: 30%;
+  }
+
+  /* line 435, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--seven-tenths {
+    width: 70%;
+  }
+
+  /* line 437, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--nine-tenths {
+    width: 90%;
+  }
+
+  /**
+   * Twelfths
+   */
+  /* line 443, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--one-twelfth {
+    width: 8.333%;
+  }
+
+  /* line 447, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--five-twelfths {
+    width: 41.666%;
+  }
+
+  /* line 449, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--seven-twelfths {
+    width: 58.333%;
+  }
+
+  /* line 453, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--eleven-twelfths {
+    width: 91.666%;
+  }
+}
+/* line 476, ../../app/assets/stylesheets/core/_grids.scss */
+.palm--visible, .palm--visible-inline {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 478, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--visible {
+    display: block;
+  }
+
+  /* line 479, ../../app/assets/stylesheets/core/_grids.scss */
+  .palm--visible-inline {
+    display: inline-block;
+  }
+}
+/* line 476, ../../app/assets/stylesheets/core/_grids.scss */
+.lap--visible, .lap--visible-inline {
+  display: none;
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  /* line 478, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--visible {
+    display: block;
+  }
+
+  /* line 479, ../../app/assets/stylesheets/core/_grids.scss */
+  .lap--visible-inline {
+    display: inline-block;
+  }
+}
+/* line 476, ../../app/assets/stylesheets/core/_grids.scss */
+.portable--visible, .portable--visible-inline {
+  display: none;
+}
+
+@media only screen and (max-width: 1023px) {
+  /* line 478, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--visible {
+    display: block;
+  }
+
+  /* line 479, ../../app/assets/stylesheets/core/_grids.scss */
+  .portable--visible-inline {
+    display: inline-block;
+  }
+}
+/* line 476, ../../app/assets/stylesheets/core/_grids.scss */
+.desk--visible, .desk--visible-inline {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  /* line 478, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--visible {
+    display: block;
+  }
+
+  /* line 479, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk--visible-inline {
+    display: inline-block;
+  }
+}
+/* line 476, ../../app/assets/stylesheets/core/_grids.scss */
+.desk-wide--visible, .desk-wide--visible-inline {
+  display: none;
+}
+
+@media only screen and (min-width: 1280px) {
+  /* line 478, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--visible {
+    display: block;
+  }
+
+  /* line 479, ../../app/assets/stylesheets/core/_grids.scss */
+  .desk-wide--visible-inline {
+    display: inline-block;
+  }
+}
+/*------------------------------------*\
+    $PUSH
+\*------------------------------------*/
+/**
+ * Push classes, to move grid items over to the right by certain amounts.
+ */
+/**
+ * Not a particularly great selector, but the DRYest way to do things.
+ */
+/* line 590, ../../app/assets/stylesheets/core/_grids.scss */
+[class*="push--"] {
+  position: relative;
+}
+
+/**
+ * Whole
+ */
+/* line 500, ../../app/assets/stylesheets/core/_grids.scss */
+.push--one-whole {
+  left: 100%;
+}
+
+/**
+ * Halves
+ */
+/* line 506, ../../app/assets/stylesheets/core/_grids.scss */
+.push--one-half, .push--two-quarters, .push--three-sixths, .push--four-eighths, .push--five-tenths, .push--six-twelfths {
+  left: 50%;
+}
+
+/**
+ * Thirds
+ */
+/* line 512, ../../app/assets/stylesheets/core/_grids.scss */
+.push--one-third, .push--two-sixths, .push--four-twelfths {
+  left: 33.333%;
+}
+
+/* line 513, ../../app/assets/stylesheets/core/_grids.scss */
+.push--two-thirds, .push--four-sixths, .push--eight-twelfths {
+  left: 66.666%;
+}
+
+/**
+ * Quarters
+ */
+/* line 519, ../../app/assets/stylesheets/core/_grids.scss */
+.push--one-quarter, .push--two-eighths, .push--three-twelfths {
+  left: 25%;
+}
+
+/* line 521, ../../app/assets/stylesheets/core/_grids.scss */
+.push--three-quarters, .push--six-eighths, .push--nine-twelfths {
+  left: 75%;
+}
+
+/**
+ * Fifths
+ */
+/* line 527, ../../app/assets/stylesheets/core/_grids.scss */
+.push--one-fifth, .push--two-tenths {
+  left: 20%;
+}
+
+/* line 528, ../../app/assets/stylesheets/core/_grids.scss */
+.push--two-fifths, .push--four-tenths {
+  left: 40%;
+}
+
+/* line 529, ../../app/assets/stylesheets/core/_grids.scss */
+.push--three-fifths, .push--six-tenths {
+  left: 60%;
+}
+
+/* line 530, ../../app/assets/stylesheets/core/_grids.scss */
+.push--four-fifths, .push--eight-tenths {
+  left: 80%;
+}
+
+/**
+ * Sixths
+ */
+/* line 536, ../../app/assets/stylesheets/core/_grids.scss */
+.push--one-sixth, .push--two-twelfths {
+  left: 16.666%;
+}
+
+/* line 540, ../../app/assets/stylesheets/core/_grids.scss */
+.push--five-sixths, .push--ten-twelfths {
+  left: 83.333%;
+}
+
+/**
+ * Eighths
+ */
+/* line 546, ../../app/assets/stylesheets/core/_grids.scss */
+.push--one-eighth {
+  left: 12.5%;
+}
+
+/* line 548, ../../app/assets/stylesheets/core/_grids.scss */
+.push--three-eighths {
+  left: 37.5%;
+}
+
+/* line 550, ../../app/assets/stylesheets/core/_grids.scss */
+.push--five-eighths {
+  left: 62.5%;
+}
+
+/* line 552, ../../app/assets/stylesheets/core/_grids.scss */
+.push--seven-eighths {
+  left: 87.5%;
+}
+
+/**
+ * Tenths
+ */
+/* line 558, ../../app/assets/stylesheets/core/_grids.scss */
+.push--one-tenth {
+  left: 10%;
+}
+
+/* line 560, ../../app/assets/stylesheets/core/_grids.scss */
+.push--three-tenths {
+  left: 30%;
+}
+
+/* line 564, ../../app/assets/stylesheets/core/_grids.scss */
+.push--seven-tenths {
+  left: 70%;
+}
+
+/* line 566, ../../app/assets/stylesheets/core/_grids.scss */
+.push--nine-tenths {
+  left: 90%;
+}
+
+/**
+ * Twelfths
+ */
+/* line 572, ../../app/assets/stylesheets/core/_grids.scss */
+.push--one-twelfth {
+  left: 8.333%;
+}
+
+/* line 576, ../../app/assets/stylesheets/core/_grids.scss */
+.push--five-twelfths {
+  left: 41.666%;
+}
+
+/* line 578, ../../app/assets/stylesheets/core/_grids.scss */
+.push--seven-twelfths {
+  left: 58.333%;
+}
+
+/* line 582, ../../app/assets/stylesheets/core/_grids.scss */
+.push--eleven-twelfths {
+  left: 91.666%;
+}
+
+@media only screen and (max-width: 480px) {
+  /**
+   * Whole
+   */
+  /* line 500, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--one-whole {
+    left: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /* line 506, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--one-half, .push--palm--two-quarters, .push--palm--three-sixths, .push--palm--four-eighths, .push--palm--five-tenths, .push--palm--six-twelfths {
+    left: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /* line 512, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--one-third, .push--palm--two-sixths, .push--palm--four-twelfths {
+    left: 33.333%;
+  }
+
+  /* line 513, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--two-thirds, .push--palm--four-sixths, .push--palm--eight-twelfths {
+    left: 66.666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /* line 519, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--one-quarter, .push--palm--two-eighths, .push--palm--three-twelfths {
+    left: 25%;
+  }
+
+  /* line 521, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--three-quarters, .push--palm--six-eighths, .push--palm--nine-twelfths {
+    left: 75%;
+  }
+
+  /**
+   * Fifths
+   */
+  /* line 527, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--one-fifth, .push--palm--two-tenths {
+    left: 20%;
+  }
+
+  /* line 528, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--two-fifths, .push--palm--four-tenths {
+    left: 40%;
+  }
+
+  /* line 529, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--three-fifths, .push--palm--six-tenths {
+    left: 60%;
+  }
+
+  /* line 530, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--four-fifths, .push--palm--eight-tenths {
+    left: 80%;
+  }
+
+  /**
+   * Sixths
+   */
+  /* line 536, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--one-sixth, .push--palm--two-twelfths {
+    left: 16.666%;
+  }
+
+  /* line 540, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--five-sixths, .push--palm--ten-twelfths {
+    left: 83.333%;
+  }
+
+  /**
+   * Eighths
+   */
+  /* line 546, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--one-eighth {
+    left: 12.5%;
+  }
+
+  /* line 548, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--three-eighths {
+    left: 37.5%;
+  }
+
+  /* line 550, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--five-eighths {
+    left: 62.5%;
+  }
+
+  /* line 552, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--seven-eighths {
+    left: 87.5%;
+  }
+
+  /**
+   * Tenths
+   */
+  /* line 558, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--one-tenth {
+    left: 10%;
+  }
+
+  /* line 560, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--three-tenths {
+    left: 30%;
+  }
+
+  /* line 564, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--seven-tenths {
+    left: 70%;
+  }
+
+  /* line 566, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--nine-tenths {
+    left: 90%;
+  }
+
+  /**
+   * Twelfths
+   */
+  /* line 572, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--one-twelfth {
+    left: 8.333%;
+  }
+
+  /* line 576, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--five-twelfths {
+    left: 41.666%;
+  }
+
+  /* line 578, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--seven-twelfths {
+    left: 58.333%;
+  }
+
+  /* line 582, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--palm--eleven-twelfths {
+    left: 91.666%;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  /**
+   * Whole
+   */
+  /* line 500, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--one-whole {
+    left: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /* line 506, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--one-half, .push--lap--two-quarters, .push--lap--three-sixths, .push--lap--four-eighths, .push--lap--five-tenths, .push--lap--six-twelfths {
+    left: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /* line 512, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--one-third, .push--lap--two-sixths, .push--lap--four-twelfths {
+    left: 33.333%;
+  }
+
+  /* line 513, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--two-thirds, .push--lap--four-sixths, .push--lap--eight-twelfths {
+    left: 66.666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /* line 519, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--one-quarter, .push--lap--two-eighths, .push--lap--three-twelfths {
+    left: 25%;
+  }
+
+  /* line 521, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--three-quarters, .push--lap--six-eighths, .push--lap--nine-twelfths {
+    left: 75%;
+  }
+
+  /**
+   * Fifths
+   */
+  /* line 527, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--one-fifth, .push--lap--two-tenths {
+    left: 20%;
+  }
+
+  /* line 528, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--two-fifths, .push--lap--four-tenths {
+    left: 40%;
+  }
+
+  /* line 529, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--three-fifths, .push--lap--six-tenths {
+    left: 60%;
+  }
+
+  /* line 530, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--four-fifths, .push--lap--eight-tenths {
+    left: 80%;
+  }
+
+  /**
+   * Sixths
+   */
+  /* line 536, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--one-sixth, .push--lap--two-twelfths {
+    left: 16.666%;
+  }
+
+  /* line 540, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--five-sixths, .push--lap--ten-twelfths {
+    left: 83.333%;
+  }
+
+  /**
+   * Eighths
+   */
+  /* line 546, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--one-eighth {
+    left: 12.5%;
+  }
+
+  /* line 548, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--three-eighths {
+    left: 37.5%;
+  }
+
+  /* line 550, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--five-eighths {
+    left: 62.5%;
+  }
+
+  /* line 552, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--seven-eighths {
+    left: 87.5%;
+  }
+
+  /**
+   * Tenths
+   */
+  /* line 558, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--one-tenth {
+    left: 10%;
+  }
+
+  /* line 560, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--three-tenths {
+    left: 30%;
+  }
+
+  /* line 564, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--seven-tenths {
+    left: 70%;
+  }
+
+  /* line 566, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--nine-tenths {
+    left: 90%;
+  }
+
+  /**
+   * Twelfths
+   */
+  /* line 572, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--one-twelfth {
+    left: 8.333%;
+  }
+
+  /* line 576, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--five-twelfths {
+    left: 41.666%;
+  }
+
+  /* line 578, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--seven-twelfths {
+    left: 58.333%;
+  }
+
+  /* line 582, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--lap--eleven-twelfths {
+    left: 91.666%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  /**
+   * Whole
+   */
+  /* line 500, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--one-whole {
+    left: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /* line 506, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--one-half, .push--portable--two-quarters, .push--portable--three-sixths, .push--portable--four-eighths, .push--portable--five-tenths, .push--portable--six-twelfths {
+    left: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /* line 512, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--one-third, .push--portable--two-sixths, .push--portable--four-twelfths {
+    left: 33.333%;
+  }
+
+  /* line 513, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--two-thirds, .push--portable--four-sixths, .push--portable--eight-twelfths {
+    left: 66.666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /* line 519, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--one-quarter, .push--portable--two-eighths, .push--portable--three-twelfths {
+    left: 25%;
+  }
+
+  /* line 521, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--three-quarters, .push--portable--six-eighths, .push--portable--nine-twelfths {
+    left: 75%;
+  }
+
+  /**
+   * Fifths
+   */
+  /* line 527, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--one-fifth, .push--portable--two-tenths {
+    left: 20%;
+  }
+
+  /* line 528, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--two-fifths, .push--portable--four-tenths {
+    left: 40%;
+  }
+
+  /* line 529, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--three-fifths, .push--portable--six-tenths {
+    left: 60%;
+  }
+
+  /* line 530, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--four-fifths, .push--portable--eight-tenths {
+    left: 80%;
+  }
+
+  /**
+   * Sixths
+   */
+  /* line 536, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--one-sixth, .push--portable--two-twelfths {
+    left: 16.666%;
+  }
+
+  /* line 540, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--five-sixths, .push--portable--ten-twelfths {
+    left: 83.333%;
+  }
+
+  /**
+   * Eighths
+   */
+  /* line 546, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--one-eighth {
+    left: 12.5%;
+  }
+
+  /* line 548, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--three-eighths {
+    left: 37.5%;
+  }
+
+  /* line 550, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--five-eighths {
+    left: 62.5%;
+  }
+
+  /* line 552, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--seven-eighths {
+    left: 87.5%;
+  }
+
+  /**
+   * Tenths
+   */
+  /* line 558, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--one-tenth {
+    left: 10%;
+  }
+
+  /* line 560, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--three-tenths {
+    left: 30%;
+  }
+
+  /* line 564, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--seven-tenths {
+    left: 70%;
+  }
+
+  /* line 566, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--nine-tenths {
+    left: 90%;
+  }
+
+  /**
+   * Twelfths
+   */
+  /* line 572, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--one-twelfth {
+    left: 8.333%;
+  }
+
+  /* line 576, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--five-twelfths {
+    left: 41.666%;
+  }
+
+  /* line 578, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--seven-twelfths {
+    left: 58.333%;
+  }
+
+  /* line 582, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--portable--eleven-twelfths {
+    left: 91.666%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /**
+   * Whole
+   */
+  /* line 500, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--one-whole {
+    left: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /* line 506, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--one-half, .push--desk--two-quarters, .push--desk--three-sixths, .push--desk--four-eighths, .push--desk--five-tenths, .push--desk--six-twelfths {
+    left: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /* line 512, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--one-third, .push--desk--two-sixths, .push--desk--four-twelfths {
+    left: 33.333%;
+  }
+
+  /* line 513, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--two-thirds, .push--desk--four-sixths, .push--desk--eight-twelfths {
+    left: 66.666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /* line 519, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--one-quarter, .push--desk--two-eighths, .push--desk--three-twelfths {
+    left: 25%;
+  }
+
+  /* line 521, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--three-quarters, .push--desk--six-eighths, .push--desk--nine-twelfths {
+    left: 75%;
+  }
+
+  /**
+   * Fifths
+   */
+  /* line 527, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--one-fifth, .push--desk--two-tenths {
+    left: 20%;
+  }
+
+  /* line 528, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--two-fifths, .push--desk--four-tenths {
+    left: 40%;
+  }
+
+  /* line 529, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--three-fifths, .push--desk--six-tenths {
+    left: 60%;
+  }
+
+  /* line 530, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--four-fifths, .push--desk--eight-tenths {
+    left: 80%;
+  }
+
+  /**
+   * Sixths
+   */
+  /* line 536, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--one-sixth, .push--desk--two-twelfths {
+    left: 16.666%;
+  }
+
+  /* line 540, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--five-sixths, .push--desk--ten-twelfths {
+    left: 83.333%;
+  }
+
+  /**
+   * Eighths
+   */
+  /* line 546, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--one-eighth {
+    left: 12.5%;
+  }
+
+  /* line 548, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--three-eighths {
+    left: 37.5%;
+  }
+
+  /* line 550, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--five-eighths {
+    left: 62.5%;
+  }
+
+  /* line 552, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--seven-eighths {
+    left: 87.5%;
+  }
+
+  /**
+   * Tenths
+   */
+  /* line 558, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--one-tenth {
+    left: 10%;
+  }
+
+  /* line 560, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--three-tenths {
+    left: 30%;
+  }
+
+  /* line 564, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--seven-tenths {
+    left: 70%;
+  }
+
+  /* line 566, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--nine-tenths {
+    left: 90%;
+  }
+
+  /**
+   * Twelfths
+   */
+  /* line 572, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--one-twelfth {
+    left: 8.333%;
+  }
+
+  /* line 576, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--five-twelfths {
+    left: 41.666%;
+  }
+
+  /* line 578, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--seven-twelfths {
+    left: 58.333%;
+  }
+
+  /* line 582, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk--eleven-twelfths {
+    left: 91.666%;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  /**
+   * Whole
+   */
+  /* line 500, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--one-whole {
+    left: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /* line 506, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--one-half, .push--desk-wide--two-quarters, .push--desk-wide--three-sixths, .push--desk-wide--four-eighths, .push--desk-wide--five-tenths, .push--desk-wide--six-twelfths {
+    left: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /* line 512, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--one-third, .push--desk-wide--two-sixths, .push--desk-wide--four-twelfths {
+    left: 33.333%;
+  }
+
+  /* line 513, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--two-thirds, .push--desk-wide--four-sixths, .push--desk-wide--eight-twelfths {
+    left: 66.666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /* line 519, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--one-quarter, .push--desk-wide--two-eighths, .push--desk-wide--three-twelfths {
+    left: 25%;
+  }
+
+  /* line 521, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--three-quarters, .push--desk-wide--six-eighths, .push--desk-wide--nine-twelfths {
+    left: 75%;
+  }
+
+  /**
+   * Fifths
+   */
+  /* line 527, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--one-fifth, .push--desk-wide--two-tenths {
+    left: 20%;
+  }
+
+  /* line 528, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--two-fifths, .push--desk-wide--four-tenths {
+    left: 40%;
+  }
+
+  /* line 529, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--three-fifths, .push--desk-wide--six-tenths {
+    left: 60%;
+  }
+
+  /* line 530, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--four-fifths, .push--desk-wide--eight-tenths {
+    left: 80%;
+  }
+
+  /**
+   * Sixths
+   */
+  /* line 536, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--one-sixth, .push--desk-wide--two-twelfths {
+    left: 16.666%;
+  }
+
+  /* line 540, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--five-sixths, .push--desk-wide--ten-twelfths {
+    left: 83.333%;
+  }
+
+  /**
+   * Eighths
+   */
+  /* line 546, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--one-eighth {
+    left: 12.5%;
+  }
+
+  /* line 548, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--three-eighths {
+    left: 37.5%;
+  }
+
+  /* line 550, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--five-eighths {
+    left: 62.5%;
+  }
+
+  /* line 552, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--seven-eighths {
+    left: 87.5%;
+  }
+
+  /**
+   * Tenths
+   */
+  /* line 558, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--one-tenth {
+    left: 10%;
+  }
+
+  /* line 560, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--three-tenths {
+    left: 30%;
+  }
+
+  /* line 564, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--seven-tenths {
+    left: 70%;
+  }
+
+  /* line 566, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--nine-tenths {
+    left: 90%;
+  }
+
+  /**
+   * Twelfths
+   */
+  /* line 572, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--one-twelfth {
+    left: 8.333%;
+  }
+
+  /* line 576, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--five-twelfths {
+    left: 41.666%;
+  }
+
+  /* line 578, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--seven-twelfths {
+    left: 58.333%;
+  }
+
+  /* line 582, ../../app/assets/stylesheets/core/_grids.scss */
+  .push--desk-wide--eleven-twelfths {
+    left: 91.666%;
+  }
+}
+/*------------------------------------*\
+    $PULL
+\*------------------------------------*/
+/**
+ * Pull classes, to move grid items back to the left by certain amounts.
+ */
+/**
+* Monetize Font icons styles
+**/
+@font-face {
+  font-family: 'monetize';
+  src: url("../fonts/monetize.eot");
+}
+@font-face {
+  font-family: 'monetize';
+  src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMg8SA4UAAAC8AAAAYGNtYXAaVsyWAAABHAAAAFRnYXNwAAAAEAAAAXAAAAAIZ2x5ZqwSk6wAAAF4AAANSGhlYWQKdHBlAAAOwAAAADZoaGVhC0oH1QAADvgAAAAkaG10eE0GA1IAAA8cAAAAUGxvY2EXjhOiAAAPbAAAACptYXhwAB0A+wAAD5gAAAAgbmFtZRIlQI8AAA+4AAABknBvc3QAAwAAAAARTAAAACAAAwRMAZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADmDwPA/8AAQAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAADAAAAAwAAABwAAQADAAAAHAADAAEAAAAcAAQAOAAAAAoACAACAAIAAQAg5g///f//AAAAAAAg5gD//f//AAH/4xoEAAMAAQAAAAAAAAAAAAAAAQAB//8ADwABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAABAAD/0weIA5YATgAAASImJwMeARUUBiMiJjU0NjclDgEjIiYnBR4BFRQOAiMiLgI1ND4CMzIWFyUuATU0NjMyFhUUBgcFPgEzMhYXEy4BNTQ2MzIWFRQGIwbvDhoM8hkdZkhIZgkI/sISLxodNBP+uw0NHzZIKSlINh8fNkgpJkIaAU0EBFM7OlMGBQE+Fz0iESEP8RQYWT8/Wlo/Am0FBP6OF0AkR2NjRxMlEOMPEhUTxxUxGihGNR4eNUYoKEc0HxoWywoWDDlRUTkOGw3iFRkHBQFxFDcfPVdXPT5XAAECAgDBBf4CvwADAAAJAiEF/v4C/gID/AK//gIB/gAAAQA/AEgC5gLvACwAACUUDwEGIyIvAQcGIyIvASY1ND8BJyY1ND8BNjMyHwE3NjMyHwEWFRQPARcWFQLmEE4QFxcQqKgQFxYQThAQqKgQEE4QFhcQqKgQFxcQThAQqKgQzRcQThAQqKgQEE4QFxYQqKgQFxcQThAQqKgQEE4QFxcQqKgQFgAAAAEAN//3Ah4DiQAUAAABNQEGFBcWMjcBNjQnASYiBwYUFwEB4v5VDAwNIw0Bqg0N/lYNIw0MDAGrAaI8/lYNIw0MDAGrDCQMAasMDA0jDf5WAAAAAAEAZQAlBhsDWwAUAAABIwEWMjc2NCcBJiIHAQYUFxYyNwEDm7YCgCZqJiUl/YAmaib9gCUlJmomAoACpf2AJSUmaiYCgCUl/YAmaiYlJQKAAAAAAAEAZQAlBhsDWwAUAAAlMwEmIgcGFBcBFjI3ATY0JyYiBwEC5bb9gCZqJiUlAoAmaiYCgCUlJmom/YDbAoAlJSZqJv2AJSUCgCZqJiUl/YAABgAA/8ACAAPAAAQACQAOABMAGAAdAAATMxUjNSEzFSM1ATMVIzUhMxUjNQEzFSM1ITMVIzUAq6sBVaur/qurqwFVq6v+q6urAVWrqwPAq6urq/5Vqqqqqv5Wq6urqwAABgAA/8ADQAPAAA4AIAAvAEEAUABiAAAlFAYjIiY1ETQ2MzIWFRERIyIGFREUFjsBMjY1ETQmIzEBFAYjIiY1ETQ2MzIWFRERIyIGFREUFjsBMjY1ETQmIzEBFAYjIiY1ETQ2MzIWFRERIyIGFREUFjsBMjY1ETQmIzEDABMNDRMTDQ0TQBomJhpAGiYmGv2AEw0NExMNDRNAGiYmGkAaJiYaAUATDQ0TEw0NE0AaJiYaQBomJhogDRMTDQFADRMTDf7AAaAmGv6AGiYmGgGAGib+YA0TEw0CIA0TEw394AKAJhr9oBomJhoCYBom/YANExMNA0ANExMN/MADoCYa/IAaJiYaA4AaJgAAAAgAAP/ABAADwAAKABUAJwAsADEANgA7AEAAAAEhNTQ2MyEyFh0BERQGIyEiJjURIREDISIGFREUFjMhMjY1ETQmIzEBETMRIyERMxEjASEVITUpARUhNSkBFSE1A8D8gCYaAwAaJiYa/QAaJgOAQP0ANUtLNQMANUtLNf3AQEABQEBA/cABAP8AAUABAP8AAUABAP8AAsCAGiYmGoD9gBomJhoCQP3AA4BLNf0ANUtLNQMANUv+wP2AAoD9gAKA/wBAQEBAQEAABQAA/8AEAAPAAA8AIAAyAEIAUgAAASEiBhUUFjMhMjY1NCYjMRMUBiMhIiY1ETQ2MyEyFhURAyEiBhURFBYzITI2NRE0JiMxAyEiBhUUFjMhMjY1NCYjMTUhIgYVFBYzITI2NTQmIzEDAP4ADRMTDQIADRMTDcAsGv0FGiUmGgMAGiZA/QA1S0o1Avs1UUs1gP4ADRMTDQIADRMTDf4ADRMTDQIADRMTDQLAEw0NExMNDRP9gBomJRoC/BorJhr9AAOAUTT9BDRLSzUDADVL/YATDQ0TEw0NE8ATDQ0TEw0NEwAABAAA/8AEAAPAAA8AKgA1AEcAAAEyNj0BNCYjIgYdARQWMzEBFAYjISImNRE0NjsBERQWMyEyNjURMzIWFREBIREUBiMhIiY1ESUhIgYVERQWMyEyNjURNCYjMQJgDRMTDQ0TEw0BYCYa/QAaJiYaQCYaAgAaJkAaJv1AAgATDf5ADRMCgP0ANUtLNQMANUtLNQKAEw2ADRMTDYANE/3AGiYmGgMAGib+wBomJhoBQCYa/QADQP7gDRMTDQEgQEs1/QA1S0s1AwA1SwAABQAA/8ADgAPAAA8AJAAwAE0AXQAAASEiBhUUFjMhMjY1NCYjMRMUBiMhIiY1ETQ2OwEVITUzMhYVEQEzNDYzMhYVMxUhNSEjNSMuASMiBgcjFSMiBhURFBYzITI2NRE0JiMxAyEiBhUUFjMhMjY1NCYjMQKg/kANExMNAcANExMNoCYa/YAaJiYaYAHAYBom/eBHNCUlNEf+wAHgYFYVSSwsSRVWYDVLSzUCgDVLSzVg/kANExMNAcANExMNAcATDQ0TEw0NE/6AGiYmGgKAGiaAgCYa/YADABomJhqAgEAdIyMdQEs1/YA1S0s1AoA1S/3AEw0NExMNDRMABQAA/88ERAOwABQAKAAtAD8ARAAAEwUWMjclPgE1DgEjBSUWJicUFhcxASUWJicUFhcFFjI3JT4BNQ4BIwURDQEtAQEFFjI3JTY0JyUmIgcFDgEXMQEWJicxHwHQHiciAc8RDhYyAf4n/icBMxcNEgID/icBMxcNEgHQHiciAc8RDhYyAf4nAdn+J/4nAdn9/QHQHiciAc8aGv4xHC0e/jAaARsCAwMBAgF60Q4O0Qg7FQwZ2toBGA4UOwn+ftsBGA0UOgrQDw/QCDwUCxnbA4//yMj//s3QDw/QDE0O9RAQ9RFHDwEzAwIBAAACAAL/+QPBA7kARQB2AAABJgYHBhYXHgEVFA4CIyIuAjU0PgI3BwYWFx4BMzI2PwE+AScuAS8BJgYHBhYfAQ4DFRQeAjMyPgI1NC4CJwExLgEnLgEnJiInIiYjIgYjBiIHDgEHDgEHMQcGFBceATMyNj8BFx4BMzI2NzY0LwEDHg0kDAwCDUBGPmqPUVGPaj4tUG5AHQoHDwYMBgsTB1UFBAICCQiADyQKCgcPJU+FYTdMgq9jY6+CSxUqPSf+4wIEAgIDAgIFAgIDAgIDAgIFAwEDAgIEAuwMDQYQCAkQBs1xBhAJCBAHDAyQAv8KAgwMIgs0jk1LhGI5OWKESz9zXUEOJw4hCQQDCQh2Bw8ICA4ETwkGDg4hCRcSUHGMTVyheEVFeKFcL1xVTCD+ywICAQECAQEBAQEBAQECAQECAtkMIQwGBgYGvGcGBgYGCyIMhAAAAgAB/8oD4AOpAAwAOwAAJSERIxEjFTMVMzUhNSUyNj8BFx4BNz4BNxMXHgE3PgE3EzYmJyYGBwMnLgEHDgEHAycmIg8BBhQXHgEzA+D8nClSUikDZPzuCA8GiF8IFgsKEAJscAgUCgoQBHwGDhAQIAZleAgVCwsQAmtHDSIMpQwMBg8IRgNj/J0pU1MpKQcFiV8IBgMEEAsB0HEHBgIDDQoBSxAfBgYOEf7yeAgGBAMQC/4wRwwMpQwiDQUHAAAABAAN/9gD5gOwABAAigCYAPgAAAEOASMiJicuATc+ARceAQcxNy4BDwEuAScwNjE3NiYnJgYPAS4BIyIGBycuAQcOAR8BDgEHIycmBgcGFh8BOAEzDgEXBw4BFx4BMzoBMzceARcwIjEHBhYXHgEzMjY/AR4BMzI2NxceATMyNjM+AS8BPgE3MRceATMyNjc2Ji8BMCYxPgEnNz4BJzEBIiY1NDYzMhYVFAYjMSUjLgEnNzY0JyYiDwEuASc1NCYjIgYdAQ4BBycmIgcGFB8BDgEHIyIGFRQWOwEeARcHBhQXHgEzMjY/AR4BFxUUFjMyNj0BPgE3Fx4BMzI2NzY0LwE+ATczMjY1NCYjMQNDCycYCRMIHhYPD0EeHhYPowMPCCgMIhcBEgQFCAgQBBIQIRALEwoNAw8ICQcCDhkoDgElBxEEAwUIJQEKBAYoCAgDAgsHAQQBKAsjFwESBAUIAgUCBgoDEhAgEQoUCg0CCwcBBAEICAMNGCkOJgIFAgYKAgQFCCUBCgMFKAgIA/10Kz09Kys9PSsBOEADHhktBgYGEQYtHUcoDAkJDChHHS0GEQYGBi0ZHgNACA0NCEADHhktBgYDCAQDCAMtHUcoDAkJDChHHS0DBwQECAMGBi0ZHgNACAwMCAKfFRgEBQ5BHh4VDg9BHnQIBwIOGSgOASUHEQQEBgglBgYCAygICAMDDwgnCxkfEQQGCAcRBBIZNRoOAw8IBwcOGCgPJgcRAwIBBgYlBgYDAigGCAEDDwgnCxofEgEBBwUIEAQSARk1Gg0DDwn9qT0rKz09Kys9fShHHS0GEQYGBi0ZHgNACA0NCEADHhktBgYGEQYtHUcoDAkJDChHHS0GEQYDAwMDLRgfAz8JDAwJPwMfGC0DAwMDBhEGLR1HKAwJCQwAAQAAAAEAAHoPTkdfDzz1AAsEAAAAAADR5pX0AAAAANHmlfQAAP/AB4gDwAAAAAgAAgAAAAAAAAABAAADwP/AAAAIAAAAAAAHiAABAAAAAAAAAAAAAAAAAAAAFAQAAAAAAAAAAAAAAAIAAAAHiAAACAACAgMlAD8CVQA3BoAAZQaAAGUCAAAAA0AAAAQAAAAEAAAABAAAAAOAAAAERAAABAAAAgQAAAEEAAANAAAAAAAKABQAHgCOAJ4A4gEMATYBXgGOAhQCeALqA1ADzgREBO4FTgakAAAAAQAAABQA+QAIAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA4ArgABAAAAAAABAAgAAAABAAAAAAACAAcAaQABAAAAAAADAAgAOQABAAAAAAAEAAgAfgABAAAAAAAFAAsAGAABAAAAAAAGAAgAUQABAAAAAAAKABoAlgADAAEECQABABAACAADAAEECQACAA4AcAADAAEECQADABAAQQADAAEECQAEABAAhgADAAEECQAFABYAIwADAAEECQAGABAAWQADAAEECQAKADQAsG1vbmV0aXplAG0AbwBuAGUAdABpAHoAZVZlcnNpb24gMS4wAFYAZQByAHMAaQBvAG4AIAAxAC4AMG1vbmV0aXplAG0AbwBuAGUAdABpAHoAZW1vbmV0aXplAG0AbwBuAGUAdABpAHoAZVJlZ3VsYXIAUgBlAGcAdQBsAGEAcm1vbmV0aXplAG0AbwBuAGUAdABpAHoAZUZvbnQgZ2VuZXJhdGVkIGJ5IEljb01vb24uAEYAbwBuAHQAIABnAGUAbgBlAHIAYQB0AGUAZAAgAGIAeQAgAEkAYwBvAE0AbwBvAG4ALgAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 17, ../../app/assets/stylesheets/core/_icons.scss */
+.icon {
+  font-family: 'monetize';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 31, ../../app/assets/stylesheets/core/_icons.scss */
+.icon--job:before {
+  content: "\e60d";
+}
+
+/* line 34, ../../app/assets/stylesheets/core/_icons.scss */
+.icon--live-statics:before {
+  content: "\e60e";
+}
+
+/* line 37, ../../app/assets/stylesheets/core/_icons.scss */
+.icon--gear:before {
+  content: "\e60f";
+}
+
+/* line 40, ../../app/assets/stylesheets/core/_icons.scss */
+.icon--save:before {
+  content: "\e60a";
+}
+
+/* line 43, ../../app/assets/stylesheets/core/_icons.scss */
+.icon--test:before {
+  content: "\e60b";
+}
+
+/* line 46, ../../app/assets/stylesheets/core/_icons.scss */
+.icon--data:before {
+  content: "\e60c";
+}
+
+/* line 49, ../../app/assets/stylesheets/core/_icons.scss */
+.icon--graph:before {
+  content: "\e600";
+}
+
+/* line 52, ../../app/assets/stylesheets/core/_icons.scss */
+.icon--chevron:before {
+  content: "\e601";
+}
+
+/* line 55, ../../app/assets/stylesheets/core/_icons.scss */
+.icon--close:before {
+  content: "\e602";
+}
+
+/* line 58, ../../app/assets/stylesheets/core/_icons.scss */
+.icon--arrow-right:before {
+  content: "\e603";
+}
+
+/* line 61, ../../app/assets/stylesheets/core/_icons.scss */
+.icon--arrow-up:before {
+  content: "\e604";
+}
+
+/* line 64, ../../app/assets/stylesheets/core/_icons.scss */
+.icon--arrow-down:before {
+  content: "\e605";
+}
+
+/* line 67, ../../app/assets/stylesheets/core/_icons.scss */
+.icon--sortable:before {
+  content: "\e606";
+}
+
+/* line 70, ../../app/assets/stylesheets/core/_icons.scss */
+.icon--bars:before {
+  content: "\e607";
+}
+
+/* line 73, ../../app/assets/stylesheets/core/_icons.scss */
+.icon--table:before {
+  content: "\e608";
+}
+
+/* line 76, ../../app/assets/stylesheets/core/_icons.scss */
+.icon--list:before {
+  content: "\e609";
+}
+
+/**
+* General form styles, inputs, labels, form-field and text area style
+**/
+/* line 5, ../../app/assets/stylesheets/core/_forms.scss */
+.form-field {
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+/* line 10, ../../app/assets/stylesheets/core/_forms.scss */
+.input--text {
+  border: 1px solid #BAC4C9;
+  border-radius: 4px;
+  padding: 1px 8px;
+  width: 100%;
+  -webkit-appearance: none;
+}
+/* line 17, ../../app/assets/stylesheets/core/_forms.scss */
+.input--text.datepicker {
+  padding: 1px 8px;
+}
+
+/* line 22, ../../app/assets/stylesheets/core/_forms.scss */
+.select--text {
+  border: 1px solid #BAC4C9;
+  border-radius: 4px;
+  padding: 1px 8px;
+  width: 100%;
+}
+
+/* line 30, ../../app/assets/stylesheets/core/_forms.scss */
+.input--radius {
+  border-radius: 10px;
+}
+/* line 32, ../../app/assets/stylesheets/core/_forms.scss */
+.input--radius.datepicker {
+  border-radius: 10px;
+}
+
+/* line 37, ../../app/assets/stylesheets/core/_forms.scss */
+.label--inline {
+  line-height: 21px;
+}
+
+/* line 41, ../../app/assets/stylesheets/core/_forms.scss */
+textarea {
+  display: block;
+  height: 80px;
+  resize: none;
+}
+
+/* line 50, ../../app/assets/stylesheets/core/_forms.scss */
+.form-control:focus, .input--text:focus, .select--text:focus, textarea:focus {
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/**
+* General Layout styles, here you can see the css for layout class
+**/
+/* line 5, ../../app/assets/stylesheets/core/_layout.scss */
+.main-wrapper {
+  height: 100%;
+  min-width: 760px;
+  overflow: hidden;
+}
+
+/* line 11, ../../app/assets/stylesheets/core/_layout.scss */
+.main-container {
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* line 16, ../../app/assets/stylesheets/core/_layout.scss */
+.main-container-wrapper {
+  padding: 15px 20px 97px 20px;
+  height: 100%;
+}
+
+/* line 21, ../../app/assets/stylesheets/core/_layout.scss */
+.content-wrapper {
+  position: relative;
+  margin-right: 0;
+  transition: margin-right, .25s, ease;
+}
+/* line 25, ../../app/assets/stylesheets/core/_layout.scss */
+.content-wrapper.left {
+  margin-left: 180px;
+}
+/* line 28, ../../app/assets/stylesheets/core/_layout.scss */
+.content-wrapper.right {
+  margin-right: 180px;
+}
+
+/* line 33, ../../app/assets/stylesheets/core/_layout.scss */
+.boxes {
+  height: 100%;
+  margin-left: 82px;
+  transition-duration: .25s;
+  transition-property: margin;
+  padding-top: 55px;
+}
+/* line 40, ../../app/assets/stylesheets/core/_layout.scss */
+.boxes.open {
+  margin-left: 340px;
+}
+/* line 42, ../../app/assets/stylesheets/core/_layout.scss */
+.boxes.open .tabs--simple {
+  left: 340px;
+}
+
+/* line 48, ../../app/assets/stylesheets/core/_layout.scss */
+.main-content {
+  min-height: 100%;
+  height: 100%;
+}
+
+/* line 6, ../../app/assets/stylesheets/modules/_dropdowns.scss */
+.dropdown {
+  position: relative;
+}
+
+/* line 10, ../../app/assets/stylesheets/modules/_dropdowns.scss */
+.dropdown-toggle {
+  padding: 13px !important;
+  border-bottom: 0 !important;
+}
+
+/* line 15, ../../app/assets/stylesheets/modules/_dropdowns.scss */
+.dropdown-toggle:focus {
+  outline: 0;
+}
+
+/* line 20, ../../app/assets/stylesheets/modules/_dropdowns.scss */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 12px;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+}
+/* line 42, ../../app/assets/stylesheets/modules/_dropdowns.scss */
+.dropdown-menu.pull-right {
+  right: 0;
+  left: auto;
+}
+/* line 49, ../../app/assets/stylesheets/modules/_dropdowns.scss */
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 16px;
+  color: #22646A;
+  white-space: nowrap;
+}
+
+/* line 62, ../../app/assets/stylesheets/modules/_dropdowns.scss */
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #1c5257;
+  background-color: #f5f5f5;
+}
+
+/* line 72, ../../app/assets/stylesheets/modules/_dropdowns.scss */
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+  color: arken(#22646A, 20%);
+  text-decoration: none;
+  outline: 0;
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+/* line 88, ../../app/assets/stylesheets/modules/_dropdowns.scss */
+.dropdown-menu > .disabled > a, .dropdown-menu > .disabled > a:hover, .dropdown-menu > .disabled > a:focus {
+  color: #22646A;
+}
+/* line 95, ../../app/assets/stylesheets/modules/_dropdowns.scss */
+.dropdown-menu > .disabled > a:hover, .dropdown-menu > .disabled > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+/* line 107, ../../app/assets/stylesheets/modules/_dropdowns.scss */
+.open > .dropdown-menu {
+  display: block;
+}
+/* line 112, ../../app/assets/stylesheets/modules/_dropdowns.scss */
+.open > a {
+  outline: 0;
+}
+
+/* line 121, ../../app/assets/stylesheets/modules/_dropdowns.scss */
+.dropdown-menu-right {
+  left: auto;
+  right: 0;
+}
+
+/* line 131, ../../app/assets/stylesheets/modules/_dropdowns.scss */
+.dropdown-menu-left {
+  left: 0;
+  right: auto;
+}
+
+/* line 137, ../../app/assets/stylesheets/modules/_dropdowns.scss */
+.dropdown-header {
+  display: block;
+  padding: 3px 20px;
+  line-height: 16px;
+  color: #22646A;
+  white-space: nowrap;
+}
+
+/* line 146, ../../app/assets/stylesheets/modules/_dropdowns.scss */
+.dropdown-backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 990;
+}
+
+/* line 156, ../../app/assets/stylesheets/modules/_dropdowns.scss */
+.pull-right > .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+/**
+* Avatar styles
+**/
+/* line 5, ../../app/assets/stylesheets/modules/_avatar.scss */
+.avatar {
+  margin: 0 auto;
+  overflow: hidden;
+}
+/* line 8, ../../app/assets/stylesheets/modules/_avatar.scss */
+.avatar img {
+  display: block;
+  width: 100%;
+}
+
+/* line 14, ../../app/assets/stylesheets/modules/_avatar.scss */
+.avatar--circle {
+  border-radius: 100%;
+}
+
+/* line 18, ../../app/assets/stylesheets/modules/_avatar.scss */
+.person__avatar {
+  width: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+/**
+* General styles for main sidebar and expandable sidebar
+**/
+/* line 5, ../../app/assets/stylesheets/modules/_sidebar.scss */
+.sidebar-container {
+  bottom: 0;
+  left: 0;
+  min-height: 100%;
+  padding-top: 54px;
+  position: absolute;
+  top: 0;
+  width: 82px;
+  z-index: 30;
+  overflow-x: hidden;
+}
+
+/* line 18, ../../app/assets/stylesheets/modules/_sidebar.scss */
+.sidebar-expandable {
+  bottom: 0;
+  color: #FFF;
+  left: -176px;
+  min-height: 100%;
+  overflow-y: auto;
+  padding: 69px 15px 15px;
+  position: absolute;
+  top: 0;
+  transition: left 0.3s ease;
+  -webkit-transform: translate3d(0, 0, 0);
+  width: 258px;
+  z-index: 20;
+}
+/* line 32, ../../app/assets/stylesheets/modules/_sidebar.scss */
+.sidebar-expandable.open {
+  left: 82px;
+}
+/* line 35, ../../app/assets/stylesheets/modules/_sidebar.scss */
+.sidebar-expandable.open .sidebar__link:before, .sidebar-expandable.open .sidebar__link:after {
+  opacity: 0;
+  transition: opacity 0s linear;
+}
+/* line 40, ../../app/assets/stylesheets/modules/_sidebar.scss */
+.sidebar-expandable.open .sidebar__link.active:before {
+  opacity: 1;
+}
+/* line 43, ../../app/assets/stylesheets/modules/_sidebar.scss */
+.sidebar-expandable.open .sidebar__link.active:after {
+  opacity: 1;
+}
+
+/* line 52, ../../app/assets/stylesheets/modules/_sidebar.scss */
+.boxes.open {
+  margin-left: 340px;
+  transition: margin-left 0.3s ease;
+}
+
+/* line 59, ../../app/assets/stylesheets/modules/_sidebar.scss */
+.sidebar__link {
+  background: transparent;
+  color: #FFF;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  line-height: 17px;
+  padding: 25px 0 15px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  transition: background 0.3s ease;
+}
+/* line 70, ../../app/assets/stylesheets/modules/_sidebar.scss */
+.sidebar__link span {
+  opacity: 0.6;
+}
+/* line 73, ../../app/assets/stylesheets/modules/_sidebar.scss */
+.sidebar__link .icon {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 10px;
+  color: #C4CED4;
+}
+/* line 80, ../../app/assets/stylesheets/modules/_sidebar.scss */
+.sidebar__link:before, .sidebar__link:after {
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+/* line 85, ../../app/assets/stylesheets/modules/_sidebar.scss */
+.sidebar__link:before {
+  content: " ";
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  border-radius: 100%;
+  right: 0px;
+  top: -10px;
+}
+/* line 95, ../../app/assets/stylesheets/modules/_sidebar.scss */
+.sidebar__link:after {
+  content: " ";
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  border-radius: 100%;
+  right: 0px;
+  bottom: -10px;
+}
+/* line 106, ../../app/assets/stylesheets/modules/_sidebar.scss */
+.sidebar__link.tab_active {
+  outline: none;
+}
+/* line 110, ../../app/assets/stylesheets/modules/_sidebar.scss */
+.sidebar__link.tab_active span {
+  opacity: 1;
+}
+/* line 116, ../../app/assets/stylesheets/modules/_sidebar.scss */
+.sidebar__link.tab_active:before, .sidebar__link.tab_active:after {
+  opacity: 1;
+}
+/* line 122, ../../app/assets/stylesheets/modules/_sidebar.scss */
+.sidebar__link:hover span {
+  opacity: 1;
+}
+/* line 126, ../../app/assets/stylesheets/modules/_sidebar.scss */
+.sidebar__link:focus {
+  outline: none;
+}
+
+/**
+* Styles for breadcrumb on main container
+**/
+/* line 5, ../../app/assets/stylesheets/modules/_breadcrumb.scss */
+.breadcrumb {
+  margin-bottom: 10px;
+  list-style: none;
+}
+@media only screen and (min-width: 800px) {
+  /* line 5, ../../app/assets/stylesheets/modules/_breadcrumb.scss */
+  .breadcrumb {
+    float: left;
+  }
+}
+/* line 11, ../../app/assets/stylesheets/modules/_breadcrumb.scss */
+.breadcrumb > li {
+  display: inline-block;
+  font-size: 12px;
+  color: #22646A;
+  line-height: 16px;
+}
+/* line 16, ../../app/assets/stylesheets/modules/_breadcrumb.scss */
+.breadcrumb > li + li:before {
+  content: "/\00a0";
+  padding: 0 5px;
+  color: #22646A;
+}
+/* line 21, ../../app/assets/stylesheets/modules/_breadcrumb.scss */
+.breadcrumb > li.active {
+  color: #25373D;
+  font-weight: 600;
+}
+
+/**
+* General styles for accordions
+**/
+/* line 5, ../../app/assets/stylesheets/modules/_accordion.scss */
+.accordion__group {
+  margin-bottom: 8px;
+}
+
+/* line 9, ../../app/assets/stylesheets/modules/_accordion.scss */
+.accordion__title {
+  border-radius: 4px;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 8px 0 8px 9px;
+}
+/* line 18, ../../app/assets/stylesheets/modules/_accordion.scss */
+.accordion__title .icon--sortable {
+  line-height: 16px;
+  padding: 0 8px;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+}
+/* line 26, ../../app/assets/stylesheets/modules/_accordion.scss */
+.accordion__title.ui-accordion-header-active {
+  border-radius: 4px 4px 0 0;
+  margin-bottom: 0;
+}
+/* line 30, ../../app/assets/stylesheets/modules/_accordion.scss */
+.accordion__title:focus {
+  outline: 0;
+}
+/* line 33, ../../app/assets/stylesheets/modules/_accordion.scss */
+.accordion__title .ui-accordion-header-icon {
+  font-family: 'monetize';
+  font-size: 7px;
+  float: left;
+  padding: 3px 5px 3px 0;
+}
+/* line 39, ../../app/assets/stylesheets/modules/_accordion.scss */
+.accordion__title .ui-icon-triangle-1-s {
+  cursor: pointer;
+}
+/* line 41, ../../app/assets/stylesheets/modules/_accordion.scss */
+.accordion__title .ui-icon-triangle-1-s:before {
+  content: "\e604";
+}
+/* line 45, ../../app/assets/stylesheets/modules/_accordion.scss */
+.accordion__title .ui-icon-triangle-1-e {
+  cursor: pointer;
+  color: #C4CED4;
+}
+/* line 48, ../../app/assets/stylesheets/modules/_accordion.scss */
+.accordion__title .ui-icon-triangle-1-e:before {
+  content: "\e605";
+}
+
+/* line 55, ../../app/assets/stylesheets/modules/_accordion.scss */
+.accordion__body, .widget__body {
+  border-radius: 0 0 4px 4px;
+  margin-bottom: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 0 16px 9px 22px;
+}
+/* line 61, ../../app/assets/stylesheets/modules/_accordion.scss */
+.accordion__body.ui-accordion-content-active, .ui-accordion-content-active.widget__body {
+  border-top: 0;
+}
+/* line 64, ../../app/assets/stylesheets/modules/_accordion.scss */
+.accordion__body .form-field, .widget__body .form-field {
+  margin-bottom: 8px !important;
+}
+
+/* line 69, ../../app/assets/stylesheets/modules/_accordion.scss */
+.accordion__body-space {
+  padding-top: 9px;
+}
+
+/* line 73, ../../app/assets/stylesheets/modules/_accordion.scss */
+.widget__body {
+  padding-top: 9px;
+  border-radius: 4px;
+}
+
+/* line 80, ../../app/assets/stylesheets/modules/_accordion.scss */
+.accordion__list li {
+  border-radius: 4px;
+  color: #FFF;
+  display: block;
+  margin-bottom: 4px;
+  padding: 6px 10px;
+}
+
+/* line 89, ../../app/assets/stylesheets/modules/_accordion.scss */
+.accordion__title-name {
+  display: inline-block;
+  float: left;
+  font-size: 12px;
+  width: 70%;
+}
+
+/* line 97, ../../app/assets/stylesheets/modules/_accordion.scss */
+.accordion__item {
+  border: 2px solid transparent;
+}
+/* line 100, ../../app/assets/stylesheets/modules/_accordion.scss */
+.accordion__item .icon--sortable {
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  float: right;
+  opacity: 0;
+  padding-top: 2px;
+  transition: opacity 0.25s ease;
+}
+/* line 109, ../../app/assets/stylesheets/modules/_accordion.scss */
+.accordion__item.ui-draggable:hover .icon--sortable {
+  opacity: 1;
+}
+/* line 114, ../../app/assets/stylesheets/modules/_accordion.scss */
+.accordion__item.ui-state-disabled:hover {
+  border-color: transparent;
+}
+/* line 116, ../../app/assets/stylesheets/modules/_accordion.scss */
+.accordion__item.ui-state-disabled:hover .icon--sortable {
+  display: none;
+}
+
+/* line 123, ../../app/assets/stylesheets/modules/_accordion.scss */
+.accordion__item-name {
+  display: inline-block;
+  float: left;
+}
+
+/**
+* Styles for bottom tabs
+**/
+/* line 6, ../../app/assets/stylesheets/modules/_tabs.scss */
+.tab-content > .tab-pane {
+  display: none;
+  visibility: hidden;
+}
+/* line 9, ../../app/assets/stylesheets/modules/_tabs.scss */
+.tab-content > .tab-pane.active {
+  display: block;
+  visibility: visible;
+}
+
+/* line 16, ../../app/assets/stylesheets/modules/_tabs.scss */
+.tabs--simple {
+  background: #FFF;
+  border-top: 1px solid #D1DBE0;
+  bottom: 0;
+  height: 42px;
+  padding-left: 20px;
+  position: absolute;
+  left: 82px;
+  right: 0;
+  transition-duration: .25s;
+  transition-property: left;
+}
+/* line 27, ../../app/assets/stylesheets/modules/_tabs.scss */
+.tabs--simple.nav {
+  padding-left: 20px;
+}
+/* line 30, ../../app/assets/stylesheets/modules/_tabs.scss */
+.tabs--simple li {
+  display: inline-block;
+  position: relative;
+  top: -1px;
+}
+/* line 34, ../../app/assets/stylesheets/modules/_tabs.scss */
+.tabs--simple li a {
+  border: 1px solid transparent;
+  display: inline-block;
+  line-height: 34px;
+  padding: 0px 25px 0px 25px;
+  outline: none;
+}
+/* line 41, ../../app/assets/stylesheets/modules/_tabs.scss */
+.tabs--simple li.active {
+  font-weight: 600;
+  position: relative;
+}
+/* line 44, ../../app/assets/stylesheets/modules/_tabs.scss */
+.tabs--simple li.active a {
+  border: 1px solid #D1DBE0;
+  border-top: transparent;
+  border-radius: 0px 0px 4px 4px;
+  color: #555;
+  outline: none;
+}
+/* line 50, ../../app/assets/stylesheets/modules/_tabs.scss */
+.tabs--simple li.active a:before {
+  content: "";
+  border-top: 1px solid #DFE8ED;
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+}
+/* line 59, ../../app/assets/stylesheets/modules/_tabs.scss */
+.tabs--simple li.active:after {
+  background: transparent;
+  content: " ";
+  height: 4px;
+  width: 4px;
+  position: absolute;
+  border-radius: 100% 0 0 0;
+  box-shadow: -1px -1px 0 #D1DBE0;
+  left: -4px;
+  top: 0px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+/* line 73, ../../app/assets/stylesheets/modules/_tabs.scss */
+.tabs--simple li.active:before {
+  background: transparent;
+  content: " ";
+  height: 4px;
+  width: 4px;
+  position: absolute;
+  border-radius: 100% 0 0 0;
+  box-shadow: -1px -1px 0 #D1DBE0;
+  right: -4px;
+  top: 0px;
+}
+
+/**
+* Styles for tags filter, over main container
+**/
+/* line 5, ../../app/assets/stylesheets/modules/_tags.scss */
+.tags {
+  background: #FFF;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  border: 1px solid #D1DBE0;
+  clear: both;
+  margin-bottom: 18px;
+  padding: 5px 15px 0;
+  width: 100%;
+}
+
+/* line 17, ../../app/assets/stylesheets/modules/_tags.scss */
+.tags__title {
+  font-size: 12px;
+  font-weight: normal;
+  float: left;
+  margin-right: 32px;
+  margin-bottom: 5px;
+  padding: 4px 0px;
+}
+
+/* line 26, ../../app/assets/stylesheets/modules/_tags.scss */
+.tags__list {
+  float: left;
+}
+/* line 28, ../../app/assets/stylesheets/modules/_tags.scss */
+.tags__list li {
+  background: #E9EFF2;
+  border-radius: 40px;
+  display: block;
+  float: left;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  padding: 4px 9px;
+  position: relative;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+}
+/* line 39, ../../app/assets/stylesheets/modules/_tags.scss */
+.tags__list li .icon {
+  color: rgba(85, 85, 85, 0.3);
+  line-height: 13px;
+  vertical-align: middle;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  left: auto;
+}
+/* line 48, ../../app/assets/stylesheets/modules/_tags.scss */
+.tags__list li .icon:hover {
+  color: #333;
+}
+
+/* line 55, ../../app/assets/stylesheets/modules/_tags.scss */
+.tag__name {
+  padding-right: 10px;
+}
+
+/**
+* General Styles for tables
+**/
+/* line 5, ../../app/assets/stylesheets/modules/_tables.scss */
+.table {
+  border-collapse: separate;
+  min-width: 550px;
+  width: 100%;
+}
+/* line 10, ../../app/assets/stylesheets/modules/_tables.scss */
+.table thead td, .table thead th {
+  color: #FFF;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 9px 15px 9px 18px;
+  text-align: left;
+}
+/* line 17, ../../app/assets/stylesheets/modules/_tables.scss */
+.table thead td:first-child, .table thead th:first-child {
+  border-radius: 4px 0 0 0;
+}
+/* line 20, ../../app/assets/stylesheets/modules/_tables.scss */
+.table thead td:last-child, .table thead th:last-child {
+  border-radius: 0 4px 0 0;
+}
+/* line 28, ../../app/assets/stylesheets/modules/_tables.scss */
+.table tbody tr:nth-child(odd) td {
+  background-color: #FFF;
+}
+/* line 34, ../../app/assets/stylesheets/modules/_tables.scss */
+.table tbody tr:last-child td {
+  border-bottom: 1px solid #D2DCE1;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+}
+/* line 37, ../../app/assets/stylesheets/modules/_tables.scss */
+.table tbody tr:last-child td:first-child {
+  border-radius: 0 0 0 4px;
+}
+/* line 40, ../../app/assets/stylesheets/modules/_tables.scss */
+.table tbody tr:last-child td:last-child {
+  border-radius: 0 0 4px 0;
+}
+/* line 47, ../../app/assets/stylesheets/modules/_tables.scss */
+.table tbody tr td:last-child {
+  border-right: 1px solid #D2DCE1;
+}
+/* line 53, ../../app/assets/stylesheets/modules/_tables.scss */
+.table tbody td {
+  background: #F4F7F9;
+  border-left: 1px solid #D2DCE1;
+  padding: 5px 15px 5px 18px;
+}
+
+/* line 61, ../../app/assets/stylesheets/modules/_tables.scss */
+.table-wrapper {
+  max-height: 460px;
+  overflow-y: visible;
+  overflow-x: auto;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+/* line 70, ../../app/assets/stylesheets/modules/_tables.scss */
+.table__delete-row {
+  color: #435D65;
+  cursor: pointer;
+  font-size: 18px;
+  float: right;
+  opacity: 0.3;
+  margin-right: 10px;
+}
+/* line 77, ../../app/assets/stylesheets/modules/_tables.scss */
+.table__delete-row:hover {
+  opacity: 1;
+}
+
+/**
+* General styles for widget section
+**/
+/* line 5, ../../app/assets/stylesheets/modules/_widget.scss */
+.widget-section {
+  min-height: 80px;
+  padding-bottom: 40px;
+  position: absolute;
+  width: 160px;
+}
+/* line 11, ../../app/assets/stylesheets/modules/_widget.scss */
+.widget-section .accordion__title .ui-accordion-header-icon {
+  color: #FFF;
+}
+/* line 14, ../../app/assets/stylesheets/modules/_widget.scss */
+.widget-section .accordion__title.ui-accordion-header-active {
+  border: none;
+  border-bottom: 0;
+}
+/* line 19, ../../app/assets/stylesheets/modules/_widget.scss */
+.widget-section .accordion__title-name {
+  font-weight: 600;
+}
+/* line 23, ../../app/assets/stylesheets/modules/_widget.scss */
+.widget-section .accordion__body, .widget-section .widget__body {
+  background-color: #FFF;
+}
+/* line 25, ../../app/assets/stylesheets/modules/_widget.scss */
+.widget-section .accordion__body.ui-accordion-content-active, .widget-section .ui-accordion-content-active.widget__body {
+  border: 1px solid #D1DBE0;
+  border-top: 1px solid #D1DBE0;
+}
+/* line 31, ../../app/assets/stylesheets/modules/_widget.scss */
+.widget-section:hover {
+  min-width: 160px;
+}
+/* line 35, ../../app/assets/stylesheets/modules/_widget.scss */
+.widget-section.left.accordion-wrapper {
+  left: -180px;
+  right: auto;
+}
+/* line 41, ../../app/assets/stylesheets/modules/_widget.scss */
+.widget-section.right.accordion-wrapper {
+  top: 0;
+  right: -180px;
+  left: auto;
+}
+
+/* line 50, ../../app/assets/stylesheets/modules/_widget.scss */
+.widget-section-right.empty {
+  height: 100%;
+  top: 0;
+  right: -20px;
+  width: 100px;
+}
+
+/* line 59, ../../app/assets/stylesheets/modules/_widget.scss */
+.widget-section-left.empty {
+  height: 100%;
+  top: 0;
+  left: -20px;
+  width: 100px;
+}
+
+/**
+* General styles for droppable and draggable elements
+**/
+/* line 5, ../../app/assets/stylesheets/modules/_draggable.scss */
+.ui-droppable {
+  border: 2px solid transparent;
+}
+
+/* line 9, ../../app/assets/stylesheets/modules/_draggable.scss */
+.dropper {
+  background: rgba(244, 247, 249, 0.32);
+  border-radius: 6px;
+  border: 2px dotted #ABB6BC;
+  display: table;
+  height: 100%;
+  min-height: 330px;
+  overflow-y: auto;
+  width: 100%;
+}
+/* line 18, ../../app/assets/stylesheets/modules/_draggable.scss */
+.dropper .drop-label {
+  color: #344B52;
+  display: table-cell;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* line 28, ../../app/assets/stylesheets/modules/_draggable.scss */
+.dragger, .dragger-column {
+  background: rgba(184, 229, 255, 0.52);
+  border-radius: 4px;
+  border: 1px solid rgba(0, 162, 255, 0.52);
+  box-shadow: 2px 4px 0px 0px rgba(186, 186, 186, 0.1);
+  color: #1B282C;
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+  min-width: 214px;
+  padding-left: 8px;
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  position: relative;
+  z-index: 20;
+}
+
+/* line 45, ../../app/assets/stylesheets/modules/_draggable.scss */
+.dragger-column {
+  min-width: 171px;
+}
+
+/* line 50, ../../app/assets/stylesheets/modules/_draggable.scss */
+.dropper-state-hover {
+  background: #FFFFFF;
+  border: 2px solid #18BC7B;
+  border-radius: 4px;
+}
+
+/* line 57, ../../app/assets/stylesheets/modules/_draggable.scss */
+.ui-draggable-disabled.accordion__item {
+  opacity: 0.5;
+}
+/* line 60, ../../app/assets/stylesheets/modules/_draggable.scss */
+.ui-draggable-disabled .accordion__title {
+  cursor: default;
+}
+/* line 62, ../../app/assets/stylesheets/modules/_draggable.scss */
+.ui-draggable-disabled .accordion__title .icon--sortable {
+  opacity: 0.3;
+}
+
+/* line 69, ../../app/assets/stylesheets/modules/_draggable.scss */
+.loaded-data .dropper {
+  border-color: transparent;
+  background: transparent;
+}
+/* line 73, ../../app/assets/stylesheets/modules/_draggable.scss */
+.loaded-data .loading-container {
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 10;
+}
+
+/**
+* Styles for loading and progress bar
+**/
+/* line 5, ../../app/assets/stylesheets/modules/_progressbar.scss */
+.loading-container {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* line 11, ../../app/assets/stylesheets/modules/_progressbar.scss */
+.text-loading {
+  color: #999999;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+/* line 16, ../../app/assets/stylesheets/modules/_progressbar.scss */
+.progressbar {
+  width: 120px;
+  height: 15px;
+  clear: both;
+  background: #E9E9E9;
+  border-radius: 4px;
+  margin: 5% auto .6em;
+  overflow: hidden;
+}
+
+/* line 26, ../../app/assets/stylesheets/modules/_progressbar.scss */
+.progress {
+  background: #FF6600;
+  height: 15px;
+  width: 0%;
+  max-width: 100%;
+  float: left;
+  -webkit-animation: progress .2s 1 forwards;
+  -moz-animation: progress .2s 1 forwards;
+  -ms-animation: progress .2s 1 forwards;
+  animation: progress .2s 1 forwards;
+}
+
+/* line 38, ../../app/assets/stylesheets/modules/_progressbar.scss */
+.pbaranim {
+  height: 15px;
+  width: 100%;
+  overflow: hidden;
+  background: url(/dev-assets/progress.gif) repeat-x;
+  -moz-opacity: 0.25;
+  -khtml-opacity: 0.25;
+  opacity: 0.25;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=25);
+  filter: alpha(opacity=25);
+}
+
+@-webkit-keyframes progress {
+  to {
+    width: 100%;
+  }
+}
+@-moz-keyframes progress {
+  to {
+    width: 100%;
+  }
+}
+@-ms-keyframes progress {
+  to {
+    width: 100%;
+  }
+}
+@keyframes progress {
+  to {
+    width: 100%;
+  }
+}
+/**
+* Header styles
+**/
+/* line 6, ../../app/assets/stylesheets/modules/_header.scss */
+.header-container {
+  background: #FFFFFF;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.21);
+  left: 0;
+  padding: 0 5px;
+  position: absolute;
+  right: 0;
+  z-index: 40;
+}
+
+/**
+* General styles for nav bar on main sidebar
+**/
+/* line 5, ../../app/assets/stylesheets/modules/_navbar.scss */
+.nav {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+/* line 9, ../../app/assets/stylesheets/modules/_navbar.scss */
+.nav:before, .nav:after {
+  content: " ";
+  display: table;
+}
+/* line 14, ../../app/assets/stylesheets/modules/_navbar.scss */
+.nav:after {
+  clear: both;
+}
+
+/* line 19, ../../app/assets/stylesheets/modules/_navbar.scss */
+.navbar-nav {
+  float: left;
+  margin: 0;
+}
+/* line 22, ../../app/assets/stylesheets/modules/_navbar.scss */
+.navbar-nav > li {
+  display: inline-block;
+}
+/* line 24, ../../app/assets/stylesheets/modules/_navbar.scss */
+.navbar-nav > li > a {
+  background-color: transparent;
+  border-bottom: 3px solid transparent;
+  color: #435D65;
+  font-size: 14px;
+  padding: 17px;
+  transition: all .4s;
+}
+/* line 31, ../../app/assets/stylesheets/modules/_navbar.scss */
+.navbar-nav > li > a .icon {
+  font-size: 9px;
+  margin-left: 5px;
+}
+/* line 37, ../../app/assets/stylesheets/modules/_navbar.scss */
+.navbar-nav > li.active a {
+  font-weight: 600;
+}
+/* line 41, ../../app/assets/stylesheets/modules/_navbar.scss */
+.navbar-nav > li.magic-line {
+  background: #FF6600;
+  bottom: 0px;
+  height: 3px;
+  left: 0;
+  position: absolute;
+  width: 100px;
+}
+
+/* line 1, ../../app/assets/stylesheets/modules/_navigation.scss */
+.top-navigation {
+  margin-left: 60px;
+  position: relative;
+}
+
+/**
+* Styles for logo
+**/
+/* line 5, ../../app/assets/stylesheets/modules/_brand.scss */
+.navbar-brand {
+  float: left;
+}
+/* line 7, ../../app/assets/stylesheets/modules/_brand.scss */
+.navbar-brand .logo {
+  color: #026BA8;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+  padding: 16px 20px;
+}
+/* line 14, ../../app/assets/stylesheets/modules/_brand.scss */
+.navbar-brand .logo .icon {
+  color: #FF6600;
+}
+
+/**
+* Styles for action links over main table
+**/
+/* line 6, ../../app/assets/stylesheets/modules/_action-links.scss */
+.action-list {
+  float: left;
+  list-style: none;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+@media only screen and (min-width: 800px) {
+  /* line 6, ../../app/assets/stylesheets/modules/_action-links.scss */
+  .action-list {
+    float: right;
+  }
+}
+/* line 14, ../../app/assets/stylesheets/modules/_action-links.scss */
+.action-list > li {
+  display: inline-block;
+  margin-left: 20px;
+}
+@media only screen and (min-width: 800px) {
+  /* line 14, ../../app/assets/stylesheets/modules/_action-links.scss */
+  .action-list > li {
+    margin-left: 30px;
+  }
+}
+/* line 20, ../../app/assets/stylesheets/modules/_action-links.scss */
+.action-list > li:first-child {
+  margin-left: 0;
+}
+/* line 23, ../../app/assets/stylesheets/modules/_action-links.scss */
+.action-list > li .action--link {
+  cursor: default;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  line-height: 1.2;
+  opacity: 0.5;
+  outline: none;
+}
+@media only screen and (min-width: 800px) {
+  /* line 23, ../../app/assets/stylesheets/modules/_action-links.scss */
+  .action-list > li .action--link {
+    font-size: 12px;
+  }
+}
+/* line 33, ../../app/assets/stylesheets/modules/_action-links.scss */
+.action-list > li .action--link:before {
+  font-family: 'monetize';
+  font-size: 15px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* line 44, ../../app/assets/stylesheets/modules/_action-links.scss */
+.loaded-data .action-list .action--link {
+  opacity: 1;
+  color: #435D65;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/**
+* General styles for pagination
+**/
+/* line 5, ../../app/assets/stylesheets/modules/_pagination.scss */
+.pagination__list {
+  position: relative;
+  z-index: 10;
+}
+/* line 9, ../../app/assets/stylesheets/modules/_pagination.scss */
+.pagination__list li {
+  display: block;
+  float: left;
+  margin-right: 4px;
+  text-align: center;
+}
+/* line 14, ../../app/assets/stylesheets/modules/_pagination.scss */
+.pagination__list li a {
+  background: transparent;
+  border: 1px solid;
+  border-radius: 100%;
+  display: block;
+  height: 24px;
+  line-height: 21px;
+  transition: background 0.3s ease;
+  width: 24px;
+}
+/* line 23, ../../app/assets/stylesheets/modules/_pagination.scss */
+.pagination__list li a:hover {
+  color: #FFF;
+}
+/* line 27, ../../app/assets/stylesheets/modules/_pagination.scss */
+.pagination__list li i {
+  padding-left: 2px;
+  line-height: 23px;
+}
+/* line 32, ../../app/assets/stylesheets/modules/_pagination.scss */
+.pagination__list li.active a {
+  color: #FFF;
+  cursor: default;
+}
+
+/**
+* General styles for modal windows
+**/
+/* line 5, ../../app/assets/stylesheets/modules/_modals.scss */
+.modal-open {
+  overflow: hidden;
+}
+
+/* line 9, ../../app/assets/stylesheets/modules/_modals.scss */
+.modal__header {
+  border-radius: 4px 4px 0 0;
+  padding: 15px 24px;
+}
+
+/* line 14, ../../app/assets/stylesheets/modules/_modals.scss */
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+/* line 25, ../../app/assets/stylesheets/modules/_modals.scss */
+.modal .form-field {
+  margin-bottom: 20px;
+}
+
+/* line 30, ../../app/assets/stylesheets/modules/_modals.scss */
+.modal__close {
+  color: rgba(255, 255, 255, 0.5);
+  float: right;
+  font-size: 18px;
+}
+/* line 34, ../../app/assets/stylesheets/modules/_modals.scss */
+.modal__close:hover {
+  color: white;
+}
+/* line 37, ../../app/assets/stylesheets/modules/_modals.scss */
+.modal__close .icon--close {
+  color: rgba(255, 255, 255, 0.5);
+  right: inherit;
+  top: inherit;
+}
+
+/* line 44, ../../app/assets/stylesheets/modules/_modals.scss */
+.modal__title {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* line 50, ../../app/assets/stylesheets/modules/_modals.scss */
+.modal__body {
+  padding: 12px 24px 12px 24px;
+}
+/* line 52, ../../app/assets/stylesheets/modules/_modals.scss */
+.modal__body p {
+  line-height: 18px;
+  margin-bottom: 15px;
+}
+
+/* line 58, ../../app/assets/stylesheets/modules/_modals.scss */
+.modal.fade .modal-dialog {
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  -o-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+
+/* line 67, ../../app/assets/stylesheets/modules/_modals.scss */
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+/* line 73, ../../app/assets/stylesheets/modules/_modals.scss */
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* line 77, ../../app/assets/stylesheets/modules/_modals.scss */
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+
+/* line 82, ../../app/assets/stylesheets/modules/_modals.scss */
+.modal-content {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  outline: 0;
+}
+
+/* line 94, ../../app/assets/stylesheets/modules/_modals.scss */
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #000000;
+}
+
+/* line 101, ../../app/assets/stylesheets/modules/_modals.scss */
+.modal-backdrop.fade {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+/* line 105, ../../app/assets/stylesheets/modules/_modals.scss */
+.modal-backdrop.in {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+/* line 110, ../../app/assets/stylesheets/modules/_modals.scss */
+.modal__footer {
+  padding: 0 24px 30px 24px;
+  text-align: right;
+}
+
+/* line 114, ../../app/assets/stylesheets/modules/_modals.scss */
+.modal__footer .btn + .btn {
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+
+/* line 118, ../../app/assets/stylesheets/modules/_modals.scss */
+.modal__footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+
+/* line 121, ../../app/assets/stylesheets/modules/_modals.scss */
+.modal__footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+
+/* line 124, ../../app/assets/stylesheets/modules/_modals.scss */
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+@media (min-width: 768px) {
+  /* line 132, ../../app/assets/stylesheets/modules/_modals.scss */
+  .modal-dialog {
+    width: 720px;
+    margin: 30px auto;
+  }
+
+  /* line 136, ../../app/assets/stylesheets/modules/_modals.scss */
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  /* line 140, ../../app/assets/stylesheets/modules/_modals.scss */
+  .modal-sm {
+    width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 145, ../../app/assets/stylesheets/modules/_modals.scss */
+  .modal-lg {
+    width: 900px;
+  }
+}
+/**
+* Styles for scroll boxes on modal windows
+**/
+/* line 5, ../../app/assets/stylesheets/modules/_box.scss */
+.box-scroll__title {
+  color: #555;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+/* line 11, ../../app/assets/stylesheets/modules/_box.scss */
+.box-scroll__list {
+  background: #EFEFEF;
+  border: 1px solid #A8A8A8;
+  border-radius: 4px;
+  height: 220px;
+  widows: 100%;
+  overflow-y: auto;
+}
+/* line 18, ../../app/assets/stylesheets/modules/_box.scss */
+.box-scroll__list li {
+  line-height: 20px;
+}
+/* line 20, ../../app/assets/stylesheets/modules/_box.scss */
+.box-scroll__list li a {
+  display: block;
+  padding: 0 5px;
+}
+/* line 23, ../../app/assets/stylesheets/modules/_box.scss */
+.box-scroll__list li a:hover {
+  color: #FFF;
+}
+/* line 28, ../../app/assets/stylesheets/modules/_box.scss */
+.box-scroll__list:hover {
+  background: #FFF;
+}
+/* line 32, ../../app/assets/stylesheets/modules/_buttons.scss */
+button {
+  border: 0;
+  width: auto;
+  font-size: 12px;
+  color: #435D65;
+  line-height: 13px;
+  padding: 10px 16px;
+}
+/**
+* General styles for buttons
+**/
+/* line 5, ../../app/assets/stylesheets/modules/_buttons.scss */
+.btn {
+  border: 0;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 7px 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* line 13, ../../app/assets/stylesheets/modules/_buttons.scss */
+.btn--default {
+  color: #FFF;
+  font-weight: 700;
+  transition: opacity, 0.20s, ease;
+  width: 160px;
+}
+/* line 18, ../../app/assets/stylesheets/modules/_buttons.scss */
+.btn--default:hover {
+  opacity: 0.8;
+}
+
+/* line 23, ../../app/assets/stylesheets/modules/_buttons.scss */
+.btn--alternative {
+  color: #828282;
+  background: rgba(153, 153, 153, 0.2);
+  transition: all, 0.20s, ease;
+  width: 160px;
+}
+/* line 28, ../../app/assets/stylesheets/modules/_buttons.scss */
+.btn--alternative:hover {
+  background: rgba(153, 153, 153, 0.4);
+}
+
+/* line 40, ../../app/assets/stylesheets/modules/_buttons.scss */
+.btn--small {
+  font-size: 12px;
+  color: #828282;
+  background: rgba(153, 153, 153, 0.2);
+  transition: all, 0.20s, ease;
+  width: 140px;
+  padding: 3px 5px;
+}
+
+/**
+* Styles for tooltip, the tooltip appear the delete icon on the table
+**/
+/* line 6, ../../app/assets/stylesheets/modules/_tooltip.scss */
+.tooltip {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  visibility: visible;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.4;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+/* line 18, ../../app/assets/stylesheets/modules/_tooltip.scss */
+.tooltip.in {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+
+/* line 22, ../../app/assets/stylesheets/modules/_tooltip.scss */
+.tooltip.top {
+  margin-top: -3px;
+  padding: 5px 0;
+}
+
+/* line 26, ../../app/assets/stylesheets/modules/_tooltip.scss */
+.tooltip.right {
+  margin-left: 3px;
+  padding: 0 5px;
+}
+
+/* line 30, ../../app/assets/stylesheets/modules/_tooltip.scss */
+.tooltip.bottom {
+  margin-top: 3px;
+  padding: 5px 0;
+}
+
+/* line 34, ../../app/assets/stylesheets/modules/_tooltip.scss */
+.tooltip.left {
+  margin-left: -3px;
+  padding: 0 5px;
+}
+
+/* line 38, ../../app/assets/stylesheets/modules/_tooltip.scss */
+.tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #000000;
+  border-radius: 4px;
+}
+
+/* line 47, ../../app/assets/stylesheets/modules/_tooltip.scss */
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+/* line 54, ../../app/assets/stylesheets/modules/_tooltip.scss */
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+
+/* line 61, ../../app/assets/stylesheets/modules/_tooltip.scss */
+.tooltip.top-left .tooltip-arrow {
+  bottom: 0;
+  right: 5px;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+
+/* line 68, ../../app/assets/stylesheets/modules/_tooltip.scss */
+.tooltip.top-right .tooltip-arrow {
+  bottom: 0;
+  left: 5px;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+
+/* line 75, ../../app/assets/stylesheets/modules/_tooltip.scss */
+.tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: #000000;
+}
+
+/* line 82, ../../app/assets/stylesheets/modules/_tooltip.scss */
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #000000;
+}
+
+/* line 89, ../../app/assets/stylesheets/modules/_tooltip.scss */
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
+}
+
+/* line 96, ../../app/assets/stylesheets/modules/_tooltip.scss */
+.tooltip.bottom-left .tooltip-arrow {
+  top: 0;
+  right: 5px;
+  margin-top: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
+}
+
+/* line 103, ../../app/assets/stylesheets/modules/_tooltip.scss */
+.tooltip.bottom-right .tooltip-arrow {
+  top: 0;
+  left: 5px;
+  margin-top: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
+}
+
+/* line 1, ../../app/assets/stylesheets/modules/_panels.scss */
+.panel__title {
+  border-radius: 4px;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 8px 0 8px 9px;
+}
+
+/* line 11, ../../app/assets/stylesheets/modules/_panels.scss */
+.panel-rounded-white-box {
+  background: #FFF;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  border: 1px solid #D1DBE0;
+  margin: 4px;
+}
+
+/* line 19, ../../app/assets/stylesheets/modules/_panels.scss */
+.panel-header {
+  background: #435D65;
+  border-radius: 4px 4px 0px 0px;
+}
+/* line 22, ../../app/assets/stylesheets/modules/_panels.scss */
+.panel-header .title {
+  padding: 8px 23px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #FFFFFF;
+  line-height: 13px;
+  margin-bottom: 0;
+}
+
+/* line 32, ../../app/assets/stylesheets/modules/_panels.scss */
+.panel-body {
+  padding: 12px 24px;
+}
+
+/* line 2, ../../app/assets/stylesheets/modules/_job-history.scss */
+.panel-data-history-container .dropdown-toggle {
+  padding: 18px !important;
+  transition: all .5s ease-in-out;
+}
+/* line 5, ../../app/assets/stylesheets/modules/_job-history.scss */
+.panel-data-history-container .dropdown-toggle .icon {
+  vertical-align: middle;
+  transition: all .5s ease-in-out;
+  font-size: 16px;
+}
+/* line 11, ../../app/assets/stylesheets/modules/_job-history.scss */
+.panel-data-history-container .dropdown-toggle:hover .icon {
+  color: #FF5C07;
+}
+/* line 18, ../../app/assets/stylesheets/modules/_job-history.scss */
+.panel-data-history-container.open .dropdown-toggle .icon {
+  color: #FF5C07;
+}
+/* line 23, ../../app/assets/stylesheets/modules/_job-history.scss */
+.panel-data-history-container.panel-data-history-panel {
+  background: #FFFFFF;
+  border: 1px solid #D1DBE0;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+/* line 29, ../../app/assets/stylesheets/modules/_job-history.scss */
+.panel-data-history-container.panel-data-history-panel .panel-data-history-list {
+  overflow: auto;
+}
+/* line 32, ../../app/assets/stylesheets/modules/_job-history.scss */
+.panel-data-history-container.panel-data-history-panel .panel-data-history-list__item {
+  /* Line Copy: */
+  border-bottom: 1px solid #D2DCE1;
+}
+
+/* line 38, ../../app/assets/stylesheets/modules/_job-history.scss */
+.panel-data-history-list {
+  min-width: 496px;
+  overflow-y: auto;
+  padding: 0;
+}
+
+/* line 43, ../../app/assets/stylesheets/modules/_job-history.scss */
+.panel-data-history-list__item {
+  padding: 16px 18px 5px 42px;
+  position: relative;
+}
+/* line 46, ../../app/assets/stylesheets/modules/_job-history.scss */
+.panel-data-history-list__item .badge-status {
+  left: 20px;
+  margin: 0;
+  position: absolute;
+  top: 20px;
+}
+/* line 52, ../../app/assets/stylesheets/modules/_job-history.scss */
+.panel-data-history-list__item .header {
+  margin-bottom: 15px;
+}
+/* line 55, ../../app/assets/stylesheets/modules/_job-history.scss */
+.panel-data-history-list__item .content {
+  margin-bottom: 15px;
+  font-style: italic;
+}
+/* line 59, ../../app/assets/stylesheets/modules/_job-history.scss */
+.panel-data-history-list__item .title {
+  color: #435D65;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 13px;
+  width: 85%;
+}
+/* line 66, ../../app/assets/stylesheets/modules/_job-history.scss */
+.panel-data-history-list__item .status {
+  font-weight: 600;
+  font-size: 10px;
+  color: #435D65;
+  line-height: 13px;
+}
+/* line 72, ../../app/assets/stylesheets/modules/_job-history.scss */
+.panel-data-history-list__item .date {
+  font-size: 10px;
+  color: #435D65;
+  line-height: 13px;
+}
+
+/* line 78, ../../app/assets/stylesheets/modules/_job-history.scss */
+.sphere {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 500%;
+  position: relative;
+  display: inline-block;
+  margin: 13px 2px;
+}
+
+/* line 89, ../../app/assets/stylesheets/modules/_job-history.scss */
+.sphere--red {
+  background-color: #e7191b;
+}
+
+/* line 92, ../../app/assets/stylesheets/modules/_job-history.scss */
+.sphere--green {
+  background-color: #18BC7B;
+}
+
+/* line 95, ../../app/assets/stylesheets/modules/_job-history.scss */
+.sphere--blue {
+  background-color: #27a9e3;
+}
+
+/* line 98, ../../app/assets/stylesheets/modules/_job-history.scss */
+.sphere--yellow {
+  background-color: #ECCC59;
+}
+
+/* line 2, ../../app/assets/stylesheets/modules/_dashboard.scss */
+.dashboard-stat.alternative {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  margin: 20px;
+  padding: 15px 20px;
+  position: relative;
+  min-height: 83px;
+}
+/* line 10, ../../app/assets/stylesheets/modules/_dashboard.scss */
+.dashboard-stat.alternative .visual {
+  float: none;
+  height: auto;
+  padding: 0;
+  width: auto;
+  padding-top: 3px;
+}
+/* line 16, ../../app/assets/stylesheets/modules/_dashboard.scss */
+.dashboard-stat.alternative .visual .icon {
+  font-size: 35px;
+}
+/* line 20, ../../app/assets/stylesheets/modules/_dashboard.scss */
+.dashboard-stat.alternative .details {
+  float: none;
+  padding-right: 0;
+}
+/* line 23, ../../app/assets/stylesheets/modules/_dashboard.scss */
+.dashboard-stat.alternative .details .number {
+  color: #FFFFFF;
+  font-size: 18px;
+  margin-bottom: 5px;
+  padding: 0;
+  text-align: left;
+}
+/* line 30, ../../app/assets/stylesheets/modules/_dashboard.scss */
+.dashboard-stat.alternative .details .desc {
+  color: #FFFFFF;
+  font-size: 10px;
+  line-height: 14px;
+  opacity: 0.8;
+  text-align: left;
+  text-transform: uppercase;
+}
+/* line 39, ../../app/assets/stylesheets/modules/_dashboard.scss */
+.dashboard-stat.alternative .dashboard-stat-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all .2s ease-in-out;
+}
+/* line 47, ../../app/assets/stylesheets/modules/_dashboard.scss */
+.dashboard-stat.alternative .dashboard-stat-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* line 54, ../../app/assets/stylesheets/modules/_dashboard.scss */
+h2.title {
+  font-weight: 600;
+  font-size: 14px;
+  color: #435D65;
+  line-height: 13px;
+  margin-bottom: 16px;
+}
+
+/**
+* General helpers for application, float, push, padding and others helpers
+**/
+/**
+ * Add/remove floats
+ */
+/* line 8, ../../app/assets/stylesheets/core/_helpers.scss */
+.float--right, .accordion__title .icon--sortable {
+  float: right !important;
+}
+
+/* line 9, ../../app/assets/stylesheets/core/_helpers.scss */
+.float--left {
+  float: left !important;
+}
+
+/* line 10, ../../app/assets/stylesheets/core/_helpers.scss */
+.float--none {
+  float: none !important;
+}
+
+/**
+ * Center blockk elements
+ */
+/* line 15, ../../app/assets/stylesheets/core/_helpers.scss */
+.block--center {
+  display: block;
+  margin: 0 auto;
+}
+
+/**
+ * Text alignment
+ */
+/* line 23, ../../app/assets/stylesheets/core/_helpers.scss */
+.text--left {
+  text-align: left  !important;
+}
+
+/* line 24, ../../app/assets/stylesheets/core/_helpers.scss */
+.text--center {
+  text-align: center !important;
+}
+
+/* line 25, ../../app/assets/stylesheets/core/_helpers.scss */
+.text--right {
+  text-align: right !important;
+}
+
+@media only screen and (min-width: 1280px) {
+  /* line 27, ../../app/assets/stylesheets/core/_helpers.scss */
+  .desk-wide--text--center {
+    text-align: center  !important;
+  }
+}
+
+/**
+ * Font weights
+ */
+/* line 36, ../../app/assets/stylesheets/core/_helpers.scss */
+.weight--light {
+  font-weight: 300 !important;
+}
+
+/* line 37, ../../app/assets/stylesheets/core/_helpers.scss */
+.weight--normal {
+  font-weight: 400 !important;
+}
+
+/* line 38, ../../app/assets/stylesheets/core/_helpers.scss */
+.weight--semibold {
+  font-weight: 600 !important;
+}
+
+/* line 40, ../../app/assets/stylesheets/core/_helpers.scss */
+.relative {
+  position: relative;
+}
+
+/**
+ * Add/remove margins
+ */
+/* line 47, ../../app/assets/stylesheets/core/_helpers.scss */
+.push {
+  margin: 16px !important;
+}
+
+/* line 48, ../../app/assets/stylesheets/core/_helpers.scss */
+.push--top {
+  margin-top: 16px !important;
+}
+
+/* line 49, ../../app/assets/stylesheets/core/_helpers.scss */
+.push--right {
+  margin-right: 16px !important;
+}
+
+/* line 50, ../../app/assets/stylesheets/core/_helpers.scss */
+.push--bottom {
+  margin-bottom: 16px !important;
+}
+
+/* line 51, ../../app/assets/stylesheets/core/_helpers.scss */
+.push--left {
+  margin-left: 16px !important;
+}
+
+/* line 52, ../../app/assets/stylesheets/core/_helpers.scss */
+.push--ends {
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
+}
+
+/* line 53, ../../app/assets/stylesheets/core/_helpers.scss */
+.push--sides {
+  margin-right: 16px !important;
+  margin-left: 16px !important;
+}
+
+/* line 55, ../../app/assets/stylesheets/core/_helpers.scss */
+.push-half {
+  margin: 8px !important;
+}
+
+/* line 56, ../../app/assets/stylesheets/core/_helpers.scss */
+.push-half--top {
+  margin-top: 8px !important;
+}
+
+/* line 57, ../../app/assets/stylesheets/core/_helpers.scss */
+.push-half--right {
+  margin-right: 8px !important;
+}
+
+/* line 58, ../../app/assets/stylesheets/core/_helpers.scss */
+.push-half--bottom {
+  margin-bottom: 8px !important;
+}
+
+/* line 59, ../../app/assets/stylesheets/core/_helpers.scss */
+.push-half--left {
+  margin-left: 8px !important;
+}
+
+/* line 60, ../../app/assets/stylesheets/core/_helpers.scss */
+.push-half--ends {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+/* line 61, ../../app/assets/stylesheets/core/_helpers.scss */
+.push-half--sides {
+  margin-right: 8px !important;
+  margin-left: 8px !important;
+}
+
+/* line 63, ../../app/assets/stylesheets/core/_helpers.scss */
+.flush {
+  margin: 0 !important;
+}
+
+/* line 64, ../../app/assets/stylesheets/core/_helpers.scss */
+.flush--top {
+  margin-top: 0 !important;
+}
+
+/* line 65, ../../app/assets/stylesheets/core/_helpers.scss */
+.flush--right {
+  margin-right: 0 !important;
+}
+
+/* line 66, ../../app/assets/stylesheets/core/_helpers.scss */
+.flush--bottom {
+  margin-bottom: 0 !important;
+}
+
+/* line 67, ../../app/assets/stylesheets/core/_helpers.scss */
+.flush--left {
+  margin-left: 0 !important;
+}
+
+/* line 68, ../../app/assets/stylesheets/core/_helpers.scss */
+.flush--ends {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* line 69, ../../app/assets/stylesheets/core/_helpers.scss */
+.flush--sides {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+/**
+ * Add/remove paddings
+ */
+/* line 75, ../../app/assets/stylesheets/core/_helpers.scss */
+.soft {
+  padding: 16px !important;
+}
+
+/* line 76, ../../app/assets/stylesheets/core/_helpers.scss */
+.soft--top {
+  padding-top: 16px !important;
+}
+
+/* line 77, ../../app/assets/stylesheets/core/_helpers.scss */
+.soft--right {
+  padding-right: 16px !important;
+}
+
+/* line 78, ../../app/assets/stylesheets/core/_helpers.scss */
+.soft--bottom {
+  padding-bottom: 16px !important;
+}
+
+/* line 79, ../../app/assets/stylesheets/core/_helpers.scss */
+.soft--left {
+  padding-left: 16px !important;
+}
+
+/* line 80, ../../app/assets/stylesheets/core/_helpers.scss */
+.soft--ends {
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+
+/* line 81, ../../app/assets/stylesheets/core/_helpers.scss */
+.soft--sides {
+  padding-right: 16px !important;
+  padding-left: 16px !important;
+}
+
+/* line 83, ../../app/assets/stylesheets/core/_helpers.scss */
+.soft-half {
+  padding: 8px !important;
+}
+
+/* line 84, ../../app/assets/stylesheets/core/_helpers.scss */
+.soft-half--top {
+  padding-top: 8px !important;
+}
+
+/* line 85, ../../app/assets/stylesheets/core/_helpers.scss */
+.soft-half--right {
+  padding-right: 8px !important;
+}
+
+/* line 86, ../../app/assets/stylesheets/core/_helpers.scss */
+.soft-half--bottom {
+  padding-bottom: 8px !important;
+}
+
+/* line 87, ../../app/assets/stylesheets/core/_helpers.scss */
+.soft-half--left {
+  padding-left: 8px !important;
+}
+
+/* line 88, ../../app/assets/stylesheets/core/_helpers.scss */
+.soft-half--ends {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+/* line 89, ../../app/assets/stylesheets/core/_helpers.scss */
+.soft-half--sides {
+  padding-right: 8px !important;
+  padding-left: 8px !important;
+}
+
+/* line 91, ../../app/assets/stylesheets/core/_helpers.scss */
+.hard {
+  padding: 0 !important;
+}
+
+/* line 92, ../../app/assets/stylesheets/core/_helpers.scss */
+.hard--top {
+  padding-top: 0 !important;
+}
+
+/* line 93, ../../app/assets/stylesheets/core/_helpers.scss */
+.hard--right {
+  padding-right: 0 !important;
+}
+
+/* line 94, ../../app/assets/stylesheets/core/_helpers.scss */
+.hard--bottom {
+  padding-bottom: 0 !important;
+}
+
+/* line 95, ../../app/assets/stylesheets/core/_helpers.scss */
+.hard--left {
+  padding-left: 0 !important;
+}
+
+/* line 96, ../../app/assets/stylesheets/core/_helpers.scss */
+.hard--ends {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* line 97, ../../app/assets/stylesheets/core/_helpers.scss */
+.hard--sides {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+/**
+ * Pull items full width of `.island` parents.
+ */
+/* line 102, ../../app/assets/stylesheets/core/_helpers.scss */
+.full-bleed {
+  margin-right: -16px !important;
+  margin-left: -16px !important;
+}
+/* line 106, ../../app/assets/stylesheets/core/_helpers.scss */
+.islet .full-bleed {
+  margin-right: -8px !important;
+  margin-left: -8px !important;
+}
+
+/**
+ * Add a help cursor to any element that gives the user extra information on
+ * `:hover`.
+ */
+/* line 117, ../../app/assets/stylesheets/core/_helpers.scss */
+.informative {
+  cursor: help !important;
+}
+
+/**
+ * Mute an object by reducing its opacity.
+ */
+/* line 125, ../../app/assets/stylesheets/core/_helpers.scss */
+.muted {
+  opacity: 0.5 !important;
+  filter: alpha(opacity=50) !important;
+}
+
+/**
+ * Align items to the right where they imply progression/movement forward, e.g.:
+ *
+   <p class=proceed><a href=#>Read more...</a></p>
+ *
+ */
+/* line 137, ../../app/assets/stylesheets/core/_helpers.scss */
+.proceed {
+  text-align: right !important;
+}
+
+/**
+ * Add a right-angled quote to links that imply movement, e.g.:
+ *
+   <a href=# class=go>Read more</a>
+ *
+ */
+/* line 148, ../../app/assets/stylesheets/core/_helpers.scss */
+.go:after {
+  content: " " "»" !important;
+}
+
+/**
+ * Apply capital case to an element (usually a `strong`).
+ */
+/* line 156, ../../app/assets/stylesheets/core/_helpers.scss */
+.caps {
+  text-transform: uppercase !important;
+}
+
+/**
+ * Hide content off-screen without resorting to `display:none;`, also provide
+ * breakpoint specific hidden elements.
+ */
+/* line 175, ../../app/assets/stylesheets/core/_helpers.scss */
+.accessibility,
+.visuallyhidden {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
+@media only screen and (max-width: 799px) {
+  /* line 182, ../../app/assets/stylesheets/core/_helpers.scss */
+  .accessibility--palm,
+  .visuallyhidden--palm {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1023px) {
+  /* line 182, ../../app/assets/stylesheets/core/_helpers.scss */
+  .accessibility--lap,
+  .visuallyhidden--lap {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+  }
+}
+@media only screen and (min-width: 800px) {
+  /* line 182, ../../app/assets/stylesheets/core/_helpers.scss */
+  .accessibility--lap-and-up,
+  .visuallyhidden--lap-and-up {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  /* line 182, ../../app/assets/stylesheets/core/_helpers.scss */
+  .accessibility--portable,
+  .visuallyhidden--portable {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* line 182, ../../app/assets/stylesheets/core/_helpers.scss */
+  .accessibility--desk,
+  .visuallyhidden--desk {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  /* line 182, ../../app/assets/stylesheets/core/_helpers.scss */
+  .accessibility--desk-wide,
+  .visuallyhidden--desk-wide {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+  }
+}
+/**
+ * Vertical alignment
+ */
+/* line 193, ../../app/assets/stylesheets/core/_helpers.scss */
+.v-table {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 199, ../../app/assets/stylesheets/core/_helpers.scss */
+.v-table-cell {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/**
+ * Mask
+ */
+/* line 208, ../../app/assets/stylesheets/core/_helpers.scss */
+.mask {
+  overflow: hidden;
+  position: relative;
+}
+
+/**
+ * Truncate text
+ */
+/* line 217, ../../app/assets/stylesheets/core/_helpers.scss */
+.ellipsis, .accordion__title-name, .accordion__item-name {
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* line 224, ../../app/assets/stylesheets/core/_helpers.scss */
+.hidden {
+  display: none;
+}
+.content-wrapper { clear:both;}
+
+.main-container-wrapper { overflow-y: auto; }
+/* debug for borders on grids
+.grid {
+  border:1px solid red;
+}
+.grid__item {
+  border:1px solid green;
+}*/
+
+
+
+.input-upload-wrapper img {
+  position:absolute;
+  right:0px;
+  top:2px;
+  cursor:pointer;
+  width:22px;
+}
+
+.input-upload-wrapper{
+  position:relative;
+  width:200px;
+  border:solid 1px #ccc;
+  border-radius:2px;
+  padding:1px;
+  display: inline-block;
+}
+
+.input-upload-wrapper input {
+  width:196px;
+  border:none;
+  cursor:text;;
+  padding:2px
+}
+
+.input-magicsuggest {
+  margin:2px !important;
+  border:1px solid #ccc;
+  border-radius:2px;
+  clear:both;
+  width:20%;
+  display:inline-block;
+}
+
+
+
+/*
+ *  CSS for boxes
+ */
+
+
+
+.group-data-presentation {
+    border-radius: 4px;
+    border: 1px solid;
+    padding: 0px 2px;
+    margin: 2px;
+    width: 30%;
+}
+
+.option-rows-main {
+  clear:both;
+}
+
+.groups-row .input-upload-wrapper,  .groups-row select {
+  display:inline-block;
+  padding-top:10px;
+}
+
+.groups-box .icon--close {
+  font-size:15px;
+}
+
+.icon--close{
+  position: absolute;
+  top: 2px;
+  right: -14px;
+  color: #C7CED0;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 9;
+}
+
+.panel-header .icon--close{
+  top: 4px;
+  right: 10px;
+  color: #FFFFF;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.display-groups-box {
+  min-height:50px;
+  position: relative;
+}
+
+.display-groups-estimate {
+  background: rgba(255,255,255,0.32);
+  border-radius: 40px;
+  color: #435D65;
+  float: right;
+  font-size: 12px;
+  line-height: 13px;
+  margin-right: 5px;
+  padding: 4px 12px;
+}
+
+
+.grey-control-box {
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  float: left;
+  margin-right: 7px;
+  text-align: center;
+  font-size: 21px;
+  color: #FFFFFF;
+  line-height: 25px;
+  margin: 6px 8px;
+  cursor: pointer;
+}
+
+.control-center {
+}
+
+.plus-button {
+  background: #435D65;
+  margin-right: 0px;
+}
+
+.minus-button {
+  background: #435D65;
+  line-height: 22px;
+  margin-right: 0px;
+}
+
+.left-parenthesis-button,
+.right-parenthesis-button {
+  font-size: 15px;
+  color: #435D65;
+  opacity: 0.59;
+  border: 1px solid #435D65;
+  line-height: 21px;
+}
+.left-parenthesis-button{
+  margin-right: 0px;
+}
+
+.right-parenthesis-button{
+  margin-right: 0px;
+}
+.group-drop {
+  padding: 10px;
+  font-size:14px;
+  font-weight: bold;
+}
+
+.grey-control-box .control-center {
+  font-size:20px;
+  font-weight: bold;
+}
+
+.group-drop span {
+  position:relative;
+  min-width:20px;
+  border:solid 1px #ccc;
+  border-radius:2px;
+  padding:4px;
+  margin-right:4px;
+  display: inline-block;
+}
+
+.group-entry {
+  border-radius: 5px;
+}
+
+.title.groups-title {
+  background: #556C74;
+  border-radius: 40px;
+  display: inline-block;
+  margin: 4px 8px;
+  padding: 4px 15px;
+  cursor: pointer;
+}
+
+.data-presentation {
+  padding: 4px 12px;
+  border: none;
+  background: transparent;
+}
+
+.display-groups-row:nth-child(even){
+  background-color: #F4F7F9;
+}
+
+.display-groups-row .grid__item{
+  border-right: 1px solid #D2DCE1;
+}
+.display-groups-row .grid__item:last-child{
+  border-right: none;
+}
+
+.logic-container{
+  width: 100%;
+  height: 70px;
+  background: #FFFFFF;
+  border: 1px solid #D1DBE0;
+  box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.10);
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.logic-container .title{
+  font-weight: 600;
+  font-size: 10px;
+  color: #435D65;
+  line-height: 13px;
+}
+
+.segments-state{
+  font-weight: 600;
+  font-size: 10px;
+  color: #7B8D93;
+  line-height: 13px;
+}
+
+/***
+Dashboard stats
+***/
+
+.dashboard-stat {
+  margin-bottom: 25px;
+  line-height: 20px;
+  margin: 10px;
+  font-family: 'Open Sans';
+  font-weight: 300 !important;
+}
+
+.dashboard-stat:before,
+.dashboard-stat:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.dashboard-stat:after {
+  clear: both;
+}
+
+.dashboard-stat .visual {
+  width: 80px;
+  height:80px;
+  display: block;
+  float: left;
+  padding-top: 10px;
+  padding-left: 15px;
+}
+
+.dashboard-stat .visual i {
+  font-size: 55px;
+  color: #fff;
+}
+
+.dashboard-stat .details {
+  float: right;
+  padding-right: 10px;
+  font-family: 'Open Sans';
+  font-weight: 300 !important;
+  border-radius: 0 !important;
+}
+
+.dashboard-stat .details .number {
+  padding-top: 25px;
+  text-align: right;
+  font-size: 30px;
+  letter-spacing: -1px;
+  font-weight: 300 !important;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.dashboard-stat .details .desc {
+  text-align: right;
+  font-size: 16px;
+  letter-spacing: 0px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.dashboard-stat .more {
+  clear: both;
+  display: block;
+  padding: 5px 10px 5px 10px;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 11px;
+  color: #fff;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+
+.dashboard-stat .more i {
+  margin-top: 4px;
+  float: right;
+}
+
+.dashboard-stat .more:hover {
+  text-decoration: none;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.dashboard-stat.blue {
+  background-color: #26C5DC;
+}
+
+.dashboard-stat.blue .more {
+  background-color: #208dbe;
+}
+
+.dashboard-stat.green {
+  background-color: #58BA65;
+}
+
+.dashboard-stat.green .more {
+  background-color: #10a062;
+}
+
+.dashboard-stat.red {
+  background-color: #ED5F5C;
+}
+
+.dashboard-stat.red .more {
+  background-color:#bc0d0e;
+}
+
+.dashboard-stat.yellow {
+  background-color: #ECCC59;
+}
+
+.dashboard-stat.yellow .more {
+  background-color: #cb871b;
+}
+
+.dashboard-stat.purple {
+  background-color: #B858AA;
+}
+
+.dashboard-stat.dark-purple {
+  background-color: #7B61DE;
+}
+
+.dashboard-stat.purple .more {
+  background-color: #6e1881;
+}
+
+.dashboard-stat.navi {
+  background-color: #5A93BE;
+}
+
+.dashboard-stat.light-blue {
+  background-color: #4FACF2;
+}
+
+.progress {
+  background: #292929;
+  border: 1px solid #111;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 5px #333;
+}
+.progress div {
+  background-color: #1a82f7;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0099FF), to(#1a82f7));
+  background: -webkit-linear-gradient(top, #0099FF, #1a82f7);
+  background: -moz-linear-gradient(top, #0099FF, #1a82f7);
+  background: -ms-linear-gradient(top, #0099FF, #1a82f7);
+  background: -o-linear-gradient(top, #0099FF, #1a82f7);
+}
+
+.progress-wrapper {
+  clear:both;
+  display:none;
+  margin-bottom:5px;
+}
+
+.action-list a { cursor: pointer !important; }
+
+
+.rounded-white-box {
+  background: #FFF;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  border: 1px solid #D1DBE0;
+  padding: 4px;
+  margin: 4px
+}
+
+/**
+ * Base colors
+ */
+
+.customized.body-color {
+  background: #E1E9F0; }
+.customized .nav-sidebar-bgcolor {
+  background: #313541; }
+.customized .sidebar-expandable-bgcolor, .customized .tab_active {
+  background: #282C37; }
+  .customized .sidebar-expandable-bgcolor .nav-sidebar-active, .customized .tab_active .nav-sidebar-active {
+    color: #FFFFFF; }
+.customized .ui-accordion-header-active .ui-icon-triangle-1-s {
+  color: #008BCF; }
+.customized .loaded-data .action-list .action--link:before {
+  color: #FFFFFF; }
+.customized .box-scroll__list li a:hover {
+  background: #008BCF; }
+.customized .box-scroll__list:hover {
+  border-color: #008BCF;
+  box-shadow: 1px 1px 0px #FFFFFF, -1px -1px 0px #FFFFFF; }
+.customized .state-active {
+  border-color: #008BCF; }
+.customized .btn--default {
+  background: #008BCF; }
+.customized .accordion__list li {
+  background: #464A53; }
+.customized .rounder-borders:before {
+  box-shadow: 4px 4px 0 #282C37; }
+.customized .rounder-borders:after {
+  box-shadow: 4px -4px 0 #282C37; }
+.customized .tabs--simple li.active a {
+  background: #E1E9F0; }
+  .customized .tabs--simple li.active a:before {
+    border-top: 1px solid #E1E9F0; }
+.customized .pagination__list li a {
+  border-color: #313541; }
+  .customized .pagination__list li a:hover {
+    background: #313541; }
+.customized .pagination__list li.active a {
+  background: #313541;
+  border-color: #313541; }
+.customized .table thead td, .customized .table thead th {
+  background: #0D89D0; }
+.customized .accordion__title {
+  background: #313541; }
+  .customized .accordion__title.ui-accordion-header-active {
+    background: #53565F;
+    border: 2px solid #008BCF;
+    border-bottom: 0; }
+.customized .accordion__body.ui-accordion-content-active {
+  background: #53565F;
+  border: 2px solid #008BCF;
+  border-top: 0; }
+.customized .modal__header {
+  background: #0D89D0; }
+.customized .widget-section .accordion__title {
+  background: #0D89D0;
+  border: 0; }
+.customized .widget-section .ui-accordion-header-active .ui-icon-triangle-1-s {
+  color: #FFFFFF; }
+.customized .widget-section .accordion__body.ui-accordion-content-active {
+  background: #FFF;
+  border: 0; }
+.customized .breadcrumb > li {
+  color: #555555;
+}
+.customized .navbar-nav > li.magic-line {
+  background: #FF5C07;
+}
+.customized .navbar-brand .logo {
+  color: #313541;
+}
+.customized .navbar-brand .logo .icon {
+  color: #05A2FD;
+}
+ul{
+  list-style-type: none;
+  padding-left: 10px;
+  margin: 10px 0;
+}
