@@ -1,7 +1,8 @@
 import Firebase from 'firebase';
 import {
 	CREATE_USER,
-	SHOW_USERS
+	SHOW_USERS,
+	REMOVE_USER
 } from '../../constants/action-types';
 
 const app = {
@@ -25,16 +26,8 @@ export function showUsers () {
 	};
 }
 
-const createUserList = () => {
-	return {
-		type: CREATE_USER
-	};
-};
-
-
 export function createUser (user, last, date) {
 	return dispatch => {
-    dispatch(createUserList());
     const guestsRef = data.ref('/users');
     guestsRef.push({
       name: user,
@@ -52,5 +45,8 @@ export function createUser (user, last, date) {
 export function removeUser (key) {
 	return dispatch => {
 		data.ref('/users').child(key).remove();
+		dispatch({
+			type: REMOVE_USER
+		});
 	};
 } 

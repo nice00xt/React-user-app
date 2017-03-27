@@ -134,6 +134,36 @@ body {
   }
 }
 
+.content-form {
+  &__label {
+    color: $clr-dark-blue;
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  &__input {
+    padding: 11px;
+    background-color: $white;
+    font-weight: 14px;
+    color: $clr-grey;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid $clr-grey;
+    width: 100%;
+  }
+
+  &__select {
+    @extend .content-form__input;
+  }
+
+  &__text-area {
+    @extend .content-form__input;
+    height: 164px;
+  }
+}
+
 .modal {
   background: rgba(0, 0, 0, 0.51);
   

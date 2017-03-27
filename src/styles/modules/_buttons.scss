@@ -45,15 +45,15 @@
 
 .btn--light {
   background: transparent;
-  border: 2px solid lighten($clr-default-green, 5%);
-  color: $clr-default-green;
-  font-size: 18px;
+  border: 1px solid lighten($clr-default-blue, 5%);
+  color: $clr-default-blue;
   font-weight: 600;
   transition: opacity, 0.20s, ease;
   width: 140px;
 
   &:hover{
-    opacity: 0.8;
+    background: $clr-default-blue;
+    color: white;
   }
 }
 

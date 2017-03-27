@@ -63,24 +63,32 @@ export class Form extends Component {
 					<div className="modal">
 						<div className="modal__content">
 							<form
+								className="content-form"
 								onChange={setField.bind(this)}
 								onSubmit={handleFormSubmit.bind(this)} 
 							>
-								<label>name: </label>
-								<input
-									name={'userName'}
-									type="text"
-									value={userName}
-								/>
-								<br/>
-								<label>last: </label>
-								<input
-									name={'userLast'}
-									type="text"
-									value={userLast}
-								/>
-								<button action="submit">Save</button>
-								<button onClick={handleCancelModal}>Cancel</button>
+								<div className="form-field">
+									<label className="content-form__label">Name: </label>
+									<input
+										className="content-form__input"
+										name={'userName'}
+										type="text"
+										value={userName}
+										required
+									/>
+								</div>
+								<div className="form-field">
+									<label className="content-form__label">Last Name: </label>
+									<input
+										className="content-form__input"
+										name={'userLast'}
+										type="text"
+										value={userLast}
+										required
+									/>
+								</div>
+								<button className="btn btn--light push-half--right" action="submit">Save</button>
+								<button className="btn btn--default" onClick={handleCancelModal}>Cancel</button>
 							</form>
 						</div>
 					</div>
