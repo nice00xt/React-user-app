@@ -31,26 +31,20 @@ const createUserList = () => {
 	};
 };
 
-const addUserList = (user, last) => {
-	return {
-		type: CREATE_USER,
-		payload: {
-			name: user,
-			last: last
-		}
-	};
-};
 
-export function createUser (user, last) {
+export function createUser (user, last, date) {
 	return dispatch => {
     dispatch(createUserList());
     const guestsRef = data.ref('/');
     guestsRef.push({
       name: user,
-      last: last
+      last: last,
+      date: date
     })
     .then(() => {
-      dispatch(addUserList(user, last));
+      dispatch({
+				type: CREATE_USER
+      });
     });
   };
 } 

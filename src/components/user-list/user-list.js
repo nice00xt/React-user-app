@@ -23,10 +23,10 @@ export class UserList extends Component {
 							<span className="status-text">{user.name} {user.last}</span>
 						</div>
 						<div className="grid__item one-fifth">
-							<span className="status-text">12 Jun 2017</span>
+							<span className="status-text">{user.date}</span>
 						</div>
 						<div className="grid__item one-fifth">
-							<span className="status-text">Taken</span>
+							<span className="status-text--free">Free</span>
 						</div>
 						<div className="grid__item one-fifth">
 							<span className="status-text">Normal</span>

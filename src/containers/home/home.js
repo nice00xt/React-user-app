@@ -30,10 +30,10 @@ export class Home extends Component {
 							<div className="container">
 								<ul className="content__tabs-list">
 									<li className="content__tabs-title--active">
-										<a href="#">USER LIST</a>
+										<a href="#">TASK LIST</a>
 									</li>
 									<li className="content__tabs-title">
-										<a href="#">DONE</a>
+										<a href="#">TAKEN</a>
 									</li>
 								</ul>
 							</div>

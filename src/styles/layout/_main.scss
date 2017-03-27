@@ -133,3 +133,16 @@ body {
     padding: 12px 0;
   }
 }
+
+.modal {
+  background: rgba(0, 0, 0, 0.51);
+  
+  &__content {
+    background: $white;
+    margin: 0 auto;
+    max-width: 590px;
+    margin-top: 6%;
+    padding: 50px 80px;
+    border-radius: 5px;
+  }
+}
