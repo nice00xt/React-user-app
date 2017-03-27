@@ -16,7 +16,7 @@ const data = Firebase.database();
 
 export function showUsers () {
 	return dispatch => {
-		data.ref('/').once('value', snap => {
+		data.ref('/users').once('value', snap => {
 			dispatch({
 				type: SHOW_USERS,
 				payload: snap.val()
@@ -35,7 +35,7 @@ const createUserList = () => {
 export function createUser (user, last, date) {
 	return dispatch => {
     dispatch(createUserList());
-    const guestsRef = data.ref('/');
+    const guestsRef = data.ref('/users');
     guestsRef.push({
       name: user,
       last: last,
@@ -51,6 +51,6 @@ export function createUser (user, last, date) {
 
 export function removeUser (key) {
 	return dispatch => {
-		data.ref('/').child(key).remove();
+		data.ref('/users').child(key).remove();
 	};
 } 

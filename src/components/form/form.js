@@ -18,6 +18,7 @@ export class Form extends Component {
 		const date = moment().format('MMM D YYYY');
 		event.preventDefault();
 		this.props.createUser(this.state.userName, this.state.userLast, date);
+		this.setState({ activeModal: false });
 	}
 
   setField (e) {
