@@ -176,3 +176,14 @@ body {
     border-radius: 5px;
   }
 }
+
+@media screen and (max-width: 700px) {
+  .content__list {
+    padding: 17px 10%;
+  }
+
+  .modal__content {
+    padding: 48px 33px;
+    margin: 0 38px;
+  }
+}

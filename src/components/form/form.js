@@ -46,11 +46,11 @@ export class Form extends Component {
 		};
 
 		const renderUserList = () => {
-			return _.map(this.props.usersData, (user, key) => {
+			return _.map(this.props.usersData, (userItem, key) => {
 				return (
 					<UserList
 						key={key}
-						user={user}
+						userItem={userItem}
 						id={key}
 					/>
 				);

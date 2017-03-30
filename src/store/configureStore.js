@@ -2,6 +2,7 @@ import {createStore, compose, applyMiddleware} from 'redux';
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 import thunk from 'redux-thunk';
 import rootReducer from '../reducers';
+import { firedux } from './firedux';
 
 function configureStoreProd(initialState) {
   const middlewares = [
@@ -35,6 +36,8 @@ function configureStoreDev(initialState) {
     applyMiddleware(...middlewares)
     )
   );
+
+  firedux.dispatch = store.dispatch;
 
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers

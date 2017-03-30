@@ -1,52 +1,59 @@
-import Firebase from 'firebase';
+import { firedux } from '../../store/firedux';
+
 import {
 	CREATE_USER,
 	SHOW_USERS,
-	REMOVE_USER
+	REMOVE_USER,
+	CREATE_USER_ERROR,
+	SHOW_USERS_ERROR
 } from '../../constants/action-types';
-
-const app = {
-    apiKey: "AIzaSyDEVoS8g0cjLYibBS2sU4YWRbGIZHmsqow",
-    authDomain: "juan-test-8b2d4.firebaseapp.com",
-    databaseURL: "https://juan-test-8b2d4.firebaseio.com",
-    storageBucket: "juan-test-8b2d4.appspot.com",
-    messagingSenderId: "613267298090"
-  };
-Firebase.initializeApp(app);
-const data = Firebase.database();
 
 export function showUsers () {
 	return dispatch => {
-		data.ref('/users').once('value', snap => {
+		firedux.watch('/users')
+		.then(({snapshot}) => {
 			dispatch({
 				type: SHOW_USERS,
-				payload: snap.val()
+				payload: snapshot.val()
+			});
+		})
+		.catch((error) => {
+			dispatch({
+				type: SHOW_USERS_ERROR,
+				message: error.message
 			});
 		});
 	};
 }
 
 export function createUser (user, last, date) {
-	return dispatch => {
-    const guestsRef = data.ref('/users');
-    guestsRef.push({
-      name: user,
-      last: last,
-      date: date
-    })
-    .then(() => {
-      dispatch({
+  return (dispatch) => {
+    firedux.push('/users', {
+			name: user,
+			last: last,
+			date: date
+		})
+		.then(() => {
+			dispatch({
 				type: CREATE_USER
-      });
-    });
-  };
+			});
+		})
+		.catch((error) => {
+			dispatch({
+				type: CREATE_USER_ERROR,
+				message: error.message
+			});
+		});
+	};
 } 
 
 export function removeUser (key) {
 	return dispatch => {
-		data.ref('/users').child(key).remove();
-		dispatch({
-			type: REMOVE_USER
+		firedux.remove(`users/${key}`)
+		.then(() => {
+			dispatch({
+				type: REMOVE_USER
+			});
 		});
 	};
 } 

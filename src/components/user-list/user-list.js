@@ -9,7 +9,7 @@ export class UserList extends Component {
 
 	render () {
 		const {
-			user
+			userItem
 		} = this.props;
 
 		return (
@@ -20,10 +20,10 @@ export class UserList extends Component {
 							<div className="user-avatar">
 								<img src={"https://pbs.twimg.com/profile_images/439719495/seriousicon_400x400.jpg"} />
 							</div>
-							<span className="status-text">{user.name} {user.last}</span>
+							<span className="status-text">{userItem.name} {userItem.last}</span>
 						</div>
 						<div className="grid__item one-fifth">
-							<span className="status-text">{user.date}</span>
+							<span className="status-text">{userItem.date}</span>
 						</div>
 						<div className="grid__item one-fifth">
 							<span className="status-text--free">Free</span>
@@ -42,7 +42,7 @@ export class UserList extends Component {
 }
 
 UserList.propTypes = {
-  user: PropTypes.object,
+  userItem: PropTypes.object,
   removeUser: PropTypes.func,
   id: PropTypes.string
 };
