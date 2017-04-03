@@ -20,7 +20,6 @@ export default function(state = INITIAL_STATE, action) {
 	
 		case SHOW_USERS_ERROR:
 		case CREATE_USER_ERROR:
-			console.log(action.message);
 			return action.message;
 		default:
 			return state;

@@ -10,7 +10,7 @@ import {
 
 export function showUsers () {
 	return dispatch => {
-		firedux.watch('/users')
+		firedux.watch('/posts')
 		.then(({snapshot}) => {
 			dispatch({
 				type: SHOW_USERS,
@@ -28,7 +28,7 @@ export function showUsers () {
 
 export function createUser (user, last, date) {
   return (dispatch) => {
-    firedux.push('/users', {
+    firedux.push('/posts', {
 			name: user,
 			last: last,
 			date: date
@@ -49,7 +49,7 @@ export function createUser (user, last, date) {
 
 export function removeUser (key) {
 	return dispatch => {
-		firedux.remove(`users/${key}`)
+		firedux.remove(`posts/${key}`)
 		.then(() => {
 			dispatch({
 				type: REMOVE_USER

@@ -1,49 +1,57 @@
-import { firedux } from '../../store/firedux';
-import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import React, { Component, PropTypes } from 'react';
+import * as actions from '../../actions/login/login';
 
-export class loginPage extends Component {
 
-	googleSignin () {
-		const provider = new firedux.auth.GoogleAuthProvider();
-		firedux.auth()
+export class LoginPage extends Component {
+		constructor(props) {
+		super(props);
 
-		.signInWithPopup(provider).then(function(result) {
-        const token = result.credential.accessToken;
-        const user = result.user;
-      
-        console.log(token);
-        console.log(user);
-     }).catch(function(error) {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-      
-        console.log(errorCode);
-        console.log(errorMessage);
-     });
-	}
+		this.state = {
+			login: null,
+		};
+  }
 
-	googleSignout () {
-		firedux.auth().signOut()
-    
-    .then(function() {
-      console.log('Signout Succesfull');
-    }, function(error) {
-      console.log('Signout Failed');  
-    });
+	renderContent () {
+		if (this.state.login) {
+			return (
+				<div>
+					<span>test Wellcome!</span>
+				</div>
+			);
+		} else if (this.state.login === false) {
+			return (
+				<div>
+					<span>test Bye</span>
+				</div>
+			);
+		}
 	}
 
 	render () {
+    const handleClickSignIn = () => {
+      this.props.signInWithGoogle();
+    };
+
 		return (
 			<div className="content">
 				<div className="container">
 					<div className="login-box">
 						<span>Login</span>
 						<br/>
-						<button onClick={this.googleSignin}>Login with google</button>
-						<button onClick={this.googleSignout}>Signout</button>
+						<button onClick={handleClickSignIn}>Login with google</button>
+						<button onClick={this.handleClickSignOut}>Signout</button>
+						{this.renderContent()}
 					</div>
 				</div>
 			</div>
 		);
 	}
 }
+
+LoginPage.propTypes = {
+  signInWithGoogle: PropTypes.func,
+};
+
+
+export default connect(null, actions)(LoginPage);
