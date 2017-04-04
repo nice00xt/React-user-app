@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import _ from 'lodash';
-import UserList from '../../components/user-list/user-list';
+import PostList from '../../components/post-list/post-list';
 import moment from 'moment';
 
 export class Form extends Component {
@@ -17,7 +17,7 @@ export class Form extends Component {
 	handleFormSubmit (event) {
 		const date = moment().format('MMM D YYYY');
 		event.preventDefault();
-		this.props.createUser(this.state.userName, this.state.userLast, date);
+		this.props.createPost(this.state.userName, this.state.userLast, date);
 		this.setState({ activeModal: false });
 	}
 
@@ -45,12 +45,12 @@ export class Form extends Component {
 			this.setState({ activeModal: false });
 		};
 
-		const renderUserList = () => {
-			return _.map(this.props.usersData, (userItem, key) => {
+		const renderPostList = () => {
+			return _.map(this.props.postData, (postItem, key) => {
 				return (
-					<UserList
+					<PostList
 						key={key}
-						userItem={userItem}
+						postItem={postItem}
 						id={key}
 					/>
 				);
@@ -122,7 +122,7 @@ export class Form extends Component {
 										</div>
 									</div>
 								</div>
-								{renderUserList()}
+								{renderPostList()}
 							</div>
 						</div>
 					</div>
@@ -134,6 +134,6 @@ export class Form extends Component {
 }
 
 Form.propTypes = {
-  createUser: PropTypes.func,
-  usersData: PropTypes.object
+  createPost: PropTypes.func,
+  postData: PropTypes.object
 };

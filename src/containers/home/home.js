@@ -1,11 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../../actions/users/users';
+import * as actions from '../../actions/posts/posts';
 import { Form } from '../../components/form/form';
 
 export class Home extends Component {
 	componentWillMount() {
-    this.props.showUsers();
+    this.props.fetchPost();
   }
 
 	render () {
@@ -40,8 +40,8 @@ export class Home extends Component {
 						</div>
 				</section>
 				<Form
-					createUser={this.props.createUser}
-					usersData={this.props.users}
+					createPost={this.props.createPost}
+					postData={this.props.posts}
 				/>
 			</div>
 		);
@@ -49,13 +49,13 @@ export class Home extends Component {
 }
 
 Home.propTypes = {
-	createUser: PropTypes.func,
-	showUsers: PropTypes.func,
-  users: PropTypes.object
+	createPost: PropTypes.func,
+	fetchPost: PropTypes.func,
+  posts: PropTypes.object
 };
 
 function mapStateToProps(state) {
-	return { users: state.users };
+	return { posts: state.posts };
 }
 
 export default connect( mapStateToProps, actions )(Home);

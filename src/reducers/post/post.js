@@ -1,9 +1,9 @@
 import {
-	CREATE_USER,
-	REMOVE_USER,
-	SHOW_USERS,
-	CREATE_USER_ERROR,
-	SHOW_USERS_ERROR
+	CREATE_POST,
+	CREATE_POST_ERROR,
+	FETCH_POST,
+	FETCH_POST_ERROR,
+	REMOVE_POST
 } from '../../constants/action-types';
 import _ from 'lodash';
 
@@ -11,15 +11,15 @@ const INITIAL_STATE = {};
 
 export default function(state = INITIAL_STATE, action) {
 	switch (action.type) {
-		case SHOW_USERS:
+		case FETCH_POST:
 			return action.payload;
-		case CREATE_USER:
+		case CREATE_POST:
 			return {...state, ...action.payload };
-		case REMOVE_USER:
+		case REMOVE_POST:
 			return _.omit(state, action.payload);
 	
-		case SHOW_USERS_ERROR:
-		case CREATE_USER_ERROR:
+		case FETCH_POST_ERROR:
+		case CREATE_POST_ERROR:
 			return action.message;
 		default:
 			return state;

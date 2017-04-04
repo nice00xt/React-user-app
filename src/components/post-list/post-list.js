@@ -1,15 +1,15 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../../actions/users/users';
+import * as actions from '../../actions/posts/posts';
 
-export class UserList extends Component {
+export class PostList extends Component {
 	handleClick() {
-    this.props.removeUser(this.props.id);
+    this.props.removePost(this.props.id);
   }
 
 	render () {
 		const {
-			userItem
+			postItem
 		} = this.props;
 
 		return (
@@ -20,10 +20,10 @@ export class UserList extends Component {
 							<div className="user-avatar">
 								<img src={"https://pbs.twimg.com/profile_images/439719495/seriousicon_400x400.jpg"} />
 							</div>
-							<span className="status-text">{userItem.name} {userItem.last}</span>
+							<span className="status-text">{postItem.name} {postItem.last}</span>
 						</div>
 						<div className="grid__item one-fifth">
-							<span className="status-text">{userItem.date}</span>
+							<span className="status-text">{postItem.date}</span>
 						</div>
 						<div className="grid__item one-fifth">
 							<span className="status-text--free">Free</span>
@@ -41,10 +41,10 @@ export class UserList extends Component {
 	}
 }
 
-UserList.propTypes = {
-  userItem: PropTypes.object,
-  removeUser: PropTypes.func,
+PostList.propTypes = {
+  postItem: PropTypes.object,
+  removePost: PropTypes.func,
   id: PropTypes.string
 };
 
-export default connect(null, actions)(UserList);
+export default connect(null, actions)(PostList);

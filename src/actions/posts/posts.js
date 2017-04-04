@@ -1,32 +1,32 @@
 import { firedux } from '../../store/firedux';
 
 import {
-	CREATE_USER,
-	SHOW_USERS,
-	REMOVE_USER,
-	CREATE_USER_ERROR,
-	SHOW_USERS_ERROR
+	CREATE_POST,
+	CREATE_POST_ERROR,
+	FETCH_POST,
+	FETCH_POST_ERROR,
+	REMOVE_POST
 } from '../../constants/action-types';
 
-export function showUsers () {
+export function fetchPost () {
 	return dispatch => {
 		firedux.watch('/posts')
 		.then(({snapshot}) => {
 			dispatch({
-				type: SHOW_USERS,
+				type: FETCH_POST,
 				payload: snapshot.val()
 			});
 		})
 		.catch((error) => {
 			dispatch({
-				type: SHOW_USERS_ERROR,
+				type: FETCH_POST_ERROR,
 				message: error.message
 			});
 		});
 	};
 }
 
-export function createUser (user, last, date) {
+export function createPost (user, last, date) {
   return (dispatch) => {
     firedux.push('/posts', {
 			name: user,
@@ -35,24 +35,24 @@ export function createUser (user, last, date) {
 		})
 		.then(() => {
 			dispatch({
-				type: CREATE_USER
+				type: CREATE_POST
 			});
 		})
 		.catch((error) => {
 			dispatch({
-				type: CREATE_USER_ERROR,
+				type: CREATE_POST_ERROR,
 				message: error.message
 			});
 		});
 	};
 } 
 
-export function removeUser (key) {
+export function removePost (key) {
 	return dispatch => {
 		firedux.remove(`posts/${key}`)
 		.then(() => {
 			dispatch({
-				type: REMOVE_USER
+				type: REMOVE_POST
 			});
 		});
 	};
