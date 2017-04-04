@@ -1,8 +1,9 @@
 import { firedux } from '../../store/firedux';
-
 import {
+  SIGN_IN,
 	SIGN_IN_SUCCESS,
 	SIGN_IN_ERROR,
+  SIGN_OUT,
 	SIGN_OUT_SUCCESS
 } from '../../constants/action-types';
 
@@ -12,6 +13,8 @@ export function signInWithGoogle() {
 
 export function signOut() {
   return dispatch => {
+    dispatch(signOutInProgress());
+    
     firedux.auth().signOut()
       .then(() => dispatch(signOutSuccess()));
   };
@@ -19,6 +22,8 @@ export function signOut() {
 
 function authenticate(provider) {
   return dispatch => {
+    dispatch(signInInProgress());
+
     firedux.auth()
     .signInWithPopup(provider)
       .then(result => 
@@ -30,10 +35,16 @@ function authenticate(provider) {
   };
 }
 
-export function signOutSuccess() {
-  return {
-    type: SIGN_OUT_SUCCESS
-  };
+function signInInProgress() {
+  return { type: SIGN_IN };
+}
+
+function signOutInProgress() {
+  return { type: SIGN_OUT };
+}
+
+function signOutSuccess() {
+  return { type: SIGN_OUT_SUCCESS };
 }
 
 export function signInSuccess(result) {
@@ -54,13 +65,13 @@ export function signInSuccess(result) {
 	});
   return {
     type: SIGN_IN_SUCCESS,
-    payload: uid
+    uid
   };
 }
 
 export function signInError(error) {
   return {
     type: SIGN_IN_ERROR,
-    payload: error
+    error
   };
 }

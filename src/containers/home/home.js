@@ -1,25 +1,40 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../../actions/posts/posts';
+import {
+	fetchPost,
+	createPost,
+	removePost
+} from '../../actions/posts/posts';
+import {
+	showUsers
+} from '../../actions/users/users';
+import {
+	signInWithGoogle,
+	signOut
+} from '../../actions/login/login';
 import { Form } from '../../components/form/form';
+import { Header } from '../header/header';
 
 export class Home extends Component {
 	componentWillMount() {
-    this.props.fetchPost();
+		const {
+			fetchPost,
+			showUsers
+		} = this.props;
+
+    fetchPost();
+    showUsers();
   }
 
 	render () {
 		return (
 			<div>
-				<header>
-					<div className="banner">
-						<div className="container">
-							<div className="banner__logo">
-								LOGO
-							</div>
-						</div>
-					</div>
-				</header>
+				<Header
+					signInWithGoogle={this.props.signInWithGoogle}
+					signOut={this.props.signOut}
+					login={this.props.login}
+					users={this.props.users}
+				/>
 				<section className="content background--white">
 						<div className="content__list-header">
 							<div className="container">
@@ -51,11 +66,30 @@ export class Home extends Component {
 Home.propTypes = {
 	createPost: PropTypes.func,
 	fetchPost: PropTypes.func,
-  posts: PropTypes.object
+	showUsers: PropTypes.func,
+  posts: PropTypes.object,
+  users: PropTypes.object,
+  signInWithGoogle: PropTypes.func,
+  signOut: PropTypes.func,
+  login: PropTypes.object
 };
 
 function mapStateToProps(state) {
-	return { posts: state.posts };
+	return { 
+		posts: state.posts,
+		users: state.users,
+		login: state.login
+	};
 }
 
-export default connect( mapStateToProps, actions )(Home);
+export default connect( 
+	mapStateToProps,
+	{
+		fetchPost,
+		createPost,
+		removePost,
+		showUsers,
+		signInWithGoogle,
+		signOut
+	}
+)(Home);

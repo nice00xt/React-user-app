@@ -1,11 +1,13 @@
 import { combineReducers } from 'redux';
 import {routerReducer} from 'react-router-redux';
 import postReducers from './post/post';
-import loginReducer from './login/login';
+import loginReducers from './login/login';
+import usersReducers from './users/users';
 
 const rootReducer = combineReducers({
 	posts: postReducers,
-  login: loginReducer,
+  login: loginReducers,
+  users: usersReducers,
   routing: routerReducer
 });
 
