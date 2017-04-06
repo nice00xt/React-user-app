@@ -26,9 +26,12 @@ export function fetchPost () {
 	};
 }
 
-export function createPost (user, last, date) {
+export function createPost (uid, displayName, photoURL, user, last, date) {
   return (dispatch) => {
     firedux.push('/posts', {
+      uid: uid,
+      displayName: displayName,
+      photoURL: photoURL,
 			name: user,
 			last: last,
 			date: date

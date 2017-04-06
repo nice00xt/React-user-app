@@ -15,9 +15,18 @@ export class Form extends Component {
   }
 
 	handleFormSubmit (event) {
-		const date = moment().format('MMM D YYYY');
 		event.preventDefault();
-		this.props.createPost(this.state.userName, this.state.userLast, date);
+		const {
+			currentUser
+		} = this.props;
+
+		const date = moment().format('MMM D YYYY');
+		this.props.createPost(
+			currentUser.uid,
+			currentUser.displayName,
+			currentUser.photoURL,
+			this.state.userName,
+			this.state.userLast, date);
 		this.setState({ activeModal: false });
 	}
 
@@ -29,6 +38,9 @@ export class Form extends Component {
 
 	render () {
 		const {
+			props: {
+				currentUser
+			},
 			state: {
 				userName,
 				userLast
@@ -49,6 +61,7 @@ export class Form extends Component {
 			return _.map(this.props.postData, (postItem, key) => {
 				return (
 					<PostList
+						currentUser={currentUser}
 						key={key}
 						postItem={postItem}
 						id={key}
@@ -68,7 +81,7 @@ export class Form extends Component {
 								onSubmit={handleFormSubmit.bind(this)} 
 							>
 								<div className="form-field">
-									<label className="content-form__label">Name: </label>
+									<label className="content-form__label">Message: </label>
 									<input
 										className="content-form__input"
 										name={'userName'}
@@ -78,7 +91,7 @@ export class Form extends Component {
 									/>
 								</div>
 								<div className="form-field">
-									<label className="content-form__label">Last Name: </label>
+									<label className="content-form__label">Type: </label>
 									<input
 										className="content-form__input"
 										name={'userLast'}
@@ -134,6 +147,8 @@ export class Form extends Component {
 }
 
 Form.propTypes = {
+	currentUser: PropTypes.object,
+	auth: PropTypes.object,
   createPost: PropTypes.func,
   postData: PropTypes.object
 };

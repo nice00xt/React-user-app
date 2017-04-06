@@ -26,38 +26,64 @@ export class Home extends Component {
     showUsers();
   }
 
+  currentUser () {
+		const {
+			auth,
+			users
+		} = this.props;
+
+		return users[auth.uid];
+  }
+
+  renderForm () {
+    const {
+      auth
+		} = this.props;
+
+		if (auth.isUserSignedIn) {
+			return (
+        <div>
+            <section className="content background--white">
+							<div className="content__list-header">
+								<div className="container">
+									<h3 className="content-title--blue">Add your task</h3>
+								</div>
+							</div>
+							<div className="content__tabs">
+								<div className="container">
+									<ul className="content__tabs-list">
+										<li className="content__tabs-title--active">
+											<a href="#">TASK LIST</a>
+										</li>
+										<li className="content__tabs-title">
+											<a href="#">TAKEN</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+					</section>
+          <Form
+						auth={this.props.auth}
+						currentUser={this.currentUser()}
+						createPost={this.props.createPost}
+						postData={this.props.posts}
+					/>
+        </div>
+      );
+		}
+  }
+
 	render () {
 		return (
 			<div>
 				<Header
+					auth={this.props.auth}
+					currentUser={this.currentUser()}
+					users={this.props.users}
 					signInWithGoogle={this.props.signInWithGoogle}
 					signOut={this.props.signOut}
-					auth={this.props.auth}
-					users={this.props.users}
 				/>
-				<section className="content background--white">
-						<div className="content__list-header">
-							<div className="container">
-								<h3 className="content-title--blue">Add you task</h3>
-							</div>
-						</div>
-						<div className="content__tabs">
-							<div className="container">
-								<ul className="content__tabs-list">
-									<li className="content__tabs-title--active">
-										<a href="#">TASK LIST</a>
-									</li>
-									<li className="content__tabs-title">
-										<a href="#">TAKEN</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-				</section>
-				<Form
-					createPost={this.props.createPost}
-					postData={this.props.posts}
-				/>
+				{this.renderForm()}
 			</div>
 		);
 	}

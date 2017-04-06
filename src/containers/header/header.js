@@ -25,11 +25,15 @@ export class Header extends Component {
   }
 
   renderTooltip () {
+    const {
+			currentUser
+		} = this.props;
+	
     if (this.state.tooltipIsOpen) {
       return (
 				<div className="arrow_box">
 					<div className="arrow-box__content">
-						<span>juan00xt@gmail.com | </span>
+						<span>{currentUser.email} | </span>
 						<a href="#" onClick={this.handleClickSignOut.bind(this)}>
 							Sign Out
 						</a>
@@ -41,7 +45,8 @@ export class Header extends Component {
 
 	renderUserOptions () {
 		const {
-			auth
+			auth,
+			currentUser
 		} = this.props;
 
 		const handleClickSignIn = () => {
@@ -52,9 +57,9 @@ export class Header extends Component {
 			return (
 				<div>
 					<div className="user-avatar--header">
-						<span className="user-name">Nombre usuario</span>
+						<span className="user-name">{currentUser.displayName}</span>
 						<a href="#" onClick={this.handleTooltip.bind(this)}>
-							<img src={"https://pbs.twimg.com/profile_images/439719495/seriousicon_400x400.jpg"} />
+							<img src={currentUser.photoURL} />
 						</a>
 					</div>
 					{this.renderTooltip()}
@@ -80,7 +85,7 @@ export class Header extends Component {
 					<div className="banner">
 						<div className="container">
 							<div className="banner__logo">
-								LOGO
+								:) LOW BUDGET LOGO
 							</div>
 							{this.renderUserOptions()}
 							<div className="clearfix" />
@@ -93,10 +98,11 @@ export class Header extends Component {
 }
 
 Header.propTypes = {
-  signInWithGoogle: PropTypes.func,
-  signOut: PropTypes.func,
   auth: PropTypes.object,
+  currentUser: PropTypes.object,
   users: PropTypes.object,
+  signInWithGoogle: PropTypes.func,
+  signOut: PropTypes.func
 };
 
 

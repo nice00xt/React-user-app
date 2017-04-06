@@ -18,9 +18,9 @@ export class PostList extends Component {
 					<div className="grid">
 						<div className="grid__item one-fifth">
 							<div className="user-avatar">
-								<img src={"https://pbs.twimg.com/profile_images/439719495/seriousicon_400x400.jpg"} />
+								<img src={postItem.photoURL} />
 							</div>
-							<span className="status-text">{postItem.name} {postItem.last}</span>
+							<span className="status-text">{postItem.displayName}</span>
 						</div>
 						<div className="grid__item one-fifth">
 							<span className="status-text">{postItem.date}</span>
@@ -42,6 +42,7 @@ export class PostList extends Component {
 }
 
 PostList.propTypes = {
+	currentUser: PropTypes.object,
   postItem: PropTypes.object,
   removePost: PropTypes.func,
   id: PropTypes.string
