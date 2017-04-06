@@ -6,7 +6,7 @@ export class Header extends Component {
 		super(props);
 
 		this.state = {
-			login: null,
+			auth: null,
 			tooltipIsOpen: false
 		};
   }
@@ -41,14 +41,14 @@ export class Header extends Component {
 
 	renderUserOptions () {
 		const {
-			login
+			auth
 		} = this.props;
 
 		const handleClickSignIn = () => {
       this.props.signInWithGoogle();
     };
 
-		if (login.isUserSignedIn) {
+		if (auth.isUserSignedIn) {
 			return (
 				<div>
 					<div className="user-avatar--header">
@@ -66,7 +66,7 @@ export class Header extends Component {
 				<div className="user-avatar--header">
 					<SignInButton
 						handleClickSignIn={handleClickSignIn}
-						login={login}
+						login={auth}
 					/>
 				</div>
 			</div>
@@ -95,7 +95,7 @@ export class Header extends Component {
 Header.propTypes = {
   signInWithGoogle: PropTypes.func,
   signOut: PropTypes.func,
-  login: PropTypes.object,
+  auth: PropTypes.object,
   users: PropTypes.object,
 };
 

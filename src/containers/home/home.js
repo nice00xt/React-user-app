@@ -11,7 +11,7 @@ import {
 import {
 	signInWithGoogle,
 	signOut
-} from '../../actions/login/login';
+} from '../../actions/auth/auth';
 import { Form } from '../../components/form/form';
 import { Header } from '../header/header';
 
@@ -32,7 +32,7 @@ export class Home extends Component {
 				<Header
 					signInWithGoogle={this.props.signInWithGoogle}
 					signOut={this.props.signOut}
-					login={this.props.login}
+					auth={this.props.auth}
 					users={this.props.users}
 				/>
 				<section className="content background--white">
@@ -71,14 +71,14 @@ Home.propTypes = {
   users: PropTypes.object,
   signInWithGoogle: PropTypes.func,
   signOut: PropTypes.func,
-  login: PropTypes.object
+  auth: PropTypes.object
 };
 
 function mapStateToProps(state) {
 	return { 
 		posts: state.posts,
 		users: state.users,
-		login: state.login
+		auth: state.auth
 	};
 }
 
