@@ -18,11 +18,9 @@ import { Header } from '../header/header';
 export class Home extends Component {
 	componentWillMount() {
 		const {
-			fetchPost,
-			showUsers
+			showUsers,
 		} = this.props;
-
-    fetchPost();
+		
     showUsers();
   }
 
@@ -37,7 +35,8 @@ export class Home extends Component {
 
   renderForm () {
     const {
-      auth
+      auth,
+      fetchPost
 		} = this.props;
 
 		if (auth.isUserSignedIn) {
@@ -56,7 +55,7 @@ export class Home extends Component {
 											<a href="#">TASK LIST</a>
 										</li>
 										<li className="content__tabs-title">
-											<a href="#">TAKEN</a>
+											<a href="#">MY TASK</a>
 										</li>
 									</ul>
 								</div>
@@ -66,6 +65,7 @@ export class Home extends Component {
 						auth={this.props.auth}
 						currentUser={this.currentUser()}
 						createPost={this.props.createPost}
+						fetchPost={fetchPost}
 						postData={this.props.posts}
 					/>
         </div>

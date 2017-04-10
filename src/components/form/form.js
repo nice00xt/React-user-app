@@ -14,14 +14,23 @@ export class Form extends Component {
 		};
   }
 
+  componentWillMount () {
+		const {
+			fetchPost
+		} = this.props;
+
+    fetchPost();
+  }
+
 	handleFormSubmit (event) {
 		event.preventDefault();
 		const {
-			currentUser
+			currentUser,
+			createPost
 		} = this.props;
 
 		const date = moment().format('MMM D YYYY');
-		this.props.createPost(
+		createPost(
 			currentUser.uid,
 			currentUser.displayName,
 			currentUser.photoURL,
@@ -76,6 +85,7 @@ export class Form extends Component {
 					<div className="modal">
 						<div className="modal__content">
 							<form
+								autoComplete="off"
 								className="content-form"
 								onChange={setField.bind(this)}
 								onSubmit={handleFormSubmit.bind(this)} 
@@ -86,7 +96,7 @@ export class Form extends Component {
 										className="content-form__input"
 										name={'userName'}
 										type="text"
-										value={userName}
+										defaultValue={userName}
 										required
 									/>
 								</div>
@@ -96,7 +106,7 @@ export class Form extends Component {
 										className="content-form__input"
 										name={'userLast'}
 										type="text"
-										value={userLast}
+										defaultValue={userLast}
 										required
 									/>
 								</div>
@@ -147,6 +157,7 @@ export class Form extends Component {
 }
 
 Form.propTypes = {
+	fetchPost: PropTypes.func,
 	currentUser: PropTypes.object,
 	auth: PropTypes.object,
   createPost: PropTypes.func,

@@ -1,10 +1,15 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions/posts/posts';
+import _ from 'lodash';
 
 export class PostList extends Component {
-	handleClick() {
-    this.props.removePost(this.props.id);
+	handleClick(idx) {
+		const {
+			removePost
+		} = this.props;
+
+    removePost(idx.key, idx.uid);
   }
 
 	render () {
@@ -12,30 +17,40 @@ export class PostList extends Component {
 			postItem
 		} = this.props;
 
-		return (
-			<div>
-				<div className="status-list__row">
-					<div className="grid">
-						<div className="grid__item one-fifth">
-							<div className="user-avatar">
-								<img src={postItem.photoURL} />
+		const renderPostItem = () => {
+			return _.map(postItem, (userItem, key) => {
+				const uid = userItem.uid;
+				return (
+					<div key={key}>
+						<div className="status-list__row">
+							<div className="grid">
+								<div className="grid__item one-fifth">
+									<div className="user-avatar">
+										<img src={userItem.photoURL} />
+									</div>
+									<span className="status-text">{userItem.displayName}</span>
+								</div>
+								<div className="grid__item one-fifth">
+									<span className="status-text">{userItem.date}</span>
+								</div>
+								<div className="grid__item one-fifth">
+									<span className="status-text--free">{userItem.last} Free</span>
+								</div>
+								<div className="grid__item one-fifth">
+									<span className="status-text">Normal</span>
+								</div>
+								<div className="grid__item one-fifth">
+									<button className="btn btn--take status-text" onClick={this.handleClick.bind(this, {key, uid},)}>Remove</button>
+								</div>
 							</div>
-							<span className="status-text">{postItem.displayName}</span>
-						</div>
-						<div className="grid__item one-fifth">
-							<span className="status-text">{postItem.date}</span>
-						</div>
-						<div className="grid__item one-fifth">
-							<span className="status-text--free">Free</span>
-						</div>
-						<div className="grid__item one-fifth">
-							<span className="status-text">Normal</span>
-						</div>
-						<div className="grid__item one-fifth">
-							<button className="btn btn--take status-text" onClick={this.handleClick.bind(this)}>Remove</button>
 						</div>
 					</div>
-				</div>
+				);
+			});
+		};
+		return (
+			<div>
+				{renderPostItem()}
 			</div>
 		);
 	}

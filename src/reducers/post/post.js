@@ -7,9 +7,7 @@ import {
 } from '../../constants/action-types';
 import _ from 'lodash';
 
-const INITIAL_STATE = {};
-
-export default function(state = INITIAL_STATE, action) {
+export const postItem = (state = {}, action) => {
 	switch (action.type) {
 		case FETCH_POST:
 			return action.payload;
@@ -24,4 +22,4 @@ export default function(state = INITIAL_STATE, action) {
 		default:
 			return state;
 	}
-}
+};

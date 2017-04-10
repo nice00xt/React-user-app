@@ -9,8 +9,8 @@ import {
 } from '../../constants/action-types';
 
 export function fetchPost () {
-	return dispatch => {
-		firedux.watch('/posts')
+	return (dispatch) => {
+		firedux.watch(`/posts`)
 		.then(({snapshot}) => {
 			dispatch({
 				type: FETCH_POST,
@@ -26,20 +26,35 @@ export function fetchPost () {
 	};
 }
 
+export const postInProgress = (uid, displayName, photoURL, user, last, date) => {
+  return {
+    type: CREATE_POST,
+    payload: {
+      [uid]: {
+        id: {
+          uid,
+          displayName,
+          photoURL,
+          user,
+          last,
+          date
+        }
+      }
+    }
+  };
+};
+
+
 export function createPost (uid, displayName, photoURL, user, last, date) {
   return (dispatch) => {
-    firedux.push('/posts', {
-      uid: uid,
-      displayName: displayName,
-      photoURL: photoURL,
-			name: user,
-			last: last,
-			date: date
-		})
-		.then(() => {
-			dispatch({
-				type: CREATE_POST
-			});
+    dispatch( postInProgress(uid, displayName, photoURL, user, last, date));
+    firedux.push(`/posts/${uid}`, {
+      uid,
+      displayName,
+      photoURL,
+			user,
+			last,
+			date
 		})
 		.catch((error) => {
 			dispatch({
@@ -50,9 +65,9 @@ export function createPost (uid, displayName, photoURL, user, last, date) {
 	};
 } 
 
-export function removePost (key) {
-	return dispatch => {
-		firedux.remove(`posts/${key}`)
+export function removePost (key, uid) {
+	return (dispatch) => {
+		firedux.remove(`/posts/${uid}/${key}`)
 		.then(() => {
 			dispatch({
 				type: REMOVE_POST
