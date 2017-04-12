@@ -26,28 +26,27 @@ export function fetchPost () {
 	};
 }
 
-export const postInProgress = (uid, displayName, photoURL, user, last, date) => {
-  return {
-    type: CREATE_POST,
-    payload: {
-      [uid]: {
-        id: {
-          uid,
-          displayName,
-          photoURL,
-          user,
-          last,
-          date
-        }
-      }
-    }
-  };
-};
+// export const postInProgress = (uid, displayName, photoURL, user, last, date, postId) => {
+//   return {
+//     type: CREATE_POST,
+//     payload: {
+//       [uid]: {
+//         [postId]: {
+//           uid,
+//           displayName,
+//           photoURL,
+//           user,
+//           last,
+//           date
+//         }
+//       }
+//     }
+//   };
+// };
 
 
 export function createPost (uid, displayName, photoURL, user, last, date) {
   return (dispatch) => {
-    dispatch( postInProgress(uid, displayName, photoURL, user, last, date));
     firedux.push(`/posts/${uid}`, {
       uid,
       displayName,
@@ -55,6 +54,24 @@ export function createPost (uid, displayName, photoURL, user, last, date) {
 			user,
 			last,
 			date
+		})
+		.then((snapshot) => {
+			const postId = snapshot;
+			dispatch({
+        type: CREATE_POST,
+        payload: {
+          [uid]: {
+            [postId]: {
+              uid,
+              displayName,
+              photoURL,
+              user,
+              last,
+              date
+            }
+          }
+         }
+			});
 		})
 		.catch((error) => {
 			dispatch({
