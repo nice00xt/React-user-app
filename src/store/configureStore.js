@@ -3,6 +3,7 @@ import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 import thunk from 'redux-thunk';
 import rootReducer from '../reducers';
 import { firedux } from './firedux';
+import { createLogger } from 'redux-logger';
 
 function configureStoreProd(initialState) {
   const middlewares = [
@@ -31,9 +32,14 @@ function configureStoreDev(initialState) {
     thunk,
   ];
 
+  const logger = createLogger({
+    collapsed: true,
+    timestamp: false
+  });
+
   const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // add support for Redux dev tools
   const store = createStore(rootReducer, initialState, composeEnhancers(
-    applyMiddleware(...middlewares)
+    applyMiddleware(...middlewares, logger)
     )
   );
 

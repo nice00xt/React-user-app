@@ -53,19 +53,20 @@ export class Header extends Component {
       this.props.signInWithGoogle();
     };
 
-		if (auth.isUserSignedIn) {
+		if (auth.userIsLogged) {
 			return (
 				<div>
 					<div className="user-avatar--header">
 						<span className="user-name">{currentUser.displayName}</span>
 						<a href="#" onClick={this.handleTooltip.bind(this)}>
-							<img src={currentUser.photoURL} />
+							<img src={currentUser.photoURL}/>
 						</a>
 					</div>
 					{this.renderTooltip()}
 				</div>
 			);
-		}
+		} 
+
 		return (
 			<div>
 				<div className="user-avatar--header">

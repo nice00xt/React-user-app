@@ -10,36 +10,43 @@ import {
 } from '../../actions/users/users';
 import {
 	signInWithGoogle,
-	signOut
+	signOut,
+	userSessionState
 } from '../../actions/auth/auth';
 import { Form } from '../../components/form/form';
-import { Header } from '../header/header';
+import { Header } from '../../components/header/header';
 
 export class Home extends Component {
 	componentWillMount() {
 		const {
 			showUsers,
+			fetchPost,
+			userSessionState
 		} = this.props;
-		
-    showUsers();
+
+		showUsers();
+		fetchPost();
+    userSessionState();
   }
 
-  currentUser () {
-		const {
-			auth,
-			users
-		} = this.props;
-
-		return users[auth.uid];
+  renderHeader () {
+    return (
+      <Header
+				auth={this.props.auth}
+				currentUser={this.props.auth.user}
+				users={this.props.users}
+				signInWithGoogle={this.props.signInWithGoogle}
+				signOut={this.props.signOut}
+			/>
+    );
   }
 
   renderForm () {
     const {
-      auth,
-      fetchPost
+      auth
 		} = this.props;
 
-		if (auth.isUserSignedIn) {
+		if (auth.userIsLogged) {
 			return (
         <div>
             <section className="content background--white">
@@ -62,10 +69,9 @@ export class Home extends Component {
 							</div>
 					</section>
           <Form
-						auth={this.props.auth}
-						currentUser={this.currentUser()}
+						auth={auth}
+						currentUser={auth.user}
 						createPost={this.props.createPost}
-						fetchPost={fetchPost}
 						postData={this.props.posts}
 					/>
         </div>
@@ -76,13 +82,7 @@ export class Home extends Component {
 	render () {
 		return (
 			<div>
-				<Header
-					auth={this.props.auth}
-					currentUser={this.currentUser()}
-					users={this.props.users}
-					signInWithGoogle={this.props.signInWithGoogle}
-					signOut={this.props.signOut}
-				/>
+				{this.renderHeader()}
 				{this.renderForm()}
 			</div>
 		);
@@ -97,7 +97,8 @@ Home.propTypes = {
   users: PropTypes.object,
   signInWithGoogle: PropTypes.func,
   signOut: PropTypes.func,
-  auth: PropTypes.object
+  auth: PropTypes.object,
+  userSessionState: PropTypes.func
 };
 
 function mapStateToProps(state) {
@@ -116,6 +117,7 @@ export default connect(
 		removePost,
 		showUsers,
 		signInWithGoogle,
-		signOut
+		signOut,
+		userSessionState
 	}
 )(Home);

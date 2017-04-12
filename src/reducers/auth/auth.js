@@ -3,7 +3,9 @@ import {
   SIGN_IN_SUCCESS,
   SIGN_IN_ERROR,
   SIGN_OUT,
-  SIGN_OUT_SUCCESS
+  SIGN_OUT_SUCCESS,
+  USER_LOGGED,
+  USER_UNLOGGED
 } from '../../constants/action-types';
 
 const INITIAL_STATE = {
@@ -12,17 +14,31 @@ const INITIAL_STATE = {
   isInProgress: false,
   hasError: false,
   errorMessage: '',
-  uid: 0
+  userIsLogged: null,
+  user: {}
 };
 
 export default function(state = INITIAL_STATE, action) {
   switch (action.type) {
+    case USER_LOGGED:
+      return {
+        ...state,
+        userIsLogged: true,
+        user: {
+          ...action.payload,
+        }
+      };
+    case USER_UNLOGGED:
+      return {
+        ...state,
+        userIsLogged: false,
+        user: {}
+      };
     case SIGN_IN_SUCCESS:
       return {
         ...state,
         isUserSignedIn: true,
-        isInProgress: false,
-        uid: action.uid
+        isInProgress: false
       };
     case SIGN_IN:
       return {

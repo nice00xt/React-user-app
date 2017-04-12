@@ -14,14 +14,6 @@ export class Form extends Component {
 		};
   }
 
-  componentWillMount () {
-		const {
-			fetchPost
-		} = this.props;
-
-    fetchPost();
-  }
-
 	handleFormSubmit (event) {
 		event.preventDefault();
 		const {
@@ -157,7 +149,6 @@ export class Form extends Component {
 }
 
 Form.propTypes = {
-	fetchPost: PropTypes.func,
 	currentUser: PropTypes.object,
 	auth: PropTypes.object,
   createPost: PropTypes.func,

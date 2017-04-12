@@ -7,6 +7,9 @@ export const SIGN_OUT = 'SIGN_OUT';
 export const SIGN_OUT_SUCCESS = 'SIGN_OUT_SUCCESS';
 export const SIGN_OUT_ERROR = 'SIGN_OUT_ERROR';
 
+export const USER_LOGGED = 'USER_LOGGED';
+export const USER_UNLOGGED = 'USER_UNLOGGED';
+
 // users
 export const FETCH_USERS = 'FECTH_USERS';
 export const FETCH_USERS_SUCCESS = 'FECTH_USERS_SUCCESS';

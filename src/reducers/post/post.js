@@ -12,7 +12,6 @@ export const postItem = (state = {}, action) => {
 		case FETCH_POST:
 			return action.payload;
 		case CREATE_POST:
-			console.log({...state, ...action }, 'ACTION')
 			return {...state, ...action.payload };
 		case REMOVE_POST:
 			return _.omit(state, action.payload);

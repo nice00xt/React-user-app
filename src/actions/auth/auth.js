@@ -4,8 +4,31 @@ import {
 	SIGN_IN_SUCCESS,
 	SIGN_IN_ERROR,
   SIGN_OUT,
-	SIGN_OUT_SUCCESS
+	SIGN_OUT_SUCCESS,
+  USER_LOGGED,
+  USER_UNLOGGED,
 } from '../../constants/action-types';
+
+export function userSessionState() {
+  return dispatch => {
+    firedux.auth().onAuthStateChanged((user) => {
+       if (user) {
+          const { uid, email, photoURL, displayName } = user;
+          dispatch({
+            type: USER_LOGGED,
+            payload: {
+              uid,
+              email,
+              photoURL,
+              displayName
+            }
+          });
+       } else {
+          dispatch({ type: USER_UNLOGGED });      
+       }
+    });
+  };
+}
 
 export function signInWithGoogle() {
   return authenticate(new firedux.auth.GoogleAuthProvider());
@@ -18,6 +41,14 @@ export function signOut() {
     firedux.auth().signOut()
       .then(() => dispatch(signOutSuccess()));
   };
+}
+
+function signOutInProgress() {
+  return { type: SIGN_OUT };
+}
+
+function signOutSuccess() {
+  return { type: SIGN_OUT_SUCCESS };
 }
 
 function authenticate(provider) {
@@ -39,14 +70,6 @@ function signInInProgress() {
   return { type: SIGN_IN };
 }
 
-function signOutInProgress() {
-  return { type: SIGN_OUT };
-}
-
-function signOutSuccess() {
-  return { type: SIGN_OUT_SUCCESS };
-}
-
 export function signInSuccess(result) {
 	const { 
 		user: { 
@@ -64,8 +87,7 @@ export function signInSuccess(result) {
     uid
 	});
   return {
-    type: SIGN_IN_SUCCESS,
-    uid
+    type: SIGN_IN_SUCCESS
   };
 }
 
