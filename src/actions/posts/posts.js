@@ -5,11 +5,20 @@ import {
 	CREATE_POST_ERROR,
 	FETCH_POST,
 	FETCH_POST_ERROR,
-	REMOVE_POST
+	REMOVE_POST,
+	IS_FETCHING
 } from '../../constants/action-types';
+
+function isFetching () {
+	return {
+		type: IS_FETCHING
+	};
+}
 
 export function fetchPost () {
 	return (dispatch) => {
+		dispatch( isFetching());
+
 		firedux.watch(`/posts`)
 		.then(({snapshot}) => {
 			dispatch({
@@ -26,52 +35,26 @@ export function fetchPost () {
 	};
 }
 
-// export const postInProgress = (uid, displayName, photoURL, user, last, date, postId) => {
-//   return {
-//     type: CREATE_POST,
-//     payload: {
-//       [uid]: {
-//         [postId]: {
-//           uid,
-//           displayName,
-//           photoURL,
-//           user,
-//           last,
-//           date
-//         }
-//       }
-//     }
-//   };
-// };
+export const postList = (payload) => {
+  return {
+    type: CREATE_POST,
+    payload
+  };
+};
 
-
-export function createPost (uid, displayName, photoURL, user, last, date) {
+export function createPost (uid, displayName, photoURL, status, type, date) {
   return (dispatch) => {
     firedux.push(`/posts/${uid}`, {
       uid,
       displayName,
       photoURL,
-			user,
-			last,
+			status,
+			type,
 			date
 		})
 		.then((snapshot) => {
 			const postId = snapshot;
-			dispatch({
-        type: CREATE_POST,
-        payload: {
-          [uid]: {
-            [postId]: {
-              uid,
-              displayName,
-              photoURL,
-              user,
-              last,
-              date
-            }
-          }
-         }
-			});
+			dispatch( postList({uid, displayName, photoURL, status, type, date, postId}));
 		})
 		.catch((error) => {
 			dispatch({
@@ -80,14 +63,16 @@ export function createPost (uid, displayName, photoURL, user, last, date) {
 			});
 		});
 	};
-} 
+}
 
 export function removePost (key, uid) {
 	return (dispatch) => {
 		firedux.remove(`/posts/${uid}/${key}`)
 		.then(() => {
 			dispatch({
-				type: REMOVE_POST
+				type: REMOVE_POST,
+				key,
+				uid
 			});
 		});
 	};

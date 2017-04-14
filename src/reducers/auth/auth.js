@@ -11,7 +11,7 @@ import {
 const INITIAL_STATE = {
   isUserSignedIn: false,
   isSignOutInProgress: false,
-  isInProgress: false,
+  isInProgress: null,
   hasError: false,
   errorMessage: '',
   userIsLogged: null,

@@ -43,7 +43,9 @@ export class Home extends Component {
 
   renderForm () {
     const {
-      auth
+      auth,
+      createPost,
+      posts
 		} = this.props;
 
 		if (auth.userIsLogged) {
@@ -71,8 +73,8 @@ export class Home extends Component {
           <Form
 						auth={auth}
 						currentUser={auth.user}
-						createPost={this.props.createPost}
-						postData={this.props.posts}
+						createPost={createPost}
+						posts={posts}
 					/>
         </div>
       );

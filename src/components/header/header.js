@@ -53,7 +53,9 @@ export class Header extends Component {
       this.props.signInWithGoogle();
     };
 
-		if (auth.userIsLogged) {
+		if (auth.userIsLogged === null) {
+			return '';
+		} else if (auth.userIsLogged) {
 			return (
 				<div>
 					<div className="user-avatar--header">
@@ -65,7 +67,7 @@ export class Header extends Component {
 					{this.renderTooltip()}
 				</div>
 			);
-		} 
+		}
 
 		return (
 			<div>

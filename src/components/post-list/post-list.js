@@ -34,10 +34,10 @@ export class PostList extends Component {
 									<span className="status-text">{userItem.date}</span>
 								</div>
 								<div className="grid__item one-fifth">
-									<span className="status-text--free">{userItem.last} Free</span>
+									<span className="status-text--free">{userItem.status}</span>
 								</div>
 								<div className="grid__item one-fifth">
-									<span className="status-text">Normal</span>
+									<span className="status-text">{userItem.type}</span>
 								</div>
 								<div className="grid__item one-fifth">
 									<button className="btn btn--take status-text" onClick={this.handleClick.bind(this, {key, uid},)}>Remove</button>

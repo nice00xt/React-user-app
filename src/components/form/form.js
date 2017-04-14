@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import _ from 'lodash';
+import { Loader } from '../../components/loader/loader';
 import PostList from '../../components/post-list/post-list';
 import moment from 'moment';
 
@@ -8,8 +9,8 @@ export class Form extends Component {
 		super(props);
 
 		this.state = {
-			userName: '',
-			userLast: '',
+			userStatus: '',
+			userType: '',
 			activeModal: false
 		};
   }
@@ -26,8 +27,20 @@ export class Form extends Component {
 			currentUser.uid,
 			currentUser.displayName,
 			currentUser.photoURL,
-			this.state.userName,
-			this.state.userLast, date);
+			this.state.userStatus,
+			this.state.userType, date);
+		this.setState({ activeModal: false });
+	}
+
+	handleOpenModal () {
+		this.setState({
+			userStatus: '',
+			userType: '',
+			activeModal: true,
+		});
+	}
+
+	handleCancelModal () {
 		this.setState({ activeModal: false });
 	}
 
@@ -37,41 +50,34 @@ export class Form extends Component {
 		});
 	}
 
-	render () {
+	renderPostList () {
 		const {
-			props: {
-				currentUser
-			},
+			posts,
+			currentUser
+		} = this.props;
+
+		return _.map(posts.data, (postItem, key) => {
+			return (
+				<PostList
+					currentUser={currentUser}
+					key={key}
+					postItem={postItem}
+					id={key}
+				/>
+			);
+		});
+	}
+
+	renderModalForm () {
+		const {
 			state: {
-				userName,
-				userLast
+				userStatus,
+				userType
 			},
 			handleFormSubmit,
 			setField
 		} = this;
 
-		const handleOpenModal = () => {
-			this.setState({ activeModal: true });
-		};
-
-		const handleCancelModal = () => {
-			this.setState({ activeModal: false });
-		};
-
-		const renderPostList = () => {
-			return _.map(this.props.postData, (postItem, key) => {
-				return (
-					<PostList
-						currentUser={currentUser}
-						key={key}
-						postItem={postItem}
-						id={key}
-					/>
-				);
-			});
-		};
-
-		const renderModalForm = () => {
 			if (this.state.activeModal) {
 				return (
 					<div className="modal">
@@ -83,12 +89,12 @@ export class Form extends Component {
 								onSubmit={handleFormSubmit.bind(this)} 
 							>
 								<div className="form-field">
-									<label className="content-form__label">Message: </label>
+									<label className="content-form__label">Status: </label>
 									<input
 										className="content-form__input"
-										name={'userName'}
+										name={'userStatus'}
 										type="text"
-										defaultValue={userName}
+										defaultValue={userStatus}
 										required
 									/>
 								</div>
@@ -96,20 +102,26 @@ export class Form extends Component {
 									<label className="content-form__label">Type: </label>
 									<input
 										className="content-form__input"
-										name={'userLast'}
+										name={'userType'}
 										type="text"
-										defaultValue={userLast}
+										defaultValue={userType}
 										required
 									/>
 								</div>
 								<button className="btn btn--light push-half--right" action="submit">Save</button>
-								<button className="btn btn--default" onClick={handleCancelModal}>Cancel</button>
+								<button className="btn btn--default" onClick={this.handleCancelModal.bind(this)}>Cancel</button>
 							</form>
 						</div>
 					</div>
 				);
 			}
-		};
+		}
+
+
+	render () {
+		const {
+			posts
+		} = this.props;
 
 		return (
 			<div>
@@ -118,7 +130,7 @@ export class Form extends Component {
 						<div className="container">
 							<div className="status-list">
 								<div className="status-list__titles">
-									<button className="btn btn--default float--right" onClick={handleOpenModal}>
+									<button className="btn btn--default float--right" onClick={this.handleOpenModal.bind(this)}>
 										Add +
 									</button>
 									<div className="clearfix" />
@@ -137,12 +149,15 @@ export class Form extends Component {
 										</div>
 									</div>
 								</div>
-								{renderPostList()}
+								{ posts.isFetching 
+									? <Loader /> 
+									: this.renderPostList()
+								}
 							</div>
 						</div>
 					</div>
 				</section>
-				{renderModalForm()}
+				{this.renderModalForm()}
 			</div>
 		);
 	}
@@ -152,5 +167,5 @@ Form.propTypes = {
 	currentUser: PropTypes.object,
 	auth: PropTypes.object,
   createPost: PropTypes.func,
-  postData: PropTypes.object
+  posts: PropTypes.object
 };
