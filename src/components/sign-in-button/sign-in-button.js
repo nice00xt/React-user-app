@@ -4,32 +4,30 @@ export default class SignInButton extends Component {
   render() {
     const {
       handleClickSignIn,
-      login
+      auth
     } = this.props;
 
-    const renderButtonText = () => {
-      if (login.isInProgress) {
-        return (
-          <div className="spinner-content">
-            <svg 
-             className="spinner" 
-             width="15px" 
-             height="15px" 
-             viewBox="0 0 66 66" 
-             xmlns="http://www.w3.org/2000/svg">
-             <circle 
-               className="path" 
-               fill="none" 
-               strokeWidth="6" 
-               strokeLinecap="round" 
-               cx="33" 
-               cy="33" 
-               r="30"
-              />
-            </svg>
-          </div>
-        );
-      }
+    const renderSpinner = () => {
+      return (
+        <div className="spinner-content">
+          <svg 
+           className="spinner" 
+           width="15px" 
+           height="15px" 
+           viewBox="0 0 66 66" 
+           xmlns="http://www.w3.org/2000/svg">
+           <circle 
+             className="path" 
+             fill="none" 
+             strokeWidth="6" 
+             strokeLinecap="round" 
+             cx="33" 
+             cy="33" 
+             r="30"
+            />
+          </svg>
+        </div>
+      );
     };
 
     return (
@@ -38,7 +36,7 @@ export default class SignInButton extends Component {
           <span className="button-name">
             Signin with
             <span className="google-name"> Google</span>
-            {renderButtonText()}
+            {auth.isInProgress ? renderSpinner(): ''}
           </span>
         </button>
       </div>
@@ -48,5 +46,6 @@ export default class SignInButton extends Component {
 
 SignInButton.propTypes = {
   handleClickSignIn: PropTypes.func,
-  login: PropTypes.object
+  auth: PropTypes.object
 };
+

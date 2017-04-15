@@ -32,6 +32,21 @@
   }
 }
 
+.btn--remove {
+  background: white;
+  color: #fd5d5d !important;
+  margin: 12px 0;
+  padding: 8px !important;
+  font-weight: 600 !important;
+  width: 100%;
+
+  &:hover {
+    background: #fd5d5d;
+    color: white !important;
+  }
+}
+
+
 .btn--default {
   color: $white;
   background: $clr-dark-black;
@@ -87,7 +102,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .btn {
     width: 100%;
   }

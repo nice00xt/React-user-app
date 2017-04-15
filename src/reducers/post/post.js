@@ -4,14 +4,18 @@ import {
 	FETCH_POST,
 	FETCH_POST_ERROR,
 	REMOVE_POST,
-	IS_FETCHING
+	IS_FETCHING,
+	POST_TAKED
 } from '../../constants/action-types';
 import omitDeep from 'omit-deep-lodash';
 import _ from 'lodash';
 
 const INITIAL_STATE = {
 	isFetching: false,
-	data: {}
+	data: {},
+	dataTaked: {
+		isTaked: false
+	}
 };
 
 export const postItem = (state = INITIAL_STATE, action) => {
@@ -41,6 +45,13 @@ export const postItem = (state = INITIAL_STATE, action) => {
 			});
 		case REMOVE_POST: 
 			return omitDeep(state, `${action.key}`);
+		case POST_TAKED:
+			return _.assign({}, state, { 
+				dataTaked: {
+					isTaked: true,
+					...action 
+				} 
+			});
 		case FETCH_POST_ERROR:
 		case CREATE_POST_ERROR:
 			return action.message;

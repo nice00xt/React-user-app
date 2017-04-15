@@ -57,12 +57,13 @@ function authenticate(provider) {
 
     firedux.auth()
     .signInWithPopup(provider)
-      .then(result => 
-        dispatch(signInSuccess(result))
-      )
-      .catch(error => dispatch(
-        signInError(error))
-      );
+
+    .then(result => 
+      dispatch(signInSuccess(result))
+    )
+    .catch(error => dispatch(
+      signInError(error))
+    );
   };
 }
 

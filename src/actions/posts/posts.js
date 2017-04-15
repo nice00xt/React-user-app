@@ -6,7 +6,8 @@ import {
 	FETCH_POST,
 	FETCH_POST_ERROR,
 	REMOVE_POST,
-	IS_FETCHING
+	IS_FETCHING,
+	POST_TAKED
 } from '../../constants/action-types';
 
 function isFetching () {
@@ -76,4 +77,25 @@ export function removePost (key, uid) {
 			});
 		});
 	};
-} 
+}
+
+export function takePost (uid, postId, userTakedId, displayName, photoURL) {
+	return (dispatch) => {
+		firedux.set(`posts/${uid}/${postId}/taken`, {
+			userTakedId,
+			displayName,
+			photoURL
+		})
+		.then(() => {
+			dispatch({
+				type: POST_TAKED,
+				userTakedId,
+				displayName,
+				photoURL
+			});
+		});
+	};
+}
+
+
+

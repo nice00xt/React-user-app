@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { Icon } from 'react-fa';
 import SignInButton from '../../components/sign-in-button/sign-in-button';
 
 export class Header extends Component {
@@ -35,7 +36,7 @@ export class Header extends Component {
 					<div className="arrow-box__content">
 						<span>{currentUser.email} | </span>
 						<a href="#" onClick={this.handleClickSignOut.bind(this)}>
-							Sign Out
+						<span><Icon className="push-half--left" name="power-off" /> Sign Out</span>
 						</a>
 					</div>
 				</div>
@@ -74,7 +75,7 @@ export class Header extends Component {
 				<div className="user-avatar--header">
 					<SignInButton
 						handleClickSignIn={handleClickSignIn}
-						login={auth}
+						auth={auth}
 					/>
 				</div>
 			</div>
