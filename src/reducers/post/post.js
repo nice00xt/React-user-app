@@ -32,14 +32,9 @@ export const postItem = (state = INITIAL_STATE, action) => {
 				data: action.payload
 			};
 		case CREATE_POST:
-			return _.assign({}, state, { data: 
-				{ 
-					...state.data,
-					[action.payload.uid]: {
-						...state.data[action.payload.uid],
-						[action.payload.postId]: {
-							...action.payload
-						}
+			return _.assign({}, state, { data: { ...state.data,
+				[action.payload.postId]: {
+					...action.payload
 					}
 				} 
 			});

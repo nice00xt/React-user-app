@@ -1,111 +1,163 @@
 import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
-import * as actions from '../../actions/posts/posts';
-import { Icon } from 'react-fa';
-import { TakedButton } from '../../components/taked-button/taked-button'; 
 import _ from 'lodash';
+import { Loader } from '../../components/loader/loader';
+import PostItem from '../../components/post-item/post-item';
+import moment from 'moment';
 
 export class PostList extends Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			takeButtonState: false,
+			userStatus: '',
+			userType: '',
+			activeModal: false
 		};
   }
 
-	handleClickRemove(idx) {
+	handleFormSubmit (event) {
+		event.preventDefault();
 		const {
-			removePost
-		} = this.props;
-
-    removePost(idx.key, idx.uid);
-  }
-
-  renderRemoveButton (key, uid) {
-    return (
-      <button 
-        className="btn btn--remove status-text" 
-        onClick={this.handleClickRemove.bind(this, {key, uid},)}
-      >
-       <Icon className="push-half--right" name="remove" />
-       Remove
-      </button>
-    );
-  }
-
-  renderTakeButton (key, uid) {
-    const {
 			currentUser,
-			takePost,
-			postItem
+			createPost
 		} = this.props;
 
-		return (
-			<TakedButton
-				postItem={postItem}
-				current={currentUser}
-				handleButtonTaked={this.handleButtonTaked}
-				postId={key}
-				takePost={takePost}
-				uid={uid}
-				handleTakeButton={this.handleTakeButton}
-			/>
-		);
-  }
+		const date = moment().format('MMM D YYYY');
+		createPost(
+			currentUser.uid,
+			currentUser.displayName,
+			currentUser.photoURL,
+			this.state.userStatus,
+			this.state.userType, date);
+		this.setState({ activeModal: false });
+	}
 
-	render () {
+	handleOpenModal () {
+		this.setState({
+			userStatus: '',
+			userType: '',
+			activeModal: true,
+		});
+	}
+
+	handleCancelModal () {
+		this.setState({ activeModal: false });
+	}
+
+  setField (e) {
+		this.setState({
+			[e.target.name]: e.target.value
+		});
+	}
+
+	renderPostItem () {
 		const {
-			postItem,
+			posts,
 			currentUser
-		} = this.props;
+		} = this.props;		
 
-		const renderPostItem = () => {
-			return _.map(postItem, (userItem, key) => {
-				const {
-					date,
-					displayName,
-					uid,
-					photoURL,
-					status,
-					type
-				} = userItem;
-				
+		return _.map(posts.data, (postItem, key) => {
+			return (
+				<PostItem
+					currentUser={currentUser}
+					key={key}
+					postItem={postItem}
+					id={key}
+				/>
+			);
+		});
+	}
+
+	renderModalForm () {
+		const {
+			state: {
+				userStatus,
+				userType
+			},
+			handleFormSubmit,
+			setField
+		} = this;
+
+			if (this.state.activeModal) {
 				return (
-					<div key={key}>
-						<div className="status-list__row">
-							<div className="grid">
-								<div className="grid__item one-fifth">
-									<div className="user-avatar">
-										<img src={photoURL} />
-									</div>
-									<span className="status-text">{displayName}</span>
+					<div className="modal">
+						<div className="modal__content">
+							<form
+								autoComplete="off"
+								className="content-form"
+								onChange={setField.bind(this)}
+								onSubmit={handleFormSubmit.bind(this)} 
+							>
+								<div className="form-field">
+									<label className="content-form__label">Status: </label>
+									<input
+										className="content-form__input"
+										name={'userStatus'}
+										type="text"
+										defaultValue={userStatus}
+										required
+									/>
 								</div>
-								<div className="grid__item one-fifth">
-									<span className="status-text">{date}</span>
+								<div className="form-field">
+									<label className="content-form__label">Type: </label>
+									<input
+										className="content-form__input"
+										name={'userType'}
+										type="text"
+										defaultValue={userType}
+										required
+									/>
 								</div>
-								<div className="grid__item one-fifth">
-									<span className="status-text--free">{status}</span>
-								</div>
-								<div className="grid__item one-fifth">
-									<span className="status-text">{type}</span>
-								</div>
-								<div className="grid__item one-fifth">
-									{ currentUser.uid === uid 
-										? this.renderRemoveButton(key, uid)
-										: this.renderTakeButton(key, uid)
-									}
-								</div>
-							</div>
+								<button className="btn btn--light push-half--right" action="submit">Save</button>
+								<button className="btn btn--default" onClick={this.handleCancelModal.bind(this)}>Cancel</button>
+							</form>
 						</div>
 					</div>
 				);
-			});
-		};
+			}
+		}
+
+
+	render () {
+		const {
+			posts
+		} = this.props;
 
 		return (
 			<div>
-				{renderPostItem()}
+				<section className="content">
+					<div className="content__list">
+						<div className="container">
+							<div className="status-list">
+								<div className="status-list__titles">
+									<button className="btn btn--default float--right" onClick={this.handleOpenModal.bind(this)}>
+										Add +
+									</button>
+									<div className="clearfix" />
+									<div className="grid">
+										<div className="grid__item one-fifth">
+											<span>USER</span>
+										</div>
+										<div className="grid__item one-fifth">
+											<span>SUBMITTED</span>
+										</div> 
+										<div className="grid__item one-fifth">
+											<span>STATUS</span>
+										</div>
+										<div className="grid__item one-fifth">
+											<span>TYPE</span>
+										</div>
+									</div>
+								</div>
+								{ posts.isFetching 
+									? <Loader /> 
+									: this.renderPostItem()
+								}
+							</div>
+						</div>
+					</div>
+				</section>
+				{this.renderModalForm()}
 			</div>
 		);
 	}
@@ -113,10 +165,7 @@ export class PostList extends Component {
 
 PostList.propTypes = {
 	currentUser: PropTypes.object,
-  postItem: PropTypes.object,
-  removePost: PropTypes.func,
-  takePost: PropTypes.func,
-  id: PropTypes.string
+	auth: PropTypes.object,
+  createPost: PropTypes.func,
+  posts: PropTypes.object
 };
-
-export default connect(null, actions)(PostList);

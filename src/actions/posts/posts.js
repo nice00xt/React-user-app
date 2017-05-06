@@ -45,7 +45,7 @@ export const postList = (payload) => {
 
 export function createPost (uid, displayName, photoURL, status, type, date) {
   return (dispatch) => {
-    firedux.push(`/posts/${uid}`, {
+    firedux.push(`/posts`, {
       uid,
       displayName,
       photoURL,
@@ -68,7 +68,7 @@ export function createPost (uid, displayName, photoURL, status, type, date) {
 
 export function removePost (key, uid) {
 	return (dispatch) => {
-		firedux.remove(`/posts/${uid}/${key}`)
+		firedux.remove(`/posts/${key}`)
 		.then(() => {
 			dispatch({
 				type: REMOVE_POST,
@@ -81,7 +81,7 @@ export function removePost (key, uid) {
 
 export function takePost (uid, postId, userTakedId, displayName, photoURL) {
 	return (dispatch) => {
-		firedux.set(`posts/${uid}/${postId}/taken`, {
+		firedux.set(`posts/${postId}/taked`, {
 			userTakedId,
 			displayName,
 			photoURL

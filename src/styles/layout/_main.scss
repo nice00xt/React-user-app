@@ -154,14 +154,37 @@ body {
     border-bottom: 1px solid $clr-light-grey;
     padding: 12px 0;
 
-    transition: all .2s linear;
-
     &--removing {
       @extend .status-list__row;
       opacity: .2;
     }
   }
 }
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    top: 20px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.slide {
+  opacity: 0;
+  position: relative;
+  top: 20px;
+  transition: all .2s ease;
+
+  animation-delay: .1s;
+  animation-duration: .15s;
+  animation-fill-mode: forwards;
+  animation-name: slide;
+}
+
 
 .content-form {
   &__label {

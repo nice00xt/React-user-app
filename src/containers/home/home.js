@@ -13,7 +13,7 @@ import {
 	signOut,
 	userSessionState
 } from '../../actions/auth/auth';
-import { Form } from '../../components/form/form';
+import { PostList } from '../../components/post-list/post-list';
 import { Header } from '../../components/header/header';
 
 export class Home extends Component {
@@ -41,7 +41,7 @@ export class Home extends Component {
     );
   }
 
-  renderForm () {
+  renderList () {
     const {
       auth,
       createPost,
@@ -70,7 +70,7 @@ export class Home extends Component {
 								</div>
 							</div>
 					</section>
-          <Form
+          <PostList
 						auth={auth}
 						currentUser={auth.user}
 						createPost={createPost}
@@ -85,7 +85,7 @@ export class Home extends Component {
 		return (
 			<div>
 				{this.renderHeader()}
-				{this.renderForm()}
+				{this.renderList()}
 			</div>
 		);
 	}

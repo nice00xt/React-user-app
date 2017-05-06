@@ -14,7 +14,6 @@ export class TakedButton extends Component {
 		this.setState({ takeButtonState: true });
 	}
 
-
 	handleTakeButton (idx) {
 		const {
 			current,
@@ -44,7 +43,10 @@ export class TakedButton extends Component {
 				className="btn btn--take status-text" 
 				onClick={this.handleTakeButton.bind(this, {postId, uid, current})}
 			>
-			<Icon className="push-half--right" name="hand-pointer-o" />
+			<Icon 
+				className="push-half--right" 
+				name="hand-pointer-o"
+			/>
 				Take!
 			</button>
 		);
@@ -65,11 +67,8 @@ export class TakedButton extends Component {
   }
 
 	render () {
-		// console.log(this.props.postItem)
 		return (
-			<div>
-				{this.renderButton()}
-			</div>
+			this.renderButton()
 		);
 	}
 }
